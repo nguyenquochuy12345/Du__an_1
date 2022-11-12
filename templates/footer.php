@@ -3,7 +3,7 @@
     <footer class="footer-section">
         <div class="newslater-section padding-bottom">
             <div class="container">
-                <div class="newslater-container bg_img" data-background="../public/layout/assets/images/newslater/newslater-bg01.jpg">
+                <div class="newslater-container bg_img" data-background="public/layout/assets/images/newslater/newslater-bg01.jpg">
                     <div class="newslater-wrapper">
                         <h5 class="cate">subscribe to Boleto </h5>
                         <h3 class="title">to get exclusive benifits</h3>
@@ -20,7 +20,7 @@
             <div class="footer-top">
                 <div class="logo">
                     <a href="index-1.html">
-                        <img src="../public/layout/assets/images/footer/footer-logo.png" alt="footer">
+                        <img src="public/layout/assets/images/footer/footer-logo.png" alt="footer">
                     </a>
                 </div>
                 <ul class="social-icons">
@@ -80,20 +80,20 @@
     <!-- ==========Newslater-Section========== -->
 
 
-    <script src="../public/layout/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="../public/layout/assets/js/modernizr-3.6.0.min.js"></script>
-    <script src="../public/layout/assets/js/plugins.js"></script>
-    <script src="../public/layout/assets/js/bootstrap.min.js"></script>
-    <script src="../public/layout/assets/js/heandline.js"></script>
-    <script src="../public/layout/assets/js/isotope.pkgd.min.js"></script>
-    <script src="../public/layout/assets/js/magnific-popup.min.js"></script>
-    <script src="../public/layout/assets/js/owl.carousel.min.js"></script>
-    <script src="../public/layout/assets/js/wow.min.js"></script>
-    <script src="../public/layout/assets/js/countdown.min.js"></script>
-    <script src="../public/layout/assets/js/odometer.min.js"></script>
-    <script src="../public/layout/assets/js/viewport.jquery.js"></script>
-    <script src="../public/layout/assets/js/nice-select.js"></script>
-    <script src="../public/layout/assets/js/main.js"></script>
+    <script src="public/layout/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="public/layout/assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="public/layout/assets/js/plugins.js"></script>
+    <script src="public/layout/assets/js/bootstrap.min.js"></script>
+    <script src="public/layout/assets/js/heandline.js"></script>
+    <script src="public/layout/assets/js/isotope.pkgd.min.js"></script>
+    <script src="public/layout/assets/js/magnific-popup.min.js"></script>
+    <script src="public/layout/assets/js/owl.carousel.min.js"></script>
+    <script src="public/layout/assets/js/wow.min.js"></script>
+    <script src="public/layout/assets/js/countdown.min.js"></script>
+    <script src="public/layout/assets/js/odometer.min.js"></script>
+    <script src="public/layout/assets/js/viewport.jquery.js"></script>
+    <script src="public/layout/assets/js/nice-select.js"></script>
+    <script src="public/layout/assets/js/main.js"></script>
 </body>
 
 

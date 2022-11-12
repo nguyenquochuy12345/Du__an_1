@@ -22,7 +22,7 @@
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="../public/layout/assets/images/logo/logo.png" alt="logo">
+                        <img src="public/layout/assets/images/logo/logo.png" alt="logo">
                     </a>
                 </div>
                 <ul class="menu">
@@ -138,7 +138,7 @@
                         <a href="contact.html">contact</a>
                     </li>
                     <li class="header-button pr-0">
-                        <a href="sign-up.html">join us</a>
+                        <a href="templates/sign-up.php">join us</a>
                     </li>
                 </ul>
                 <div class="header-bar d-lg-none">
