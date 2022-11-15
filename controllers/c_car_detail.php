@@ -1,6 +1,6 @@
 <?php
 // @session_start();
-class C_couse
+class C_car_detail
 {
 
     public function HienThi()
@@ -16,7 +16,7 @@ class C_couse
         // $m_couse = new M_couse();
 
    
-        include('templates/home/layout.php');
+        include('templates/car-details/layout.php');
 
     }
 }
