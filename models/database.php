@@ -99,38 +99,7 @@ function pdo_execute($sql){
     catch(PDOException $e){
         throw $e;
     }
-<<<<<<< HEAD
-    
-    //Function execute the query 
-
-
-    public function execute($options=array()) {
-        $this->sta = $this->pdo->prepare($this->sql);
-        if($options) {  //If have $options then system will be tranmission parameters
-            for($i=0;$i<count($options);$i++) {
-                $this->sta->bindParam($i+1,$options[$i]);
-            }
-        }
-        $this->sta->execute();
-        return $this->sta;
-    }
-    
-    
-    //Funtion load datas on table
-    public function loadAllRows($options=array()) {
-        if(!$options) {
-            if(!$result = $this->execute())
-                return false;
-        }
-        else {
-            if(!$result = $this->execute($options))
-                return false;
-        }
-        return $result->fetchAll(PDO::FETCH_OBJ);
-=======
-    finally{
-        unset($conn);
-    }}
+}
 function pdo_query($sql){
     $sql_args = array_slice(func_get_args(), 1);
     try{
@@ -142,7 +111,6 @@ function pdo_query($sql){
     }
     catch(PDOException $e){
         throw $e;
->>>>>>> 794a28f0a267038007f0a1ee6d06e44257aed8a4
     }
     finally{
         unset($conn);
