@@ -138,7 +138,7 @@
                         <a href="contact.html">contact</a>
                     </li>
                     <li class="header-button pr-0">
-                        <a href="templates/sign-up.php">join us</a>
+                        <a href="login.php">join us</a>
                     </li>
                 </ul>
                 <div class="header-bar d-lg-none">

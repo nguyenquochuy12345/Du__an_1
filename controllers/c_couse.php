@@ -17,6 +17,5 @@ class C_couse
 
    
         include('templates/layout.php');
-
     }
 }

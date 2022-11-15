@@ -1,5 +1,5 @@
 <?php
-include("database.php");
+include("../models/database.php");
 class M_user extends database
 {
     function read_user()

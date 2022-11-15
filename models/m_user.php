@@ -17,6 +17,29 @@ class M_user extends database
         header("location:index.php");
     }
    
+    function read_user_by_id_pass($email,$mat_khau)
+    {
+        $sql="select * from nguoi_dung where email=? and password=?";
+        $this->setQuery($sql);
+        return $this->loadRow(array($email,md5($mat_khau)));
+    }
+
+    function luu_dang_nhap($email,$mat_khau)
+    {
+        $user = $this->read_user_by_id_pass($email,$mat_khau);
+        if(isset($user->ma_quyen) && $user->ma_quyen == 2)
+        {
+            $_SESSION['user'] = $user;
+            $selfURL = explode("/", $_SERVER['REQUEST_URI']);
+            echo "<script type='text/javascript'>window.location.href = '". $selfURL[2] ."'</script>";
+        }
+
+        else
+        {
+            return "Thông tin đăng nhập không hợp lệ ";
+        }
+    }
+
     public function  Insert_user($id_khach_hang,$ten_dang_nhap,$mat_khau,$email,$ngay_dang_ky)
     {
         $sql ="insert into khach_hang values(?,?,?,?,?)";

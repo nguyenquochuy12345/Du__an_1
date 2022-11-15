@@ -22,6 +22,8 @@ class database{
     }
     
     //Function execute the query 
+
+
     public function execute($options=array()) {
         $this->sta = $this->pdo->prepare($this->sql);
         if($options) {  //If have $options then system will be tranmission parameters
@@ -32,6 +34,7 @@ class database{
         $this->sta->execute();
         return $this->sta;
     }
+    
     
     //Funtion load datas on table
     public function loadAllRows($options=array()) {
