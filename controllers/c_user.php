@@ -1,14 +1,18 @@
 <?php
-@session_start();
-include ("../models/m_user.php");
-class C_khach_hang
+session_start();
+include ("models/m_user.php");
+class C_user
 {
+    function Show_student()
+    {
 
-    function show_khachhang()
+        include('templates/layout.php');
+    }
+    function show_user()
     {
 // Models
         $m_user = new M_user();
-        // $users = $m_user->read_user()
+        // $users = $m_user->read_user();
         // $view = 'views/user/v_user.php';
         include('templates/layout.php');
 // View
@@ -16,9 +20,13 @@ class C_khach_hang
     function add_user()
     {
 
-        //     $ma_danh_gia,$ten_hv,$anh_hv,$cam_nhan,$ma_kshoa_hoc
+        //     $ma_danh_gia,$ten_hv,$anh_hv,$cam_nhan,$ma_khoa_hoc
+        
 
         $m_user = new M_user();
+
+        include('templates/sign-up.php');
+        
         if (isset($_POST["btnSave"])) {
             $users = $m_user->read_user();
             $id_khach_hang = NULL;
@@ -41,6 +49,7 @@ class C_khach_hang
 
 
             $kq = $m_user->Insert_user($id_khach_hang,$ten_dang_nhap,$mat_khau,$email,$ngay_dang_ky);
+
             if ($kq) {
                 echo "<script>window.location='user.php'</script>";
             } else {
@@ -49,61 +58,49 @@ class C_khach_hang
         }
         // View
         // $view = 'views/user/v_adduser.php';
+        // include('templates/sign-up.php');
         include('templates/layout.php');
 
     }
-
     function Hien_thi_dang_nhap()
     {
-        // include('templates/layout.php');
-        //  $a =0;
 
-        if(isset($_POST["login"]))
+        if(isset($_SESSION["ma_quyen"]) )
         {
-            $ten=$_POST["ten_dang_nhap"];
-            $m_user =new M_user();
-            // $users = $m_user->read_user_by_nameuser($ten);
-            //die();
-            $mk=$_POST["mat_khau"];
-
-            // $this->luu_dang_nhap($ten,$mk);
-        //    $users = $m_user->read_user_by_email($ten);
-
-
-        }
-        if(isset($_SESSION['user_teacher']))
-        {
-//            if($_SESSION["ma_quyen"]==1) {
+            if($_SESSION["ma_quyen"]==1) {
                 include('templates/layout.php');
-//            }
-//            if($_SESSION["ma_quyen"]==2) {
-//                include('templates_hv/layout.php');
-//            }
+            }
+            if($_SESSION["ma_quyen"]==2) {
+                include('templates_hv/layout.php');
+            }
 
         }
+
         else
         {
             $_SESSION['error']="Thông tin đăng nhập không hợp lệ ";
-            header("location:index.php");
+            header("location:login.php");
         }
 
+
+
+
     }
-
-
     function thoat_dang_nhap()
     {
-      //  session_destroy();
-        unset($_SESSION['user_admin']);
+        session_destroy();
         header("location:login.php");
     }
-
     function luu_dang_nhap($ten,$mk)
     {
-        // $m_user=new M_user();
-        // $user = $m_user->read_user_by_id_pass($ten,$mk);
-        // if(!empty($user)) {
-        //     $_SESSION['user_admin'] = $user;
-        // }
+
+        $m_user=new M_user();
+
+        $user = $m_user->read_user_by_id_pass($ten,$mk);
+
+            $_SESSION['fullname'] = $user->ho_ten;
+
+            $_SESSION['ma_quyen'] = $user->ma_quyen;
     }
 
 }

@@ -47,29 +47,29 @@
                         <span class="cate">welcome</span>
                         <h2 class="title">to Boleto </h2>
                     </div>
-                    <form action="../models/m_user.php" class="account-form" method="POST" >
+                    <form action="" class="account-form" method="POST" >
                     <div class="form-group">
                             <label for="email1">User Name<span>*</span></label>
-                            <input type="text" placeholder="Enter Your Name" id="name" required>
+                            <input type="text" placeholder="Enter Your Name" id="name" required name="ten_dang_nhap">
                         </div>
                         <div class="form-group">
                             <label for="email1">Email<span>*</span></label>
-                            <input type="text" placeholder="Enter Your Email" id="email1" required>
+                            <input type="text" placeholder="Enter Your Email" id="email1" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="pass1">Password<span>*</span></label>
-                            <input type="password" placeholder="Password" id="pass1" required>
+                            <input type="password" placeholder="Password" id="pass1" name="mat_khau" required>
                         </div>
                         <div class="form-group">
                             <label for="pass2">Confirm Password<span>*</span></label>
-                            <input type="password" placeholder="Password" id="pass2" required>
+                            <input type="password" placeholder="Password" id="pass2" name="mat_khau_2" require>
                         </div>
                         <div class="form-group checkgroup">
                             <input type="checkbox" id="bal" required checked>
                             <label for="bal">I agree to the <a href="#0">Terms, Privacy Policy</a> and <a href="#0">Fees</a></label>
                         </div>
                         <div class="form-group text-center">
-                            <input type="submit" value="Sign Up">
+                            <input type="submit" name="btnSave" value="Sign Up">
                         </div>
                     </form>
                     <div class="option">

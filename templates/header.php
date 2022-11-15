@@ -1,4 +1,4 @@
-<body>
+
     <div id="this-top" class="layout-theme animated-css"  data-header="sticky" data-header-top="200"  > 
     
     <!-- Loader -->
@@ -62,24 +62,10 @@
                       <a href="javascript:void(0);" class="navbar-brand"></a> </div>
                     <div id="navbar-collapse-1" class="navbar-collapse collapse">
                       <ul class="nav navbar-nav">
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="https://pro-theme.com/html/autozone/vehicle-listings.html">VEHICLE LISTINGS</a> </li>
-                        <li><a href="https://pro-theme.com/html/autozone/car-details.html">CAR DETAILS</a></li>
-                        <li class="dropdown" ><a href="https://pro-theme.com/html/autozone/news.html">NEWS</a>
-                          <ul role="menu" class="dropdown-menu">
-                            <li> <a href="https://pro-theme.com/html/autozone/news-grid.html">LEVEL 1</a> 
-                              
-                              </li>
-                            <li> <a href="https://pro-theme.com/html/autozone/news-details.html">LEVEL 1</a>
-                              
-                              <ul role="menu" class="dropdown-menu">
-                                <li> <a href="https://pro-theme.com/html/autozone/news-grid.html">LEVEL 2</a> </li>
-                                <li> <a href="https://pro-theme.com/html/autozone/news-details.html">LEVEL 2</a> </li>
-                              </ul>
-                              
-                              </li>
-                          </ul>
-                        </li>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="">VEHICLE LISTINGS</a> </li>
+                        <li><a href="car_details.php">CAR DETAILS</a></li>
+                        <li><a href="news.php">NEWS</a></li>
                         <li><a href="https://pro-theme.com/html/autozone/news-grid.html">NEWS GRID</a></li>
                         <li><a href="https://pro-theme.com/html/autozone/news-details.html">NEWS DETAILS</a></li>
                       </ul>

@@ -47,7 +47,7 @@
                         <span class="cate">welcome</span>
                         <h2 class="title">to Boleto </h2>
                     </div>
-                    <form action="./models/m_user.php" class="account-form" method="$_POST" >
+                    <form action="./models/m_user.php" class="account-form" method="POST" >
                     <div class="form-group">
                             <label for="name">User Name<span>*</span></label>
                             <input type="text" placeholder="Enter Your Name" id="name" required>
