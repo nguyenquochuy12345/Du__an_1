@@ -16,7 +16,7 @@ class C_couse
         // $m_couse = new M_couse();
 
    
-        include('templates/layout.php');
+        include('templates/home/layout.php');
 
     }
 }

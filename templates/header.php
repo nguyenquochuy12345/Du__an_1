@@ -1,151 +1,95 @@
 <body>
-    <!-- ==========Preloader========== -->
-    <div class="preloader">
-        <div class="preloader-inner">
-            <div class="preloader-icon">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ==========Preloader========== -->
-    <!-- ==========Overlay========== -->
-    <div class="overlay"></div>
-    <a href="#0" class="scrollToTop">
-        <i class="fas fa-angle-up"></i>
-    </a>
-    <!-- ==========Overlay========== -->
-
-    <!-- ==========Header-Section========== -->
-    <header class="header-section">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="public/layout/assets/images/logo/logo.png" alt="logo">
-                    </a>
+    <div id="this-top" class="layout-theme animated-css"  data-header="sticky" data-header-top="200"  > 
+    
+    <!-- Loader -->
+    <div id="page-preloader"><span class="spinner"></span></div>
+    <!-- Loader end -->
+      
+      <!-- Start Switcher -->
+      <div class="switcher-wrapper">
+        <div class="demo_changer">
+          <div class="demo-icon customBgColor"><i class="fa fa-cog fa-spin fa-2x"></i></div>
+          <div class="form_holder">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="predefined_styles">
+                  <div class="skin-theme-switcher">
+                    <h4>Color</h4>
+                    <a href="javascript:void(0);" data-switchcolor="color1" class="styleswitch" style="background-color:#fe5656;"> </a> <a href="javascript:void(0);" data-switchcolor="color2" class="styleswitch" style="background-color:#4fb0fd;"> </a> <a href="javascript:void(0);" data-switchcolor="color3" class="styleswitch" style="background-color:#ffc73c;"> </a> <a href="javascript:void(0);" data-switchcolor="color4" class="styleswitch" style="background-color:#ff8300;"> </a> <a href="javascript:void(0);" data-switchcolor="color5" class="styleswitch" style="background-color:#02cc8b;"> </a> </div>
                 </div>
-                <ul class="menu">
-                    <li>
-                        <a href="#0" class="active">Home</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="#0" class="active">Home One</a>
-                            </li>
-                            <li>
-                                <a href="index-2.html">Home Two</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">movies</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="movie-grid.html">Movie Grid</a>
-                            </li>
-                            <li>
-                                <a href="movie-list.html">Movie List</a>
-                            </li>
-                            <li>
-                                <a href="movie-details.html">Movie Details</a>
-                            </li>
-                            <li>
-                                <a href="movie-details-2.html">Movie Details 2</a>
-                            </li>
-                            <li>
-                                <a href="movie-ticket-plan.html">Movie Ticket Plan</a>
-                            </li>
-                            <li>
-                                <a href="movie-seat-plan.html">Movie Seat Plan</a>
-                            </li>
-                            <li>
-                                <a href="movie-checkout.html">Movie Checkout</a>
-                            </li>
-                            <li>
-                                <a href="popcorn.html">Movie Food</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">events</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="events.html">Events</a>
-                            </li>
-                            <li>
-                                <a href="event-details.html">Event Details</a>
-                            </li>
-                            <li>
-                                <a href="event-speaker.html">Event Speaker</a>
-                            </li>
-                            <li>
-                                <a href="event-ticket.html">Event Ticket</a>
-                            </li>
-                            <li>
-                                <a href="event-checkout.html">Event Checkout</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">sports</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="sports.html">Sports</a>
-                            </li>
-                            <li>
-                                <a href="sport-details.html">Sport Details</a>
-                            </li>
-                            <li>
-                                <a href="sports-ticket.html">Sport Ticket</a>
-                            </li>
-                            <li>
-                                <a href="sports-checkout.html">Sport Checkout</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">About Us</a>
-                            </li>
-                            <li>
-                                <a href="apps-download.html">Apps Download</a>
-                            </li>
-                            <li>
-                                <a href="sign-in.html">Sign In</a>
-                            </li>
-                            <li>
-                                <a href="sign-up.html">Sign Up</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">blog</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                                <a href="blog-details.html">Blog Single</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">contact</a>
-                    </li>
-                    <li class="header-button pr-0">
-                        <a href="templates/sign-up.php">join us</a>
-                    </li>
-                </ul>
-                <div class="header-bar d-lg-none">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
+              </div>
             </div>
+          </div>
         </div>
-    </header>
+        <script src="https://pro-theme.com/html/autozone/assets/plugins/switcher/js/bootstrap-select.js"></script> 
+        <script src="https://pro-theme.com/html/autozone/assets/plugins/switcher/js/evol.colorpicker.min.js"></script> 
+        <script src="https://pro-theme.com/html/autozone/assets/plugins/switcher/js/dmss.js"></script> 
+      </div>
+      <!-- End Switcher -->
+      
+      <div id="wrapper"> 
+        
+        <!-- HEADER -->
+        <div class="header">
+          <div class="top-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="header-contacts"> <span class="header-contacts__item"><i class="icon fa fa-phone"></i>+ 987 654 3210</span> <a class="header-contacts__item" href="mailto:autoz@zone.com"><i class="icon fa fa-envelope"></i>autoz (at) zone.com</a> </div>
+                  <ul class="social-links list-inline">
+                    <li><a class="icon fa fa-facebook" href="javascript:void(0);"></a></li>
+                    <li><a class="icon fa fa-twitter" href="javascript:void(0);"></a></li>
+                    <li><a class="icon fa fa-youtube-play" href="javascript:void(0);"></a></li>
+                    <li><a class="icon fa fa-instagram" href="javascript:void(0);"></a></li>
+                    <li><a class="icon fa fa-google-plus" href="javascript:void(0);"></a></li>
+                  </ul>
+                </div>
+                <!-- end col --> 
+              </div>
+              <!-- end row --> 
+            </div>
+            <!-- end container --> 
+          </div>
+          <!-- end top-header -->
+          
+          <div class="header__inner">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-xs-12"> <a href="https://pro-theme.com/html/autozone/index.html" class="logo"> <img class="logo__img img-responsive" src="https://pro-theme.com/html/autozone/assets/img/logo.png" height="50" width="111" alt="Logo"> </a>
+                  <div class="navbar yamm">
+                    <div class="navbar-header hidden-md hidden-lg hidden-sm">
+                      <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                      <a href="javascript:void(0);" class="navbar-brand"></a> </div>
+                    <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="https://pro-theme.com/html/autozone/vehicle-listings.html">VEHICLE LISTINGS</a> </li>
+                        <li><a href="https://pro-theme.com/html/autozone/car-details.html">CAR DETAILS</a></li>
+                        <li class="dropdown" ><a href="https://pro-theme.com/html/autozone/news.html">NEWS</a>
+                          <ul role="menu" class="dropdown-menu">
+                            <li> <a href="https://pro-theme.com/html/autozone/news-grid.html">LEVEL 1</a> 
+                              
+                              </li>
+                            <li> <a href="https://pro-theme.com/html/autozone/news-details.html">LEVEL 1</a>
+                              
+                              <ul role="menu" class="dropdown-menu">
+                                <li> <a href="https://pro-theme.com/html/autozone/news-grid.html">LEVEL 2</a> </li>
+                                <li> <a href="https://pro-theme.com/html/autozone/news-details.html">LEVEL 2</a> </li>
+                              </ul>
+                              
+                              </li>
+                          </ul>
+                        </li>
+                        <li><a href="https://pro-theme.com/html/autozone/news-grid.html">NEWS GRID</a></li>
+                        <li><a href="https://pro-theme.com/html/autozone/news-details.html">NEWS DETAILS</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end container --> 
+          </div>
+          <!-- end header__inner --> 
+        </div>
+        <!-- end header -->
