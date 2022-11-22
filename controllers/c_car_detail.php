@@ -16,7 +16,7 @@ class C_car_detail
         // $m_couse = new M_couse();
 
    
-        include('templates/car-details/layout.php');
+        include('view/car-details/layout.php');
 
     }
 }
