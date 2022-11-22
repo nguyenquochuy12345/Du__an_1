@@ -11,7 +11,7 @@ function insert_danhmuc($danhmuc){
 }
 
 function  update_danhmuc($id_danhmuc,$name_danhmuc){
-    $sql = "update danhmuc set name_danhmuc = '$name_danhmuc' where id_danhmuc=".$id_danhmuc;
+    $sql = "update danhmuc set name_danhmuc = '$name_danhmuc' where id_danhmuc='$id_danhmuc'";
     pdo_execute($sql);
 }
 
