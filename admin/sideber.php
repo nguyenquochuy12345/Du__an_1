@@ -49,7 +49,7 @@ font-family: 'Roboto', sans-serif;
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?action=listtaikhoan" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-black text-white-600 hover:text-white-800   hover:text-white pr-6">
+                    <a href="index.php?action=quanlytaikhoan" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-black text-white-600 hover:text-white-800   hover:text-white pr-6">
                         <span class="inline-flex justify-center items-center ml-4">
                             <i class="fa-solid fa-users"></i>
                         </span>
@@ -65,7 +65,7 @@ font-family: 'Roboto', sans-serif;
                     </a>
                 </li>
                 <li>
-                    <a href="index.php?action=danhsachbinhluan" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-black text-white-600 hover:text-white-800   hover:text-white pr-6">
+                    <a href="index.php?action=quanlybinhluan" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-black text-white-600 hover:text-white-800   hover:text-white pr-6">
                         <span class="inline-flex justify-center items-center ml-4">
                             <i class="fa-solid fa-comments"></i>
                         </span>

@@ -65,11 +65,11 @@ function loadsanpham_cungloai($id,$id_danhmuc){
     $listsanphamdanhmuc = pdo_query($sql);
     return $listsanphamdanhmuc;
 }
-function update_sanpham($id,$id_danhmuc,$name, $price, $price_sale,$hinh,$description,$view){
-    if ($hinh!="") {
-        $sql = "update sanpham set id_danhmuc = '".$id_danhmuc."', name = '".$name."', price = '".$price."' ,price_sale = '".$price_sale."' ,img = '".$hinh."' ,description = '".$description."' ,view = '".$view."' where id=".$id;
+function update_sanpham($id_sanpham,$name_sanpham,$price_sanpham,$hinh_sanpham,$description_sanpham,$view_sanpham,$id_danhmuc){
+    if ($hinh_sanpham!="") {
+        $sql = "update sanpham set name_sanpham = '$name_sanpham', price_sanpham = '$price_sanpham' ,hinh_sanpham = '$hinh_sanpham' ,description_sanpham = '$description_sanpham' ,view_sanpham = '$view_sanpham', id_danhmuc = '$id_danhmuc' where id_sanpham='$id_sanpham'";
     } else {
-        $sql = "update sanpham set id_danhmuc = '".$id_danhmuc."', name = '".$name."', price = '".$price."' ,price_sale = '".$price_sale."'  ,description = '".$description."' ,view = '".$view."' where id=".$id;
+        $sql = "update sanpham set name_sanpham = '$name_sanpham', price_sanpham = '$price_sanpham' ,description_sanpham = '$description_sanpham' ,view_sanpham = '$view_sanpham', id_danhmuc = '$id_danhmuc' where id_sanpham='$id_sanpham'";
     }
     pdo_execute($sql);
 }
