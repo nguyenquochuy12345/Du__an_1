@@ -37,7 +37,6 @@ body{
     background-color: white;
     height: auto;
     border-radius: 10px;
-    padding-bottom: 70px;
 }
 #binhluan_traloi{
     width: auto;
@@ -70,7 +69,8 @@ body{
     
 }
 header{
-    width: auto;
+    margin-left: 160px;
+    width: 100%;
     background-color: #e8e4e4;
     padding-left: 50px;
     display: flex;
@@ -90,6 +90,11 @@ header a{
 .user{
     padding-top: 20px;
     height: 75px;
+}
+.user1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .box a{
     text-decoration: none;
@@ -186,7 +191,6 @@ footer{
 }
 .nen3{
     width: auto;
-    height: auto;
     margin-left: 230px;
     background-color: #b7b1b1;
     display: flex;

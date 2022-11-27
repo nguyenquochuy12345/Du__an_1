@@ -7,7 +7,7 @@
         $account = $stmt->fetch(PDO::FETCH_ASSOC);
         return $account;
     }
-    function dangky($username,$password,$repassword,$hovaten,$email,$address,$sdt,$file){
+    function dangky($username,$img,$password,$repassword,$hovaten,$email,$address,$sdt,$file){
         include './ketnoi/ketnoi.php';
         $errors = [];
         if ($file['size'] > 0) {
@@ -137,7 +137,7 @@
     }
     function show_user(){
         include '../ketnoi/ketnoi.php';
-        $sql = "SELECT user_id,password,email,hovaten,tel,img,address, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id  ";
+        $sql = "SELECT * from taikhoan";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);

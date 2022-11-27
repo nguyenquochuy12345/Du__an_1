@@ -1,4 +1,4 @@
-<div class="nen">
+<div class="nen w-[95%]">
     <div class="listchung">
         <h1>Danh sách danh mục</h1>
         <table class="list" >

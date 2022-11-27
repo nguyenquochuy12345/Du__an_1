@@ -10,7 +10,7 @@
         
     }
 </script>
-<div class="nen">
+<div class="nen w-[95%]">
     <div class="listchung">
         <h1>Danh sách đơn hàng</h1>
 
@@ -40,7 +40,7 @@
                         <td><?= $order['hovaten'] ?></td>
                         <td><?= $order['email'] ?></td>
                         <td><?= $order['tel'] ?></td>
-                        <!-- <td id="order_diachi" ><?= $order['address'] ?></td> -->
+                        <td id="order_diachi" ><?= $order['address'] ?></td>
                         <td id="ngaythang"><?= $order['ngaydathang'] ?></td>
                         <?php $count++; ?>
                         <form class="donhang" action="index.php?act=capnhat_donhang" method="post">

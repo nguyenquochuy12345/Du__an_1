@@ -173,7 +173,7 @@ if (isset($_GET['act'])) {
         $sdt = $_POST['sdt'];
         $address = $_POST['address'];
         $file = $_FILES['img'];
-        dangky($username, $password, $repassword, $hovaten, $email, $address, $sdt, $file);
+        dangky($username, $password, $img, $repassword, $hovaten, $email, $address, $sdt, $file);
         if (!isset($_SESSION['errors']['img']) && !isset($_SESSION['errors']['username']) && !isset($_SESSION['errors']['password']) && !isset($_SESSION['errors']['repassword']) && !isset($_SESSION['errors']['hovaten']) && !isset($_SESSION['errors']['email']) && !isset($_SESSION['errors']['address']) && !isset($_SESSION['errors']['sdt'])) {
           $_SESSION['dangkythanhcong'] = "Đăng ký thành công";
           header("location: index.php?act=vao_trang_dangnhap");

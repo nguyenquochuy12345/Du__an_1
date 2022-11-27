@@ -95,17 +95,20 @@
                 if (isset($_POST['them'])) {
                     $product_name = $_POST['product_name'];
                     $price = $_POST['price'];
-                    $description = $_POST['description'];
-                    $cate_id = $_POST['cate_id'];
-                    $quantity = $_POST['quantity'];
                     $file = $_FILES['img'];
                     $file2 = $_FILES['img2'];
                     $file3 = $_FILES['img3'];
                     $file4 = $_FILES['img4'];
-                    addsp($product_name, $price, $description, $quantity, $file, $file2, $file3, $file4, $cate_id);
-                    if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['img2']) && !isset($_SESSION['error_product']['img3']) && !isset($_SESSION['error_product']['img4']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
-                        header("location: index.php?act=showsp");
-                    }
+                    $description = $_POST['description'];
+                    $quantity = $_POST['quantity'];
+                    $cate_id = $_POST['cate_id'];
+                    addsp($product_name, $price, $file, $file2, $file3, $file4, $description, $quantity, $cate_id);
+                    echo '<script>alert("Thêm thành công")</script>';
+                    // if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['img2']) && !isset($_SESSION['error_product']['img3']) && !isset($_SESSION['error_product']['img4']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
+                    //     header("location: index.php?act=showsp");
+                    // }
+                    include '../view/admin/sanpham/list_sp.php';
+                    break;
                 }
                 include "../view/admin/sanpham/add.php";
                 break;

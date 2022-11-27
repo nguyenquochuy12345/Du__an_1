@@ -21,7 +21,6 @@
                     <td class="thongbaoloi"><?=$_SESSION['cate_error']['cate_name'] ?></td>
                     <?php endif?>
             </tr>
-           
             <?php
             ?>
             <tr>
@@ -31,8 +30,6 @@
             <td>
             </td>
            </tr>
-
-                
         </table>
     </form>
     <?php $_SESSION['cate_error']= []?>

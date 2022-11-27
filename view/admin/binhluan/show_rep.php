@@ -1,10 +1,8 @@
-<div class="nen">
+<div class="nen w-[95%]">
     <div class="listchung">
         <h1>Danh sách Trả lời</h1>
-
         <form action="" method="post">
             <table class="list">
-
                 <thead>
                     <tr>
                         <th>Mã bình luận</th>

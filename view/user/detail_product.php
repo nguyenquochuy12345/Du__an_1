@@ -1,10 +1,10 @@
-<div class="ltn__shop-details-area mb-120" style="margin-top:50px ;">
+<div class="ltn__shop-details-area mb-120">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="ltn__shop-details-inner">
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <div class="row mt-[200px]">
+                        <div class="col-lg-6 ">
                             <div class="ltn__shop-details-img-gallery">
                                 <div class="ltn__shop-details-large-img">
                                     <div class="single-large-img">
@@ -12,9 +12,9 @@
                                             <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
                                         </a>
                                     </div>
-                                    <div class="single-large-img">
+                                    <!-- <div class="single-large-img">
                                         <a href="view/public/img/car/<?php echo $product['img_2'] ?>" data-rel="lightcase:myCollection">
-                                            <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
+                                            <img src="view/public/img/car/<?php echo $product['img_2'] ?>" alt="Image">
                                         </a>
                                     </div>
                                     <div class="single-large-img">
@@ -26,14 +26,14 @@
                                         <a href="view/public/img/car/<?php echo $product['img_4'] ?>" data-rel="lightcase:myCollection">
                                             <img src="view/public/img/car/<?php echo $product['img_4'] ?>" alt="Image">
                                         </a>
-                                    </div>
+                                    </div> -->
                                 </div>
-                                <div class="ltn__shop-details-small-img slick-arrow-2">
+                                <div class="ltn__shop-details-small-img slick-arrow-2 flex items-stretch">
                                     <div class="single-small-img">
                                         <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
                                     </div>
                                     <div class="single-small-img">
-                                        <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
+                                        <img src="view/public/img/car/<?php echo $product['img_2'] ?>" alt="Image">
                                     </div>
                                     <div class="single-small-img">
                                         <img src="view/public/img/car/<?php echo $product['img_3'] ?>" alt="Image">
@@ -181,7 +181,7 @@
                                                 <li>
                                                     <div class="product-buy-btn">
                                                         <?php if ($product['quantity'] > 0) { ?>
-                                                            <button class="theme-btn-2 btn btn-effect-2" type="submit" name="thanhtoan">Đặt lịch</button>
+                                                            <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="submit" name="thanhtoan">Đặt lịch</button>
                                                         <?php } else { ?>
                                                             <h2 class=" thongbao_detailsp">Ô tô đã hết hàng</h2>
                                                         <?php } ?>

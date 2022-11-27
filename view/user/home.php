@@ -1,4 +1,5 @@
-<div class="ltn__product-area ltn__product-gutter mb-120" style="margin-top:150px ;">
+<?php include 'view/user/banner.php';?>
+<div class="ltn__product-area ltn__product-gutter mb-120">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 order-lg-2">

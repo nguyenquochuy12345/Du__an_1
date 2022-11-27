@@ -12,11 +12,11 @@
         <button type="button"><a href="index.php?act=vao_donhang">Lịch đặt của tôi</a></button>
     </div>
 <?php } else { ?>
-    <div class="ltn__appointment-area pb-120">
+    <div class="ltn__appointment-area pb-120 ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="ltn__appointment-inner">
+                    <div class="ltn__appointment-inner my-10 mt-[200px]">
                         <form action="index.php?act=muahang" method="post">
                             <h6>Thông tin đặt xe của bạn</h6>
                             <div class="row">
@@ -140,10 +140,8 @@
                                 Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
                             </div> -->
                                 <div class="btn-wrapper text-center mt-0">
-                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase" name="btn_muahang" type="submit">Đặt lịch ngay bây giờ</button>
+                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" name="btn_muahang" type="submit">Đặt lịch ngay bây giờ</button>
                                 </div>
-
-
                         </form>
                     </div>
                 </div>

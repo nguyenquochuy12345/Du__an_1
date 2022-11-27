@@ -1,10 +1,8 @@
-<div class="nen">
+<div class="nen w-[95%]">
     <div class="listchung">
         <h1>Danh sách bình luận</h1>
-
         <form action="" method="post">
             <table class="list">
-
               <thead>
               <tr>  
                     <th>Ảnh sản phẩm</th>
@@ -18,7 +16,7 @@
                 <tbody>
                 <?php foreach ($binhluan as $binhluan) : ?>
                     <tr>
-                        <td><img src="../view/img/<?=$binhluan['img']?>"  alt="" height="100px"></td>
+                        <td><img class="mx-auto" src="../view/public/img/car/<?=$binhluan['img']?>" width="100px" alt=""></td>
                         <td><?= $binhluan['product_name'] ?></td>
                         <td><?= $binhluan['soluong'] ?></td>
                         <td><?= $binhluan['moiNhat'] ?></td>

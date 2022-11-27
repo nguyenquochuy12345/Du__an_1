@@ -1,4 +1,4 @@
-<div class="nen">
+<div class="nen w-[95%]">
     <div class="listchung">
         <h1>Danh sách tài khoản </h1>
         <table class="list">
@@ -19,7 +19,7 @@
                 <tr>
                     <td><?=$user['user_id']?></td>
                     <td><?=  $user['hovaten'] ?></td>
-                    <td> <img  class="anhuser" src="../view/img/<?= $user['img'] ?>" alt=""></td>
+                    <td> <img  class="anhuser" src="../view/public/img/team/<?= $user['img'] ?>" alt=""></td>
                     <td><?=$user['username']?></td>
                     <td><?= $user['password']?></td>
                     <td><?= $user['tel']?></td>

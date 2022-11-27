@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../view/public/css/admin.css">
     <!-- <link rel="stylesheet" href="../view/public/icon/fontawesome-free-6.2.0/css/all.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <?php
     function format_currency($n = 0)
@@ -32,7 +32,7 @@
 <body>
     <div class="container">
         <div class="box">
-            <img src="../view/img/logo.png" alt="">
+            <img class="bg-white p-5 mb-5" src="../view/public/img/logo.png" alt="">
             <ul>
                 <li> <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ quản trị</a></li>
                 <li><a href="index.php?act=showdm"><i class="fa-solid fa-bars"></i> Danh mục</a></li>
@@ -42,20 +42,23 @@
                 <li><a href="index.php?act=showdonhang"><i class="fa-solid fa-file-invoice-dollar"></i>Đơn hàng</a></li>
             </ul>
         </div>
-        <header>
-
+        <header class="">
             <div class="phai">
-
-                <?php if (isset($_SESSION['user'])) {
+                <?php 
+                require_once '../model/taikhoan.php';
+                if (isset($_SESSION['user'])) {
                     extract($_SESSION['user']);
                 ?>
-
                     <ul class="user">
                         <li class="an"><a class="tenuser" href="#">
-                                <div class="chao">Chào :</div> <img  src=" <?= $img ?>" alt="">
-                                <div class="chao"> <?= $hovaten ?> </div> <i id="muiten" class="fa-solid fa-chevron-down"></i>
+                            <div class="user1">
+                                <div class="chao">Chào :</div> <img  src="../view/public/img/team/<?= $user['img'] ?>" alt="">
+                                <div class="chao"> <?= $hovaten ?> </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
                             </a>
-
                             <ul>
                                 <li><a href="../index.php?act=vao_trang_taikhoan">Thông tin tài khoản</a></li>
                                 <li><a href="../index.php?act=vao_trang_doimatkhau">Đổi mật khẩu</a></li>
@@ -65,13 +68,10 @@
                             </ul>
                         </li>
                     </ul>
-
                 <?php
                 } else {
                 ?>
-
                     <button><a href="index.php?act=vao_trang_dangnhap">Tài khoản</a></button>
                 <?php } ?>
             </div>
-
         </header>

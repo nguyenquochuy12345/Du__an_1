@@ -13,7 +13,7 @@ function add($cate_name)
         $check_cate_name = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($check_cate_name) {
             $error['cate_name'] = "Tên danh mục đã tồn tại";
-        }    
+        }
     }
     $_SESSION['cate_error'] = $error;
        
@@ -95,4 +95,5 @@ function thongke_dm()
     $stmt->execute();
     $cates = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $cates;
+    
 }

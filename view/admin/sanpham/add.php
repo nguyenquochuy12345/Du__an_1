@@ -1,8 +1,6 @@
 <div class="nen">
     <div class="add">
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-           
-
             <table class="form">
             <h1>Thêm sản phẩm</h1>
                 <tr>
@@ -134,7 +132,7 @@
                         </select></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="them">Thêm</button></td>
+                    <td><button type="submit" name="them" >Thêm</button></td>
                 </tr>
             </table>
         </form>
