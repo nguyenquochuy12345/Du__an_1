@@ -58,28 +58,27 @@
                                 </div>
                                 <h3>Mercedes A-Class</h3>
                                 <div class="product-price">
-                                    <span>$49000.00</span>
-                                    <del>$65000.00</del>
+                                    <span><?php echo $product['price'] ?> VNĐ</span>
                                 </div>
                                 <div class="modal-product-meta ltn__product-details-menu-1 mb-30">
                                     <ul>
-                                        <li><strong>SKU:</strong> <span>12345</span></li>
-                                        <li><strong>Availability:</strong> <span>Many in stock</span></li>
+                                        <li><strong>Mã hàng:</strong> <span><?php echo $product['product_id'] ?> </span></li>
+                                        <li><strong>Số lượng:</strong> <span><?php echo $product['quantity'] ?> </span></li>
                                         <li>
-                                            <strong>Vendor:</strong>
+                                            <strong>Người bán:</strong>
                                             <span>
-                                                <a href="#">Rose</a>
+                                                <a href="#">Huy</a>
                                             </span>
                                         </li>
                                         <li>
-                                            <strong>Product Type:</strong>
+                                            <strong>Loại sản phẩm:</strong>
                                             <span>
-                                                <a href="#">New</a>
+                                                <a href="#">Mới</a>
                                             </span>
                                         </li>
                                         <li>
                                             <div class="ltn__color-widget clearfix">
-                                                <strong class="alignleft">Color</strong>
+                                                <strong class="alignleft">Màu sắc</strong>
                                                 <ul>
                                                     <li class="black"><a href="#"></a></li>
                                                     <li class="white"><a href="#"></a></li>
@@ -93,7 +92,7 @@
                                         </li>
                                         <li>
                                             <div class="ltn__tagcloud-widget ltn__size-widget clearfix">
-                                                <strong class="alignleft">Size</strong>
+                                                <strong class="alignleft">Kích thước</strong>
                                                 <ul>
                                                     <li><a href="#">S</a></li>
                                                     <li><a href="#">M</a></li>
@@ -104,7 +103,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <strong>Categories:</strong>
+                                            <strong>Thể loại:</strong>
                                             <span>
                                                 <a href="#">Parts</a>
                                                 <a href="#">Car</a>
@@ -114,36 +113,20 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="ltn__countdown ltn__countdown-2 mb-10" data-countdown="2021/01/01"></div>
+                                <div class="ltn__countdown ltn__countdown-2 mb-10" data-countdown="12000"></div>
                                 <hr>
-                                <div class="ltn__product-details-menu-2">
-
-                                    <ul>
-                                        <li>
-                                            <!-- <div class="cart-plus-minus">
-                                                    <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
-                                                </div> -->
-                                        </li>
-                                        <li>
-                                            <!-- <a href="#" class="theme-btn-1 btn btn-effect-1" title="Add to Cart" data-bs-toggle ="modal" data-bs-target="#add_to_cart_modal">
-                                                    <i class="fas fa-shopping-cart"></i>
-                                                    <span>ADD TO CART</span>
-                                                </a> -->
-                                        </li>
-                                    </ul>
-                                </div>
                                 <div class="ltn__product-details-menu-3">
                                     <ul>
                                         <li>
                                             <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
                                                 <i class="far fa-heart"></i>
-                                                <span>Add to Wishlist</span>
+                                                <span>Dang sách yêu thích</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="" title="Compare" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
                                                 <i class="fas fa-exchange-alt"></i>
-                                                <span>Compare</span>
+                                                <span>So sách</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -151,7 +134,7 @@
                                 <hr>
                                 <div class="ltn__social-media">
                                     <ul>
-                                        <li>Share:</li>
+                                        <li>Đăng:</li>
                                         <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
@@ -161,7 +144,7 @@
                                 </div>
                                 <hr>
                                 <div class="ltn__safe-checkout">
-                                    <h5>Guaranteed Safe Checkout</h5>
+                                    <h5>Thanh toán</h5>
                                     <img src="view/public/img/icons/payment-2.png" alt="Payment Image">
                                 </div>
                                 <hr>
@@ -210,9 +193,9 @@
                 <div class="ltn__shop-details-tab-inner">
                     <div class="ltn__shop-details-tab-menu">
                         <div class="nav">
-                            <a class="active show" data-bs-toggle="tab" href="#liton_tab_details_1_1">Description</a>
+                            <a class="active show" data-bs-toggle="tab" href="#liton_tab_details_1_1">Mô tả</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_2" class="">Reviews</a> -->
-                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Comments</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Bình luận</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_4" class="">Shipping Policy</a> -->
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_5" class="">Size Chart</a> -->
                         </div>
@@ -229,7 +212,7 @@
                             <div class="ltn__shop-details-tab-content-inner">
                                 <!-- comment-area -->
                                 <div class="ltn__comment-area mb-30">
-                                    <h4 class="title-2">Comments (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
+                                    <h4 class="title-2">Bình luận (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
                                     <div class="ltn__comment-inner">
                                         <ul>
                                             <?php foreach ($binhluan as $binhluan) : ?>
@@ -254,9 +237,9 @@
                                                                 <?php endif ?>
                                                                 <?php if (isset($_SESSION['user'])) : ?>
                                                                     <?php if ($binhluan['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
-                                                                        <div class="xoa">
+                                                                        <!-- <div class="xoa">
                                                                             <a href="index.php?act=delete_binhluan&id_binhluan=<?= $binhluan['binhluan_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
-                                                                        </div>
+                                                                        </div> -->
                                                                     <?php endif ?>
                                                                 <?php endif ?>
                                                             </div>
@@ -284,9 +267,9 @@
                                                                             <p><?= $rep['noidung'] ?>
                                                                                 <?php if (isset($_SESSION['user'])) : ?>
                                                                                     <?php if ($rep['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
-                                                                            <div class="xoa">
+                                                                            <!-- <div class="xoa">
                                                                                 <a href="index.php?act=delete_rep&rep_id=<?= $rep['rep_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
-                                                                            </div>
+                                                                            </div> -->
                                                                         <?php endif ?>
                                                                     <?php endif ?></p>
                                                                     <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a>
@@ -310,14 +293,14 @@
                                 <!-- comment-reply -->
                                 <div class="ltn__comment-reply-area ltn__form-box mb-60">
                                     <form action="index.php?act=guibinhluan&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" method="POST">
-                                        <h4 class="title-2">Leave a Reply</h4>
+                                        <h4 class="title-2">Để lại bình luận</h4>
                                         <div class="input-item input-item-textarea ltn__custom-icon">
-                                            <textarea type="text" name="noidungbl" placeholder="Type your comments...."></textarea>
+                                            <textarea type="text" name="noidungbl" placeholder="Nhận xét của bạn...."></textarea>
                                         </div>
 
 
                                         <div class="btn-wrapper">
-                                            <button name="gui" class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
+                                            <button name="gui" class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
                                             <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
                                                 <div class="thongbao"><?= $_SESSION['thongbaobinhluan'] ?></div>
 
@@ -343,8 +326,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title-area ltn__section-title-2">
-                    <h6 class="section-subtitle ltn__secondary-color">// cars</h6>
-                    <h1 class="section-title">Related Products<span>.</span></h1>
+                    <h6 class="section-subtitle ltn__secondary-color">// Xe Ôtô</h6>
+                    <h1 class="section-title">Sản phẩm liên quan .</h1>
                 </div>
             </div>
         </div>
@@ -356,7 +339,7 @@
                         <a href="product-details.html"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                         <div class="product-badge">
                             <ul>
-                                <li class="soldout-badge">New</li>
+                                <li class="soldout-badge">Mới</li>
                             </ul>
                         </div>
                         <div class="product-hover-action">

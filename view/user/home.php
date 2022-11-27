@@ -1,5 +1,5 @@
 <?php include 'view/user/banner.php';?>
-<div class="ltn__product-area ltn__product-gutter mb-120">
+<div class="ltn__product-area ltn__product-gutter mb-120 mt-20">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 order-lg-2">
@@ -15,7 +15,7 @@
                         </li>
                         <li>
                             <div class="showing-product-number text-right">
-                                <span>Showing 1–12 of 18 results</span>
+                                <span>XE MỚI</span>
                             </div>
                         </li>
                         <li>

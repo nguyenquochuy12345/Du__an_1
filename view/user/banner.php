@@ -13,8 +13,8 @@
                                                     <i class="fa fa-play"></i>
                                                 </a>
                                             </div>
-                                            <h1 class="slide-title animated ">Providing A <br> Professional & <br> Relaible Service</h1>
-                                            <h6 class="slide-sub-title animated"><span>//</span> TALENTED ENGINEER & MECHANICS</h6>
+                                            <h1 class="slide-title animated ">Cung cấp dịch vụ<br> chuyên nghiệp & <br> đáng tin cậy</h1>
+                                            <h6 class="slide-sub-title animated"><span>// KĨ SƯ TÀI NĂNG & CƠ KHÍ</span></h6>
                                         </div>
                                     </div>
                                     <div class="slide-item-img">
@@ -27,9 +27,8 @@
                                                     <ul>
                                                         <li>
                                                             <div class="ltn__product-pointer-inner">
-                                                                <h5><a href="shop.html">Brand new car for your family</a></h5>
-                                                                <p>Lorem ipsum dolor sit amet, cons
-                                                                    ectetur adipisicing elit, sed</p>
+                                                                <h5><a href="shop.html">Xe hoàn toàn mới cho gia đình bạn</a></h5>
+                                                                <p>Bản thân công ty rất quan trọng, nhưng nó sẽ là kết quả của quá trình thành lập</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -45,7 +44,7 @@
                                                         <li>
                                                             <div class="ltn__product-pointer-inner">
                                                                 <h5><a href="shop.html">Goodyear Assurance Finesse 235/55R18 100H BSW</a></h5>
-                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum?</p>
+                                                                <p>Bản thân công ty là một công ty rất thành công. Phải chăng anh đang chaỵ chốn nỗi đau?</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -60,9 +59,8 @@
                                                     <ul>
                                                         <li>
                                                             <div class="ltn__product-pointer-inner">
-                                                                <h5><a href="shop.html">Bullet Proof Glasses</a></h5>
-                                                                <p>Lorem ipsum dolor sit amet, cons
-                                                                    ectetur adipisicing elit, sed</p>
+                                                                <h5><a href="shop.html">Kính chống đạn</a></h5>
+                                                                <p>Bản thân công ty rất quan trọng, nhưng nó sẽ là kết quả của quá trình thành lập</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -84,14 +82,14 @@
                                 <div class="col-lg-12 align-self-center">
                                     <div class="slide-item-info">
                                         <div class="slide-item-info-inner ltn__slide-animation">
-                                            <h6 class="slide-sub-title ltn__secondary-color animated">// TALENTED ENGINEER & MECHANICS</h6>
-                                            <h1 class="slide-title animated ">Professional Car <br> Service Provide</h1>
+                                            <h6 class="slide-sub-title ltn__secondary-color animated">// KĨ SƯ TÀI NĂNG & CƠ KHÍ</h6>
+                                            <h1 class="slide-title animated ">Cung cấp dịch vụ xe hơi<br> chuyên nghiệp</h1>
                                             <div class="slide-brief animated">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                <p>Chăm sóc bệnh nhân, theo dõi sự trưởng thành của bệnh nhân là rất quan trọng, nhưng nó được thực hiện giống như công việc.</p>
                                             </div>
                                             <div class="btn-wrapper animated">
-                                                <a href="service.html" class="theme-btn-1 btn btn-effect-1">OUR SERVICES</a>
-                                                <a href="about.html" class="btn btn-transparent btn-effect-3">LEARN MORE</a>
+                                                <a href="service.html" class="theme-btn-1 btn btn-effect-1">DỊCH VỤ CỦA CHÚNG TÔI</a>
+                                                <a href="about.html" class="btn btn-transparent btn-effect-3">TÌM HIỂU THÊM</a>
                                             </div>
                                         </div>
                                     </div>
@@ -105,9 +103,8 @@
                                                     <ul>
                                                         <li>
                                                             <div class="ltn__product-pointer-inner">
-                                                                <h5><a href="shop.html">Brand new car for your family</a></h5>
-                                                                <p>Lorem ipsum dolor sit amet, cons
-                                                                    ectetur adipisicing elit, sed</p>
+                                                                <h5><a href="shop.html">Xe hoàn toàn mới cho gia đình bạny</a></h5>
+                                                                <p>Bản thân công ty rất quan trọng, nhưng nó sẽ là kết quả của quá trình thành lập</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -123,7 +120,7 @@
                                                         <li>
                                                             <div class="ltn__product-pointer-inner">
                                                                 <h5><a href="shop.html">Goodyear Assurance Finesse 235/55R18 100H BSW</a></h5>
-                                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum?</p>
+                                                                <p>Bản thân công ty là một công ty rất thành công. Phải chăng anh đang chaỵ chốn nỗi đau?</p>
                                                             </div>
                                                         </li>
                                                     </ul>
@@ -138,9 +135,8 @@
                                                     <ul>
                                                         <li>
                                                             <div class="ltn__product-pointer-inner">
-                                                                <h5><a href="shop.html">Bullet Proof Glasses</a></h5>
-                                                                <p>Lorem ipsum dolor sit amet, cons
-                                                                    ectetur adipisicing elit, sed</p>
+                                                                <h5><a href="shop.html">Kính chống đạn</a></h5>
+                                                                <p>Bản thân công ty rất quan trọng, nhưng nó sẽ là kết quả của quá trình thành lập</p>
                                                             </div>
                                                         </li>
                                                     </ul>
