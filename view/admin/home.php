@@ -1,41 +1,5 @@
 <div class="nen">
     
-    <div class="listchung">
-        <h1>Doanh thu </h1>
-        <table class="list" >
-           <thead>
-           <tr>
-                <th>Ngày</th>
-                <th>Số đơn hàng</th>
-                <th>Doanh thu</th>
-                <th>Chức năng</th>
-            </tr>
-           </thead>
-           <tbody>
-            <?php $tong= 0?>
-           <?php foreach ($doanhthu as $doanhthu_value) : ?>
-                <tr>
-                    <td><?= $doanhthu_value['ngay'] ?></td>
-                    <td><?=$doanhthu_value['sodonhang']?></td>
-                    <td><?=format_currency($doanhthu_value['tongdoanhthu']) . " VNĐ"  ?></td>
-                    <td><button id="sua"><a href="index.php?act=detail_doanhthu&ngay=<?=$doanhthu_value['ngay']?>">Chi tiêt</a></button></td>
-                    <?php $tong +=  $doanhthu_value['tongdoanhthu']?>
-                </tr>
-            <?php endforeach ?>
-                <tr>
-                    <th  >Tổng</th>
-                    <th></th>
-                    <th><?=format_currency($tong). " VNĐ"?></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td><button id="sua"><a href="index.php?act=bieudo_doanhthu">Biểu đồ</a></button></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-           </tbody>
-        </table>
-    </div>
 </div>
 <div class="nen3">
     <div class="listchung">

@@ -5,6 +5,11 @@ if (isset($_SESSION['user'])) {
 ?>
 <!-- LOGIN AREA START -->
 <div class="ltn__login-area pb-65" style="margin-top: 50px;">
+    <?php if (!isset($_SESSION['user'])) : ?>
+        <script>
+            alert('Bạn cần đăng nhập đã !');
+        </script>
+    <?php endif ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

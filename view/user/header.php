@@ -144,7 +144,7 @@
                                                 </ul>
                                             </li>
 
-                                            <li class=""><a href="tin-tuc">Tin tức</a>
+                                            <li class=""><a href="index.php?act=tintuc">Tin tức</a>
                                             </li>
                                             </li>
                                             <li><a href="index.php?act=contact">Liên hệ</a></li>
@@ -210,7 +210,7 @@
                             </div>
                             <!-- mini-cart -->
                             <div class="mini-cart-icon">
-                                <a href="index.php?act=viewcart" class="">
+                                <a href="index.php?act=vao_datlich" class="">
                                     <i class="icon-shopping-cart"></i>
                                     <!-- <sup>2</sup> -->
                                 </a>

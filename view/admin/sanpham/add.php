@@ -112,7 +112,7 @@
                     <td>Quantity</td>
                 </tr>
                 <tr>
-                    <td><input type="number" name="quantity" ></td>
+                    <td><input type="number" min="1" name="quantity" ></td>
                 </tr>
                 <tr>
                     <td>
@@ -138,6 +138,6 @@
                 </tr>
             </table>
         </form>
-    </div>
+    </div>  
     <?php unset($_SESSION['error_product']) ?>
 </div>

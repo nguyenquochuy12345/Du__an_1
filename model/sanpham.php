@@ -128,10 +128,10 @@ function addsp($product_name, $price, $description, $quantity, $file, $file2, $f
         $stmt = $conn->prepare($sql);
         //Thực thi
         $stmt->execute();
-        move_uploaded_file($file['tmp_name'], '../view/img/' . $img);
-        move_uploaded_file($file2['tmp_name'], '../view/img/' . $img2);
-        move_uploaded_file($file3['tmp_name'], '../view/img/' . $img3);
-        move_uploaded_file($file4['tmp_name'], '../view/img/' . $img4);
+        move_uploaded_file($file['tmp_name'], '../view/public/img/car/' . $img);
+        move_uploaded_file($file2['tmp_name'], '../view/public/img/car/' . $img2);
+        move_uploaded_file($file3['tmp_name'], '../view/public/img/car/' . $img3);
+        move_uploaded_file($file4['tmp_name'], '../view/public/img/car/' . $img4);
     }
 }
 function deletesp($id)

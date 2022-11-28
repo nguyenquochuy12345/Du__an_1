@@ -58,64 +58,34 @@
                                 </div>
                                 <h3>Mercedes A-Class</h3>
                                 <div class="product-price">
-                                    <span>$49000.00</span>
-                                    <del>$65000.00</del>
+                                    <span>$<?php echo format_currency($product['price']) ?></span>
                                 </div>
                                 <div class="modal-product-meta ltn__product-details-menu-1 mb-30">
                                     <ul>
-                                        <li><strong>SKU:</strong> <span>12345</span></li>
-                                        <li><strong>Availability:</strong> <span>Many in stock</span></li>
-                                        <li>
-                                            <strong>Vendor:</strong>
+                                        <li><strong>Mã sản phẩm:</strong> <span><?php echo $product['product_id'] ?></span></li>
+                                            <strong>Người tư vấn:</strong>
                                             <span>
-                                                <a href="#">Rose</a>
+                                                <a href="#">Nhân viên</a>
                                             </span>
                                         </li>
                                         <li>
                                             <strong>Product Type:</strong>
                                             <span>
-                                                <a href="#">New</a>
+                                                <a href="#">Mới</a>
                                             </span>
                                         </li>
                                         <li>
                                             <div class="ltn__color-widget clearfix">
-                                                <strong class="alignleft">Color</strong>
+                                                <strong class="alignleft">Màu</strong>
                                                 <ul>
-                                                    <li class="black"><a href="#"></a></li>
-                                                    <li class="white"><a href="#"></a></li>
-                                                    <li class="red"><a href="#"></a></li>
-                                                    <li class="yellow"><a href="#"></a></li>
-                                                    <li class="green"><a href="#"></a></li>
-                                                    <li class="blue"><a href="#"></a></li>
-                                                    <li class="navy"><a href="#"></a></li>
+                                                    <li class="<?php echo $product['color'] ?>"><a href="#"></a></li>
                                                 </ul>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="ltn__tagcloud-widget ltn__size-widget clearfix">
-                                                <strong class="alignleft">Size</strong>
-                                                <ul>
-                                                    <li><a href="#">S</a></li>
-                                                    <li><a href="#">M</a></li>
-                                                    <li><a href="#">L</a></li>
-                                                    <li><a href="#">XL</a></li>
-                                                    <li><a href="#">XXL</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <strong>Categories:</strong>
-                                            <span>
-                                                <a href="#">Parts</a>
-                                                <a href="#">Car</a>
-                                                <a href="#">Seat</a>
-                                                <a href="#">Cover</a>
-                                            </span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="ltn__countdown ltn__countdown-2 mb-10" data-countdown="2021/01/01"></div>
-                                <hr>
+                                <!-- <div class="ltn__countdown ltn__countdown-2 mb-10" data-countdown="2021/01/01"></div>
+                                <hr> -->
                                 <div class="ltn__product-details-menu-2">
 
                                     <ul>
@@ -170,8 +140,10 @@
                                         <form action="index.php?act=vao_trang_xacnhan_muahang" method="post">
 
                                         <?php } else { ?>
-                                            <form action="index.php?act=viewcart" method="post">
-
+                                            <!-- <script src="">
+                                                alert('Bạn cần đăng nhập thì mới có thể đặt lịch');
+                                            </script> -->
+                                            <form action="index.php?act=vao_trang_dangnhap" method="post">
                                             <?php } ?>
                                             <ul>
                                                 <li>
@@ -247,8 +219,8 @@
                                                                 <?php if (isset($_SESSION['user'])) : ?>
                                                                     <?php if ($binhluan['user_id'] != $_SESSION['user']['user_id']) : ?>
                                                                         <div class=" sangdi">
-                                                                            
-                                                                            <button class="ltn__comment-reply-btn" type="button" >Trả lời</button>
+
+                                                                            <button class="ltn__comment-reply-btn" type="button">Trả lời</button>
                                                                         </div>
                                                                     <?php endif ?>
                                                                 <?php endif ?>
@@ -309,26 +281,28 @@
                                 </div>
                                 <!-- comment-reply -->
                                 <div class="ltn__comment-reply-area ltn__form-box mb-60">
-                                    <form action="index.php?act=guibinhluan&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" method="POST">
-                                        <h4 class="title-2">Leave a Reply</h4>
-                                        <div class="input-item input-item-textarea ltn__custom-icon">
-                                            <textarea type="text" name="noidungbl" placeholder="Type your comments...."></textarea>
-                                        </div>
+                                    <?php if (isset($_SESSION['user'])) { ?>
+                                        <form action="index.php?act=guibinhluan&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" method="post">
+                                        <?php } else { ?>
+                                            <form action="index.php?act=vao_trang_dangnhap" method="post">
+                                            <?php } ?>
+                                            <h4 class="title-2">Leave a Reply</h4>
+                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                <textarea type="text" name="noidungbl" placeholder="Type your comments...."></textarea>
+                                            </div>
 
 
-                                        <div class="btn-wrapper">
-                                            <button name="gui" class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
-                                            <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
-                                                <div class="thongbao"><?= $_SESSION['thongbaobinhluan'] ?></div>
+                                            <div class="btn-wrapper">
+                                                <button name="gui" class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
+                                                <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
+                                                    <div class="thongbao"><?= $_SESSION['thongbaobinhluan'] ?></div>
 
-                                            <?php endif ?>
-                                        </div>
-                                        
-                                    </form>
+                                                <?php endif ?>
+                                            </div>
+                                            </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

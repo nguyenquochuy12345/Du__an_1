@@ -19,7 +19,7 @@
                     <th>Ca</th>
                     <th>Cơ sở</th>
                     <th>Trạng thái</th>
-                    <th>Thao tác</th>
+                    <!-- <th>Thao tác</th> -->
                 </tr>
                 <?php foreach ( $my_orders  as $my_order) : ?>
                    <tr id="hang">
@@ -34,7 +34,7 @@
 
                     <td><?=$my_order['status']?>        
                         </td>
-                    <td><button class="chitiet_order"><a href="index.php?act=chitiet_order&order_id=<?=$my_order['order_id']?>">Chi tiết</a></button></td>
+                    <!-- <td><button class="chitiet_order"><a href="index.php?act=chitiet_order&order_id=<?=$my_order['order_id']?>">Chi tiết</a></button></td> -->
                    </tr>
                 <?php endforeach ?>
             </table>

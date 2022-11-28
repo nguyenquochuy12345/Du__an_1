@@ -27,10 +27,10 @@
                 $cate_bieude = thongke_dm();
                 include '../view/admin/danhmuc/bieudo.php';
                 break;
-            case 'bieudo_doanhthu':
-                $bieude_doanhthu = bieude_doanhthu();
-                include "../view/admin/doanhthu/bieudo_doanhthu.php";
-                break;
+            // case 'bieudo_doanhthu':
+            //     $bieude_doanhthu = bieude_doanhthu();
+            //     include "../view/admin/doanhthu/bieudo_doanhthu.php";
+            //     break;
             case 'adddm':
                 if (isset($_POST['them'])) {
                     $cate_name = $_POST['cate_name'];
@@ -293,25 +293,17 @@
                     $order_id = $_POST['order_id'];
                     $status = $_POST['trangtdh'];
                     $ngaydathang = $_POST['ngaydathang'];
-                    $tong = $_POST['tong'];
-                    capnhat_donhang($status, $order_id, $tong,$ngaydathang);
+                    // $tong = $_POST['tong'];
+                    capnhat_donhang($status, $order_id,$ngaydathang);
                     $show_order = showdonhang();
                     header("location: index.php?act=showdonhang");
                 }
-                break;
-            case 'detail_doanhthu':
-                if (isset($_GET['ngay'])) {
-                    $ngay =  $_GET['ngay'];
-                    $detail_doanhthu = show_doanhthu_ngay($ngay);
-                    include '../view/admin/doanhthu/detail.doanhthu.php';
-                }
-
                 break;
             default:
                 $khachvip = top3khachhang_muanhieu();
                 $sanpham_top1_view=sanpham_xemnhieunhat();
                 $cate = thongke_dm();
-                $doanhthu = show_doanhthu();
+                // $doanhthu = show_doanhthu();
                 $sp_binhluannhieu = sanphamdcbinhluannhieu();
                 require_once "../view/admin/home.php";
                 break;
@@ -321,7 +313,7 @@
         $khachvip = top3khachhang_muanhieu();
         $sanpham_top1_view=sanpham_xemnhieunhat();
         $cate = thongke_dm();
-        $doanhthu = show_doanhthu();
+        // $doanhthu = show_doanhthu();
         require_once "../view/admin/home.php";
     }
     require_once "../view/admin/footer.php";

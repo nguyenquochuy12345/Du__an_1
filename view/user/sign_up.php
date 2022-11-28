@@ -31,7 +31,7 @@ if (isset($_SESSION['user'])) {
                         <td colspan="2" ><input name="username" type="text"  ></td>
                     </tr>
                     <tr>
-                        <td class="thongbao" ><?php if(isset($_SESSION['errors']['username'])):?>
+                        <td class="thongbao" style="color: red; " ><?php if(isset($_SESSION['errors']['username'])):?>
                                 <?=$_SESSION['errors']['username']?>
                             <?php endif?>
                         </td>
@@ -44,7 +44,7 @@ if (isset($_SESSION['user'])) {
                         <td colspan="2" ><input name="password"  type="password"></td>
                     </tr>
                     <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['password'])):?>
+                        <td class="thongbao" style="color: red; "><?php if(isset($_SESSION['errors']['password'])):?>
                                 <?=$_SESSION['errors']['password']?>
                             <?php endif?>
                         </td>
@@ -57,20 +57,8 @@ if (isset($_SESSION['user'])) {
                         <td colspan="2" ><input name="repassword"  type="password"></td>
                     </tr>
                     <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['repassword'])):?>
+                        <td class="thongbao" style="color: red; "><?php if(isset($_SESSION['errors']['repassword'])):?>
                                 <?=$_SESSION['errors']['repassword']?>
-                            <?php endif?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="ten_input">Ảnh</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" id="signupimg"><input  type="file" name="img"></td>
-                    </tr>
-                    <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['img'])):?>
-                                <?=$_SESSION['errors']['img']?>
                             <?php endif?>
                         </td>
                     </tr>
@@ -81,7 +69,7 @@ if (isset($_SESSION['user'])) {
                         <td colspan="2" ><input name="hovaten" type="text"></td>
                     </tr>
                     <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['hovaten'])):?>
+                        <td class="thongbao" style="color: red; "><?php if(isset($_SESSION['errors']['hovaten'])):?>
                                 <?=$_SESSION['errors']['hovaten']?>
                             <?php endif?>
                         </td>
@@ -93,20 +81,8 @@ if (isset($_SESSION['user'])) {
                         <td colspan="2" ><input name="email" type="text"></td>
                     </tr>
                     <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['email'])):?>
+                        <td class="thongbao" style="color: red; "><?php if(isset($_SESSION['errors']['email'])):?>
                                 <?=$_SESSION['errors']['email']?>
-                            <?php endif?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="ten_input">Địa chỉ</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" ><input name="address" type="text"></td>
-                    </tr>
-                    <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['address'])):?>
-                                <?=$_SESSION['errors']['address']?>
                             <?php endif?>
                         </td>
                     </tr>
@@ -117,13 +93,13 @@ if (isset($_SESSION['user'])) {
                         <td colspan="2" ><input name="sdt" type="text"></td>
                     </tr>
                     <tr>
-                        <td class="thongbao"><?php if(isset($_SESSION['errors']['sdt'])):?>
+                        <td class="thongbao" style="color: red; "><?php if(isset($_SESSION['errors']['sdt'])):?>
                                 <?=$_SESSION['errors']['sdt']?>
                             <?php endif?>
                         </td>
                     </tr>
                     <tr>
-                        <td class="thongbao">
+                        <td class="thongbao" style="color: red; ">
                         <?php if(isset($_SESSION['thongbao'])):?>
                            <?=$_SESSION['thongbao']?>
                         <?php endif?> 

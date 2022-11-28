@@ -57,7 +57,7 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $ngayxemxe, $caxemxe
         //         $sql = "INSERT INTO order_detail(order_id,product_id,quantity) VALUES('$last_id','$product_id','$quantity')";
         //         $stmt = $conn->prepare($sql);
         //         $stmt->execute();
- 
+
         //     }
         // }
     }
@@ -76,7 +76,7 @@ function showdonhang_theo_user($user_id)
 function show_chitiet_order($order_id)
 {
     include './ketnoi/ketnoi.php';
-    $sql = " SELECT order_id, order_detail.quantity, products.product_name,products.price,products.img  FROM order_detail JOIN products ON products.product_id = order_detail.product_id WHERE order_id = '$order_id' order by products.price desc";
+    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM order_detail JOIN products ON products.product_id = order_detail.product_id WHERE order_id = '$order_id' order by products.price desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -118,29 +118,28 @@ function showdonhang_theo_khachhang($user_id)
     $show_order_theo_khachhang = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $show_order_theo_khachhang;
 }
-function capnhat_donhang($status, $order_id, $tong, $ngaydathang)
+function capnhat_donhang($status, $order_id, $ngaydathang)
 {
     include '../ketnoi/ketnoi.php';
     if ($status == 3) {
         $sql = "UPDATE  tbl_order SET status_id = 3 ,ngayhoanthanhdonhang = CURRENT_DATE, ngaydathang = '$ngaydathang'   WHERE order_id = '$order_id'  ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-        if ($sql) {
-            $sql = "SELECT ngay FROM   doanhthu WHERE ngay = CURRENT_DATE ";
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $doanhthu = $stmt->fetch(PDO::FETCH_ASSOC);
+        // if ($sql) {
+        //     $sql = "SELECT ngay FROM   doanhthu WHERE ngay = CURRENT_DATE ";
+        //     $stmt = $conn->prepare($sql);
+        //     $stmt->execute();
+        //     $doanhthu = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if (!$doanhthu) {
-                $sql = "INSERT INTO doanhthu VALUES (CURRENT_DATE,'$tong')";
-                $stmt = $conn->prepare($sql);
-                $stmt->execute();
-            } else {
-                $sql = "UPDATE doanhthu SET tongdoanhthu = tongdoanhthu+$tong WHERE ngay = CURRENT_DATE";
-                $stmt = $conn->prepare($sql);
-                $stmt->execute();
-            }
-        }
+        // if (!$doanhthu) {
+        //     $sql = "INSERT INTO doanhthu VALUES (CURRENT_DATE,'$tong')";
+        //     $stmt = $conn->prepare($sql);
+        //     $stmt->execute();
+        // } else {
+        //     $sql = "UPDATE doanhthu SET tongdoanhthu = tongdoanhthu+$tong WHERE ngay = CURRENT_DATE";
+        //     $stmt = $conn->prepare($sql);
+        //     $stmt->execute();
+        // }
     } else {
         $sql = "UPDATE  tbl_order SET status_id = '$status',ngaydathang = '$ngaydathang' WHERE order_id = '$order_id'  ";
         $stmt = $conn->prepare($sql);

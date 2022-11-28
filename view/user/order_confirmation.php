@@ -9,7 +9,7 @@
 <?php if (isset($_SESSION['dangkythanhcong'])) { ?>
     <div class="cart_error">
         <p>Cảm ơn quý khách đã đặt lịch bên Ga-ra! quý khách có thể click nút bên dưới để xem thông tin đặt lịch của bạn</p>
-        <button type="button"><a href="index.php?act=vao_donhang">Lịch đặt của tôi</a></button>
+        <button type="button"><a href="index.php?act=vao_datlich">Lịch đặt của tôi</a></button>
     </div>
 <?php } else { ?>
     <div class="ltn__appointment-area pb-120">
@@ -129,16 +129,16 @@
                                                     <option value="Trịnh Văn Bô">Địa chỉ</option>
                                                     <option value="Trịnh Văn Bô">Trịnh Văn Bô</option>
                                                     <option value="74 Đường cầu Diễn">74 Đường cầu Diễn</option>
-                                                    <option value="keangNam Mễ Trì">keangNam Mễ Trì</option>
+                                                    <option value="Hoàng Quốc Việt - Cầu Giấy">Hoàng Quốc Việt - Cầu Giấy</option>
 
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="alert alert-warning" role="alert">
+                                <div class="alert alert-warning" role="alert">
                                 Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
-                            </div> -->
+                            </div>
                                 <div class="btn-wrapper text-center mt-0">
                                     <button class="btn theme-btn-1 btn-effect-1 text-uppercase" name="btn_muahang" type="submit">Đặt lịch ngay bây giờ</button>
                                 </div>

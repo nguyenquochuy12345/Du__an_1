@@ -7,21 +7,21 @@
         $account = $stmt->fetch(PDO::FETCH_ASSOC);
         return $account;
     }
-    function dangky($username,$password,$repassword,$hovaten,$email,$address,$sdt,$file){
+    function dangky($username,$password,$repassword,$hovaten,$email,$sdt){
         include './ketnoi/ketnoi.php';
         $errors = [];
-        if ($file['size'] > 0) {
-            $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-            $ext = strtolower($ext);
-            if ($ext != "png" && $ext != "jpeg" && $ext != "jpg" && $ext != "gif") {
-                $errors['img'] = "Không đúng định dạnh ảnh";
-            } else {
-                $img = $file['name'];
-            }
-        }
-        else{
-            $errors['img'] = "Ảnh không được để trống";
-        }
+        // if ($file['size'] > 0) {
+        //     $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+        //     $ext = strtolower($ext);
+        //     if ($ext != "png" && $ext != "jpeg" && $ext != "jpg" && $ext != "gif") {
+        //         $errors['img'] = "Không đúng định dạnh ảnh";
+        //     } else {
+        //         $img = $file['name'];
+        //     }
+        // }
+        // else{
+        //     $errors['img'] = "Ảnh không được để trống";
+        // }
         if($username== ""){
             $errors['username'] = "Bạn chưa nhập username";
         }  
@@ -77,9 +77,9 @@
         if($hovaten == ""){
             $errors['hovaten'] = "Họ và tên không được để trống";
         }
-        if($address == ""){
-            $errors['address'] = "Địa chỉ không được để trống";
-        }
+        // if($address == ""){
+        //     $errors['address'] = "Địa chỉ không được để trống";
+        // }
         if($sdt == ""){
             $errors['sdt'] = "Số điện thoại không được để trống";
         }
@@ -98,7 +98,7 @@
         }
         $_SESSION['errors'] =  $errors;
        if(! $errors ){
-        $sql = "INSERT INTO taikhoan(username,password,hovaten,email,address,tel,img,ngaydangky) VALUES ('$username','$password','$hovaten','$email','$address','$sdt','$img',CURRENT_DATE) ";
+        $sql = "INSERT INTO taikhoan(username,password,hovaten,email,tel,vaitro_id) VALUES ('$username','$password','$hovaten','$email','$sdt',1) ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         move_uploaded_file($file['tmp_name'], './view/img/' . $img);
@@ -137,7 +137,7 @@
     }
     function show_user(){
         include '../ketnoi/ketnoi.php';
-        $sql = "SELECT user_id,password,email,hovaten,tel,img,address, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id  ";
+        $sql = "SELECT user_id,password,email,hovaten,tel, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id  ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);

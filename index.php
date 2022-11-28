@@ -14,9 +14,7 @@ if (!isset($_SESSION['cart'])) {
 if (isset($_GET['act'])) {
   $act = $_GET['act'];
   switch ($act) {
-    // Ket noi vs controller 
-
-    
+      // Ket noi vs controller 
 
     case 'guibinhluan':
       unset($_SESSION['thongbaobinhluan']);
@@ -62,14 +60,15 @@ if (isset($_GET['act'])) {
       }
 
       break;
-
-    
     case 'gioithieu':
       include './view/user/gioithieu.php';
       break;
 
     case 'contact':
       include './view/user/contact/conten.php';
+      break;
+    case 'tintuc':
+      include './view/user/blog/conten.php';
       break;
 
     case 'sanpham':
@@ -161,7 +160,7 @@ if (isset($_GET['act'])) {
         }
       }
       break;
-      
+
     case 'dangkytk':
 
       if (isset($_POST['dangky'])) {
@@ -171,9 +170,7 @@ if (isset($_GET['act'])) {
         $hovaten = $_POST['hovaten'];
         $email = $_POST['email'];
         $sdt = $_POST['sdt'];
-        $address = $_POST['address'];
-        $file = $_FILES['img'];
-        dangky($username, $password, $repassword, $hovaten, $email, $address, $sdt, $file);
+        dangky($username, $password, $repassword, $hovaten, $email, $sdt);
         if (!isset($_SESSION['errors']['img']) && !isset($_SESSION['errors']['username']) && !isset($_SESSION['errors']['password']) && !isset($_SESSION['errors']['repassword']) && !isset($_SESSION['errors']['hovaten']) && !isset($_SESSION['errors']['email']) && !isset($_SESSION['errors']['address']) && !isset($_SESSION['errors']['sdt'])) {
           $_SESSION['dangkythanhcong'] = "Đăng ký thành công";
           header("location: index.php?act=vao_trang_dangnhap");
@@ -319,16 +316,19 @@ if (isset($_GET['act'])) {
         dathang($id_user, $hovaten, $tel, $email, $yeucau, $ngayxemxe, $caxemxe, $cosoxemxe);
         if (!isset($_SESSION['errors_muahhang']['hovaten']) && !isset($_SESSION['errors_muahhang']['email'])  && !isset($_SESSION['errors_muahhang']['tel'])) {
           $_SESSION['dangkythanhcong'] = "Đăng ký thành công";
-          header("location: index.php?act=vao_trang_xacnhan_muahang");
+          header("location: index.php?act=vao_trang_xacnhan_datlich");
         } else {
-          header("location: index.php?act=vao_trang_xacnhan_muahang");
+          header("location: index.php?act=vao_trang_xacnhan_datlich");
         }
       }
       break;
     case 'vao_trang_xacnhan_muahang';
       include './view/user/order_confirmation.php';
       break;
-    case 'vao_donhang':
+    case 'vao_trang_xacnhan_datlich';
+      include './view/user/order_confirmation.php';
+      break;
+    case 'vao_datlich':
       if (isset($_SESSION['user'])) {
         $user_id = $_SESSION['user']['user_id'];
         $my_orders = showdonhang_theo_user($user_id);
@@ -339,6 +339,7 @@ if (isset($_GET['act'])) {
       if (isset($_GET['order_id'])) {
         $order_id = $_GET['order_id'];
         $order_details = show_chitiet_order($order_id);
+        // echo $order_id;
       }
       include './view/user/order_detail.php';
       break;
