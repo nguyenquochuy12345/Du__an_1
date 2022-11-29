@@ -8,21 +8,19 @@ if (isset($_SESSION['user'])) {
 
 
 <div class="ltn__login-area pb-110">
-    <div class="container">
+    <div class="container pt-[200px]">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title-area text-center">
-                    <h1 class="section-title">Register <br>Your Account</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
-                        Sit aliquid, Non distinctio vel iste.</p>
+                    <h1 class="section-title">Đăng ký</h1>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="account-login-inner">
-                <form action="index.php?act=dangkytk" method="post" enctype="multipart/form-data">
-                <table class="dangky" >
+            <div class="col-lg-6 offset-lg-3 w-[50%] mx-auto">
+                <div class="account-login-inner w-full">
+                <form class="w-full" action="index.php?act=dangkytk" method="post" enctype="multipart/form-data">
+                <table class="dangky w-full" >
                    
                     <tr>
                         <td class="ten_input">Tên đăng nhập</td>
@@ -109,18 +107,20 @@ if (isset($_SESSION['user'])) {
                     $_SESSION['errors']=[];
                     ?>
                     <tr>
-                       <td > <button type="submit" name="dangky" class="dk">Đăng ký</button></td>
-                       
+                       <td class="flex justify-around mr-[15%]">
+                            <button type="submit" name="dangky" class="dk theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29] mx-auto">Đăng ký</button>
+                            <p><a href="index.php?act=vao_trang_dangnhap"><button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]">Đăng nhập</button></a></p>
+                        </td>
                     </tr>
                 </table>
             </form>
-                    <div class="by-agree text-center">
-                        <p>By creating an account, you agree to our:</p>
-                        <p><a href="#">TERMS OF CONDITIONS &nbsp; &nbsp; | &nbsp; &nbsp; PRIVACY POLICY</a></p>
-                        <div class="go-to-btn mt-50">
-                            <a href="index.php?act=vao_trang_dangnhap">Đăng nhập</a>
-                        </div>
-                    </div>
+                <div class="go-to-btn mt-50">
+                    
+                </div>
+                <div class="by-agree text-center">
+                    <p>By creating an account, you agree to our:</p>
+                    <p><a href="#">TERMS OF CONDITIONS &nbsp; &nbsp; | &nbsp; &nbsp; PRIVACY POLICY</a></p>
+                </div>
                 </div>
             </div>
         </div>

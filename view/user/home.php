@@ -1,3 +1,4 @@
+<?php include 'view/user/banner.php';?>
 <div class="ltn__product-area ltn__product-gutter mb-120" style="margin-top:150px ;">
     <div class="container">
         <div class="row">
@@ -14,7 +15,7 @@
                         </li>
                         <li>
                             <div class="showing-product-number text-right">
-                                <span>Showing 1–12 of 18 results</span>
+                                <span>XEM MỚI</span>
                             </div>
                         </li>
                         <li>
@@ -35,7 +36,7 @@
                                                 <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
-                                                        <li class="soldout-badge">New</li>
+                                                        <li class="soldout-badge">Mới</li>
                                                     </ul>
                                                 </div>
                                                 <div class="product-hover-action">
@@ -57,8 +58,7 @@
                                             <div class="product-info">
                                                 <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
                                                 <div class="product-price">
-                                                    <span>$<?php echo format_currency($product['price'])  ?></span>
-                                                    <del>$<?php echo format_currency($product['price']) ?></del>
+                                                    <span><?php echo format_currency($product['price'])  ?> VNĐ</span>
                                                 </div>
                                                 <div class="product-info-brief">
                                                     <ul>
@@ -95,7 +95,7 @@
                                                 <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
-                                                        <li class="sale-badge">New</li>
+                                                        <li class="sale-badge">Mới</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -111,8 +111,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="product-price">
-                                                    <span>$<?php echo format_currency($product['price'])  ?></span>
-                                                    <del>$<?php echo format_currency($product['price']) ?></del>
+                                                    <span><?php echo format_currency($product['price'])  ?> VNĐ</span>
                                                 </div>
                                                 <div class="product-info-brief">
                                                     <ul>
@@ -182,8 +181,7 @@
                                             </div>
                                             <h6><a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><?php echo $top3sp['product_name'] ?></a></h6>
                                             <div class="product-price">
-                                                <span>$<?php echo format_currency($top3sp['price'])  ?></span>
-                                                <del>$<?php echo format_currency($top3sp['price']) ?></del>
+                                                <span><?php echo format_currency($top3sp['price'])  ?> VNĐ</span>
                                             </div>
                                         </div>
                                     </div>
@@ -197,7 +195,7 @@
                     <div class="widget ltn__search-widget">
                         <h4 class="ltn__widget-title ltn__widget-title-border">Tìm kiếm xe</h4>
                         <form action="index.php?act=timsp" method="POST">
-                            <input type="text" name="kyw" placeholder="Search your keyword...">
+                            <input type="text" name="kyw" placeholder="Tìm kiếm...">
                             <button type="submit" name="timsp"><i class="fas fa-search"></i></button>
                         </form>
                     </div>

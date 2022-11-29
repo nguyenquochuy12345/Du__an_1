@@ -1,4 +1,4 @@
-    <div class="wrapper">
+    <div class="wrapper pt-[200px]">
         <h1>Phản hồi cho chúng tôi</h1>
         <div id="error_message">
         </div>

@@ -4,7 +4,7 @@ if (isset($_SESSION['user'])) {
 }
 ?>
 <!-- LOGIN AREA START -->
-<div class="ltn__login-area pb-65" style="margin-top: 50px;">
+<div class="ltn__login-area pb-65 pt-[200px]">
     <?php if (!isset($_SESSION['user'])) : ?>
         <script>
             alert('Bạn cần đăng nhập đã !');
@@ -14,27 +14,24 @@ if (isset($_SESSION['user'])) {
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title-area text-center">
-                    <h1 class="section-title">Sign In <br>To Your Account</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
-                        Sit aliquid, Non distinctio vel iste.</p>
+                    <h1 class="section-title">Đăng nhập</h1>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="account-login-inner">
-                    <form action="index.php?act=dangnhap" method="post">
+        <div class="flex flex-col mx-auto w-[50%] text-center">
+            <div class="col-lg-6 w-full">
+                <div class="account-login-inner w-full">
+                    <form class="w-full" action="index.php?act=dangnhap" method="post">
 
-                        <table class="dangnhap">
-                            <h2 id="dangnhap">Đăng nhập</h2>
+                        <table class="dangnhap w-full">
                             <tr>
-                                <td class="ten_input">Tên đăng nhập</td>
+                                <td class="ten_input text-left">Tên đăng nhập</td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input name="username" type="text"></td>
                             </tr>
                             <tr>
-                                <td class="ten_input">Mật khẩu</td>
+                                <td class="ten_input text-left">Mật khẩu</td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input name="password" type="password"></td>
@@ -51,29 +48,16 @@ if (isset($_SESSION['user'])) {
                                 </td>
                             </tr>
                             <tr>
-                                <td> <button type="submit" name="dangnhap" class="dn">Đăng nhập</button></td>
-                                <td class="quen"><a href="index.php?act=vao_trang_quenmk">Quên mật khẩu ?</a></td>
+                                <td colspan="4"> <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="submit" name="dangnhap" class="dn">Đăng nhập</button></td>
                             </tr>
                             <tr>
-                                <td class="hoac" colspan="2">
-                                    <h4><span>Hoặc</span></h4>
-                                </td>
+                                
                             </tr>
                             <tr>
-                                <td class="dangky2" colspan="2">Bạn chưa có tài khoản? <a href="index.php?act=vao_trang_dangky">Đăng ký ngay</a></td>
+                                <td class="dangky2 flex item-center justify-center gap-x-1 mt-3" >Bạn chưa có tài khoản? <a href="index.php?act=vao_trang_dangky">Đăng ký ngay</a><span>Hoặc</span><a href="index.php?act=vao_trang_quenmk">Quên mật khẩu ?</a></td>
                             </tr>
                         </table>
                     </form>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="account-create text-center pt-50">
-                    <h4>DON'T HAVE AN ACCOUNT?</h4>
-                    <p>Add items to your wishlistget personalised recommendations <br>
-                        check out more quickly track your orders register</p>
-                    <div class="btn-wrapper">
-                        <a href="index.php?act=vao_trang_dangky" class="theme-btn-1 btn black-btn">Đăng ký tài khoản ngay</a>
-                    </div>
                 </div>
             </div>
         </div>

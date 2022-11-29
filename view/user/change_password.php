@@ -3,7 +3,7 @@ if (!isset($_SESSION['user'])) {
     header("location: index.php");
 }
 ?>
-<div class="content">
+<div class="content  pt-[200px]">
 
     <form action="index.php?act=doimatkhau" method="post">
 

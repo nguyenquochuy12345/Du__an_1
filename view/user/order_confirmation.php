@@ -13,7 +13,7 @@
     </div>
 <?php } else { ?>
     <div class="ltn__appointment-area pb-120">
-        <div class="container">
+        <div class="container  pt-[200px]">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ltn__appointment-inner">

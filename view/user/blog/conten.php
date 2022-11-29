@@ -1,4 +1,4 @@
-<div class="ltn__blog-area mb-120">
+<div class="ltn__blog-area mb-120 pt-[200px]">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">

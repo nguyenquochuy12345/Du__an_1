@@ -1,5 +1,5 @@
     <!-- ABOUT US AREA START -->
-    <div class="ltn__about-us-area pt-120-- pb-120">
+    <div class="ltn__about-us-area pt-120-- pb-120 pt-[200px]">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 align-self-center">

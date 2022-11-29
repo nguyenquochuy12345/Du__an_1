@@ -1,10 +1,10 @@
-<div class="ltn__contact-address-area mb-90">
+<div class="ltn__contact-address-area mb-90 pt-[200px]">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                         <div class="ltn__contact-address-icon">
-                            <img src="img/icons/10.png" alt="Icon Image">
+                            <img class="mx-auto" src="https://tunatheme.com/tf/html/autixir-preview/autixir/img/icons/10.png" alt="Icon Image">
                         </div>
                         <h3>Email Address</h3>
                         <p>info@webmail.com <br>
@@ -14,7 +14,7 @@
                 <div class="col-lg-4">
                     <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                         <div class="ltn__contact-address-icon">
-                            <img src="img/icons/11.png" alt="Icon Image">
+                            <img class="mx-auto" src="https://tunatheme.com/tf/html/autixir-preview/autixir/img/icons/11.png" alt="Icon Image">
                         </div>
                         <h3>Phone Number</h3>
                         <p>+0123-456789 <br> +987-6543210</p>
@@ -23,7 +23,7 @@
                 <div class="col-lg-4">
                     <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                         <div class="ltn__contact-address-icon">
-                            <img src="img/icons/12.png" alt="Icon Image">
+                            <img class="mx-auto" src="https://tunatheme.com/tf/html/autixir-preview/autixir/img/icons/12.png" alt="Icon Image">
                         </div>
                         <h3>Office Address</h3>
                         <p>18/A, New Born Town Hall <br>
@@ -76,7 +76,7 @@
                             </div>
                             <p><label class="input-info-save mb-0"><input type="checkbox" name="agree"> Save my name, email, and website in this browser for the next time I comment.</label></p>
                             <div class="btn-wrapper mt-0">
-                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">get an free service</button>
+                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit">get an free service</button>
                             </div>
                             <p class="form-messege mb-0 mt-20"></p>
                         </form>
@@ -88,9 +88,9 @@
     <!-- CONTACT MESSAGE AREA END -->
 
     <!-- GOOGLE MAP AREA START -->
-    <div class="google-map">
-       
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <div class="google-map pt-[150px]">
+    <iframe class="mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863980694189!2d105.74678709999999!3d21.0381278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1669652706969!5m2!1svi!2s" width="85%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 
     </div>
     <!-- GOOGLE MAP AREA END -->

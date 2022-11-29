@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content pt-[200px]">
     <?php if(empty($my_orders)) {?>
         <div class="cart_error">
                 <p>Bạn chưa có lịch hẹn nào</p>
