@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../view/public/css/admin.css">
     <!-- <link rel="stylesheet" href="../view/public/icon/fontawesome-free-6.2.0/css/all.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <?php
     function format_currency($n = 0)
@@ -39,7 +39,7 @@
                 <li><a href="index.php?act=showsp"><i class="fa-solid fa-box"></i> Sản phẩm</a></li>
                 <li><a href="index.php?act=showuser"><i class="fa-solid fa-user"></i> Tài khoản</a></li>
                 <li><a href="index.php?act=showcommemt"><i class="fa-solid fa-comment"></i> Bình luận</a></li>
-                <li><a href="index.php?act=showdonhang"><i class="fa-solid fa-file-invoice-dollar"></i>Đơn hàng</a></li>
+                <li><a href="index.php?act=showdonhang"><i class="fa-solid fa-file-invoice-dollar"></i>Lịch đặt</a></li>
             </ul>
         </div>
         <header>

@@ -76,13 +76,13 @@
                                         <li>
                                             <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
                                                 <i class="far fa-heart"></i>
-                                                <span>Dang sách yêu thích</span>
+                                                <span>Add to Wishlist</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#" class="" title="Compare" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
                                                 <i class="fas fa-exchange-alt"></i>
-                                                <span>So sách</span>
+                                                <span>Compare</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -100,13 +100,13 @@
                                 </div>
                                 <hr>
                                 <div class="ltn__safe-checkout">
-                                    <h5>Thanh toán</h5>
+                                    <h5>Guaranteed Safe Checkout</h5>
                                     <img src="view/public/img/icons/payment-2.png" alt="Payment Image">
                                 </div>
                                 <hr>
                                 <div class="ltn__product-details-menu-2">
                                     <?php if (isset($_SESSION['user'])) { ?>
-                                        <form action="index.php?act=vao_trang_xacnhan_muahang" method="post">
+                                        <form action="index.php?act=vao_trang_xacnhan_datlich" method="post">
 
                                         <?php } else { ?>
                                             <form action="index.php?act=vao_trang_dangnhap" method="post">
@@ -115,7 +115,7 @@
                                                 <li>
                                                     <div class="product-buy-btn">
                                                         <?php if ($product['quantity'] > 0) { ?>
-                                                            <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="submit" name="thanhtoan">Đặt lịch</button>
+                                                            <button class="theme-btn-2 btn btn-effect-2" type="submit" name="thanhtoan">Đặt lịch</button>
                                                         <?php } else { ?>
                                                             <h2 class=" thongbao_detailsp">Ô tô đã hết hàng</h2>
                                                         <?php } ?>
@@ -143,9 +143,9 @@
                 <div class="ltn__shop-details-tab-inner">
                     <div class="ltn__shop-details-tab-menu">
                         <div class="nav">
-                            <a class="active show" data-bs-toggle="tab" href="#liton_tab_details_1_1">Mô tả</a>
+                            <a class="active show" data-bs-toggle="tab" href="#liton_tab_details_1_1">Description</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_2" class="">Reviews</a> -->
-                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Bình luận</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Comments</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_4" class="">Shipping Policy</a> -->
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_5" class="">Size Chart</a> -->
                         </div>
@@ -162,7 +162,7 @@
                             <div class="ltn__shop-details-tab-content-inner">
                                 <!-- comment-area -->
                                 <div class="ltn__comment-area mb-30">
-                                    <h4 class="title-2">Bình luận (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
+                                    <h4 class="title-2">Comments (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
                                     <div class="ltn__comment-inner">
                                         <ul>
                                             <?php foreach ($binhluan as $binhluan) : ?>

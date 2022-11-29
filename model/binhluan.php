@@ -97,7 +97,7 @@ function list_binhluan()
 function chitietBinhluan($product_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = "SELECT binhluan.binhluan_id,product_id,taikhoan.hovaten,binhluan.ngaybl,taikhoan.img,binhluan.noidung
+    $sql = "SELECT binhluan.binhluan_id,product_id,taikhoan.hovaten,binhluan.ngaybl,binhluan.noidung
          FROM binhluan JOIN taikhoan ON taikhoan.user_id=binhluan.user_id where product_id = '$product_id'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();

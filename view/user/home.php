@@ -42,12 +42,12 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
+                                                            <a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                            <a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
                                                                 <i class="fas fa-shopping-cart"></i>
                                                             </a>
                                                         </li>
@@ -56,7 +56,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
+                                                <h2 class="product-title"><a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
                                                 <div class="product-price">
                                                     <span><?php echo format_currency($product['price'])  ?> VNĐ</span>
                                                 </div>
@@ -92,7 +92,7 @@
                                     <div class="col-lg-12">
                                         <div class="ltn__product-item ltn__product-item-3">
                                             <div class="product-img">
-                                                <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
+                                                <a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="sale-badge">Mới</li>
@@ -100,7 +100,7 @@
                                                 </div>
                                             </div>
                                             <div class="product-info">
-                                                <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
+                                                <h2 class="product-title"><a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
                                                 <div class="product-ratting">
                                                     <ul>
                                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
@@ -132,12 +132,12 @@
                                                 <div class="product-hover-action">
                                                     <ul>
                                                         <li>
-                                                            <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
+                                                            <a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
                                                                 <i class="far fa-eye"></i>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                            <a href="index.php?act=chitiet_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
                                                                 <i class="fas fa-shopping-cart"></i>
                                                             </a>
                                                         </li>
@@ -167,7 +167,7 @@
                                 <li>
                                     <div class="top-rated-product-item clearfix">
                                         <div class="top-rated-product-img">
-                                            <a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><img src="view/public/img/car/<?= $top3sp['img'] ?>" alt="#"></a>
+                                            <a href="index.php?act=chitiet_datlich&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><img src="view/public/img/car/<?= $top3sp['img'] ?>" alt="#"></a>
                                         </div>
                                         <div class="top-rated-product-info">
                                             <div class="product-ratting">
@@ -179,7 +179,7 @@
                                                     <li><a href="#"><i class="fas fa-star"></i></a></li>
                                                 </ul>
                                             </div>
-                                            <h6><a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><?php echo $top3sp['product_name'] ?></a></h6>
+                                            <h6><a href="index.php?act=chitiet_datlich&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><?php echo $top3sp['product_name'] ?></a></h6>
                                             <div class="product-price">
                                                 <span><?php echo format_currency($top3sp['price'])  ?> VNĐ</span>
                                             </div>

@@ -140,7 +140,7 @@
                                 Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
                             </div>
                                 <div class="btn-wrapper text-center mt-0">
-                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" name="btn_muahang" type="submit">Đặt lịch ngay bây giờ</button>
+                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase" name="btn_datlich" type="submit">Đặt lịch ngay bây giờ</button>
                                 </div>
 
 
