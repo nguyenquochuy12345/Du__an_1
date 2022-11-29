@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="view/public/css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="view/public/css/responsive.css">
+
+    <link rel="stylesheet" href="../view/public/css/admin.css">
     <?php
     function format_currency($n = 0)
     {
