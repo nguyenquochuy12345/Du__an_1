@@ -39,7 +39,7 @@
                 <li><a href="index.php?act=showsp"><i class="fa-solid fa-box"></i> Sản phẩm</a></li>
                 <li><a href="index.php?act=showuser"><i class="fa-solid fa-user"></i> Tài khoản</a></li>
                 <li><a href="index.php?act=showcommemt"><i class="fa-solid fa-comment"></i> Bình luận</a></li>
-                <li><a href="index.php?act=showdonhang"><i class="fa-solid fa-file-invoice-dollar"></i>Đơn hàng</a></li>
+                <li><a href="index.php?act=showdonhang"><i class="fa-solid fa-file-invoice-dollar"></i>Lịch đặt</a></li>
             </ul>
         </div>
         <header>

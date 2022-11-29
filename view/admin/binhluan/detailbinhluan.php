@@ -8,7 +8,7 @@
 
                 <tr>
                     <th>Mã bình luận</th>
-                    <th colspan="2">Người bình luận</th>
+                    <th colspan="1">Người bình luận</th>
                     <th>Ngày bình luận</th>
                     <th>Nội dung</th>
                     <th colspan="3" >Chức năng</th>
@@ -16,7 +16,6 @@
                 <?php foreach ($chitiet_binhluan as $value) : ?>
                     <tr>
                         <td><?= $value['binhluan_id'] ?></td>
-                        <td><img class="anhuser" src="../view/img/<?= $value['img'] ?>" alt=""></td>
                         <td><?= $value['hovaten'] ?></td>
                         <td><?= $value['ngaybl'] ?></td>
                         <td><?= $value['noidung'] ?></td>

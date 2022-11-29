@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center">
                     <div class="about-us-img-wrap about-img-left">
-                        <img src="img/team/4.jpg" alt="About Us Image">
+                        <img src="./view/public/img/team/4.jpg" alt="About Us Image">
                         <div class="about-us-img-info about-us-img-info-2">
                             <div class="about-us-img-info-inner">
                                 <h1>25<span>+</span></h1>
@@ -171,7 +171,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__testimonial-item ltn__testimonial-item-4">
                         <div class="ltn__testimoni-img">
-                            <img src="img/testimonial/6.jpg" alt="#">
+                            <img src="./view/public/img/testimonial/6.jpg" alt="#">
                         </div>
                         <div class="ltn__testimoni-info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -186,7 +186,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__testimonial-item ltn__testimonial-item-4">
                         <div class="ltn__testimoni-img">
-                            <img src="img/testimonial/7.jpg" alt="#">
+                            <img src="./view/public/img/testimonial/7.jpg" alt="#">
                         </div>
                         <div class="ltn__testimoni-info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -201,7 +201,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__testimonial-item ltn__testimonial-item-4">
                         <div class="ltn__testimoni-img">
-                            <img src="img/testimonial/1.jpg" alt="#">
+                            <img src="./view/public/img/testimonial/1.jpg" alt="#">
                         </div>
                         <div class="ltn__testimoni-info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -216,7 +216,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__testimonial-item ltn__testimonial-item-4">
                         <div class="ltn__testimoni-img">
-                            <img src="img/testimonial/2.jpg" alt="#">
+                            <img src="./view/public/img/testimonial/2.jpg" alt="#">
                         </div>
                         <div class="ltn__testimoni-info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -231,7 +231,7 @@
                 <div class="col-lg-12">
                     <div class="ltn__testimonial-item ltn__testimonial-item-4">
                         <div class="ltn__testimoni-img">
-                            <img src="img/testimonial/5.jpg" alt="#">
+                            <img src="./view/public/img/testimonial/5.jpg" alt="#">
                         </div>
                         <div class="ltn__testimoni-info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>

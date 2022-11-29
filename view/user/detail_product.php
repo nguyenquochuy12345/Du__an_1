@@ -137,7 +137,7 @@
                                 <hr>
                                 <div class="ltn__product-details-menu-2">
                                     <?php if (isset($_SESSION['user'])) { ?>
-                                        <form action="index.php?act=vao_trang_xacnhan_muahang" method="post">
+                                        <form action="index.php?act=vao_trang_xacnhan_datlich" method="post">
 
                                         <?php } else { ?>
                                             <!-- <script src="">
