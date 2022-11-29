@@ -43,7 +43,7 @@
                                 </div>
                                 <h3>Mercedes A-Class</h3>
                                 <div class="product-price">
-                                    <span><?php echo format_currency($product['price']) ?></span>
+                                    <span><?php echo format_currency($product['price']) ?> VNĐ</span>
                                 </div>
                                 <div class="modal-product-meta ltn__product-details-menu-1 mb-30">
                                     <ul class="flex flex-col gap-y-2">
@@ -106,7 +106,7 @@
                                 <hr>
                                 <div class="ltn__product-details-menu-2">
                                     <?php if (isset($_SESSION['user'])) { ?>
-                                        <form action="index.php?act=vao_trang_xacnhan_muahang" method="post">
+                                        <form action="index.php?act=vao_trang_xacnhan_datlich" method="post">
 
                                         <?php } else { ?>
                                             <form action="index.php?act=vao_trang_dangnhap" method="post">

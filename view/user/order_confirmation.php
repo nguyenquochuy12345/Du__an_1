@@ -7,9 +7,9 @@
 <?php endif ?>
 
 <?php if (isset($_SESSION['dangkythanhcong'])) { ?>
-    <div class="cart_error pt-[200px]">
-        <p>Cảm ơn quý khách đã đặt lịch bên Ga-ra! quý khách có thể click nút bên dưới để xem thông tin đặt lịch của bạn</p>
-        <button type="button"><a href="index.php?act=vao_datlich">Lịch đặt của tôi</a></button>
+    <div class="cart_error pt-[200px] mx-auto">
+        <h2 class="text-center text-[24px] font-[700]">Cảm ơn quý khách đã đặt lịch bên Ga-ra! quý khách có thể click nút bên dưới để xem thông tin đặt lịch của bạn</h2>
+        <p class="text-center my-5"><a class="" href="index.php?act=vao_datlich"><button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="button">Lịch đặt của tôi</button></a></p>
     </div>
 <?php } else { ?>
     <div class="ltn__appointment-area pb-120">
@@ -140,7 +140,7 @@
                                 Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
                             </div>
                                 <div class="btn-wrapper text-center mt-0">
-                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" name="btn_muahang" type="submit">Đặt lịch ngay bây giờ</button>
+                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" name="btn_datlich" type="submit">Đặt lịch ngay bây giờ</button>
                                 </div>
 
 
