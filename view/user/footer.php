@@ -1,7 +1,7 @@
 <footer class="ltn__footer-area ltn__footer-2  ltn__footer-color-2">
         <div class="footer-top-area  section-bg-1">
             <div class="container">
-                <div class="row">
+                <div class="row mt-[50px]">
                     <div class="col-xl-4 col-md-5">
                         <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1">
                             <h6 class="ltn__secondary-color text-uppercase">// time shedule</h6>

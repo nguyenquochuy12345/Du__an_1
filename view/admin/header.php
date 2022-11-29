@@ -32,7 +32,7 @@
 <body>
     <div class="container">
         <div class="box">
-            <img src="../view/img/logo.png" alt="">
+            <img class="bg-white p-[20px] mb-5" src="../view/public/img/logo.png" alt="">
             <ul>
                 <li> <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ quản trị</a></li>
                 <li><a href="index.php?act=showdm"><i class="fa-solid fa-bars"></i> Danh mục</a></li>

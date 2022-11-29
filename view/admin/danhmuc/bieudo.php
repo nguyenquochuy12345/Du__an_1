@@ -10,7 +10,6 @@
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart() {
-           
             var data = google.visualization.arrayToDataTable([
                 ['danhmuc', 'sosanpham'],
                 <?php

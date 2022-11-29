@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content pt-[200px]">
     <?php if(empty($my_orders)) {?>
         <div class="cart_error">
                 <p>Bạn chưa có lịch hẹn nào</p>
@@ -34,8 +34,8 @@
 
                     <td><?=$my_order['status']?>        
                         </td>
-                    <!-- <td><button class="chitiet_order"><a href="index.php?act=chitiet_order&order_id=<?=$my_order['order_id']?>">Chi tiết</a></button></td>
-                   </tr> -->
+                    <!-- <td><button class="chitiet_order"><a href="index.php?act=chitiet_order&order_id=<?=$my_order['order_id']?>">Chi tiết</a></button></td> -->
+                   </tr>
                 <?php endforeach ?>
             </table>
             </div>

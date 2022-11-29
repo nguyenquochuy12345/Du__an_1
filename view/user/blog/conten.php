@@ -1,5 +1,5 @@
 <div class="ltn__blog-area mb-120">
-        <div class="container">
+        <div class="container pt-[150px]">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="ltn__blog-list-wrap">
@@ -12,36 +12,35 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-category">
-                                            <a href="#">Business</a>
+                                            <a href="#">Việc kinh doanh</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Lorem ipsum dolor sit amet, consecte
-                                    cing elit, sed do eiusmod tempor.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="blog-details.html">Đó thực sự là một nỗi đau trong ass, nhưng tôi đang cho nó thời gian.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Binh luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <p>Điều quan trọng là phải tự chăm sóc cơn đau, và nó sẽ kéo theo sự phát triển của bệnh nhân, nhưng đồng thời nó sẽ xảy ra rằng có rất nhiều công việc và đau đớn. Vì đến từng chi tiết nhỏ nhất, không ai nên thực hành bất kỳ loại công việc nào trừ khi anh ta thu được một số lợi ích từ nó. Nỗi nghi ngờ hay nỗi đau quở trách trong niềm vui muốn trở thành một sợi tóc của nỗi đau</p>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
                                         <ul>
                                             <li class="ltn__blog-author">
-                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">By: Ethan</a>
+                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">Bởi: Ethan</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Read more</a>
+                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -58,36 +57,35 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-category">
-                                            <a href="#">Business</a>
+                                            <a href="#">Việc kinh doanh</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="blog-details.html">Tăng mỡ và béo, nhưng làm điều tương tự xảy ra cùng lúc với chuyển dạ và đau đớn.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem </a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Bình luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <p>Điều quan trọng là phải tự chăm sóc cơn đau, và nó sẽ kéo theo sự phát triển của bệnh nhân, nhưng đồng thời nó sẽ xảy ra rằng có rất nhiều công việc và đau đớn. Vì đến từng chi tiết nhỏ nhất, không ai nên thực hành bất kỳ loại công việc nào trừ khi anh ta thu được một số lợi ích từ nó. Nỗi nghi ngờ hay nỗi đau quở trách trong niềm vui muốn trở thành một sợi tóc của nỗi đau</p>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
                                         <ul>
                                             <li class="ltn__blog-author">
-                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">By: Ethan</a>
+                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">Bởi: Ethan</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Read more</a>
+                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
                                     </div>
                                 </div>
                             </div>
@@ -109,36 +107,35 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-category">
-                                            <a href="#">Business</a>
+                                            <a href="#">Việc kinh doanh</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Magna aliqua. Ut enim ad minim venia
-                                    m, quis nostrud exercitation ullamco</a></h3>
+                                <h3 class="ltn__blog-title"><a href="blog-details.html">Một số cái tuyệt vời. Thực ra, đến từng chi tiết nhỏ nhất, không ai nên thao thao bất tuyệt cả.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem </a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Bình luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <p>Điều quan trọng là phải tự chăm sóc cơn đau, và nó sẽ kéo theo sự phát triển của bệnh nhân, nhưng đồng thời nó sẽ xảy ra rằng có rất nhiều công việc và đau đớn. Vì đến từng chi tiết nhỏ nhất, không ai nên thực hành bất kỳ loại công việc nào trừ khi anh ta thu được một số lợi ích từ nó. Nỗi nghi ngờ hay nỗi đau quở trách trong niềm vui muốn trở thành một sợi tóc của nỗi đau</p>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
                                         <ul>
                                             <li class="ltn__blog-author">
-                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">By: Ethan</a>
+                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">Bởi: Ethan</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Read more</a>
+                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -153,36 +150,35 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-category">
-                                            <a href="#">Business</a>
+                                            <a href="#">Việc kinh doanh</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="blog-details.html">Bạn làm việc chỉ để nhận được một số lợi ích từ nó. Đừng để nỗi đau qua đi.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Bình luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i> 22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <p>Điều quan trọng là phải tự chăm sóc cơn đau, và nó sẽ kéo theo sự phát triển của bệnh nhân, nhưng đồng thời nó sẽ xảy ra rằng có rất nhiều công việc và đau đớn. Vì đến từng chi tiết nhỏ nhất, không ai nên thực hành bất kỳ loại công việc nào trừ khi anh ta thu được một số lợi ích từ nó. Nỗi nghi ngờ hay nỗi đau quở trách trong niềm vui muốn trở thành một sợi tóc của nỗi đau</p>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
                                         <ul>
                                             <li class="ltn__blog-author">
-                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">By: Ethan</a>
+                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">Bởi: Ethan</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Read more</a>
+                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
                                     </div>
                                 </div>
                             </div>
@@ -193,36 +189,35 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-category">
-                                            <a href="#">Business</a>
+                                            <a href="#">Việc kinh doanh</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">In reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="blog-details.html">Anh muốn có lỗi trong cuộc vui đừng để sợi tóc nào chạy trốn khỏi nỗi đau</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem </a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Bình luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i> 22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <p>Điều quan trọng là phải tự chăm sóc cơn đau, và nó sẽ kéo theo sự phát triển của bệnh nhân, nhưng đồng thời nó sẽ xảy ra rằng có rất nhiều công việc và đau đớn. Vì đến từng chi tiết nhỏ nhất, không ai nên thực hành bất kỳ loại công việc nào trừ khi anh ta thu được một số lợi ích từ nó. Nỗi nghi ngờ hay nỗi đau quở trách trong niềm vui muốn trở thành một sợi tóc của nỗi đau</p>
                                 <div class="ltn__blog-meta-btn">
                                     <div class="ltn__blog-meta">
                                         <ul>
                                             <li class="ltn__blog-author">
-                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">By: Ethan</a>
+                                                <a href="#"><img src="view/public/img/blog/author.jpg" alt="#">Bởi: Ethan</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Read more</a>
+                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
                                     </div>
                                 </div>
                             </div>
@@ -231,19 +226,18 @@
                         <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-quote bg-image bg-overlay-theme-90" data-bs-bg="img/blog/3.jpg">
                             <div class="ltn__blog-brief">
                                 <blockquote>
-                                    <a href="blog-details.html">Excepteur sint occaecat cupida
-                                        tat non proident, sunt in.</a>
+                                    <a href="blog-details.html">Trừ phi bị sắc dục che mắt, không ra mà vào.</a>
                                 </blockquote>
                                 <div class="ltn__blog-meta mb-0">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem</a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Bình luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
@@ -255,22 +249,21 @@
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li class="ltn__blog-category">
-                                            <a href="#">Business</a>
+                                            <a href="#">Việc kinh doanh</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Culpa qui officia deserunt mollit anim
-                                    id est laborum. Sed ut perspiciatis</a></h3>
+                                <h3 class="ltn__blog-title"><a href="blog-details.html">Cảm giác tội lỗi của những người từ bỏ nhiệm vụ của họ làm dịu đi tâm hồn, đó là sự cực nhọc. Nhưng như bạn quan sát</a></h3>
                                 <div class="ltn__blog-meta mb-0">
                                     <ul>
                                         <li>
-                                            <a href="#"><i class="far fa-eye"></i>232 Views</a>
+                                            <a href="#"><i class="far fa-eye"></i>232 Lượt xem </a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="far fa-comments"></i>35 Comments</a>
+                                            <a href="#"><i class="far fa-comments"></i>35 Bình luận</a>
                                         </li>
                                         <li class="ltn__blog-date">
-                                            <i class="far fa-calendar-alt"></i>June 22, 2020
+                                            <i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020
                                         </li>
                                     </ul>
                                 </div>
@@ -300,11 +293,11 @@
                     <aside class="sidebar-area blog-sidebar ltn__right-sidebar">
                         <!-- Author Widget -->
                         <div class="widget ltn__author-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">About Me</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border">Về tôi</h4>
                             <div class="ltn__author-widget-inner text-center">
                                 <img src="view/public/img/team/4.jpg" alt="Image">
                                 <h5>Rosalina D. Willaimson</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis distinctio, odio, eligendi suscipit reprehenderit atque.</p>
+                                <p>Điều rất quan trọng là khách hàng phải chú ý đến quá trình adipiscing. Sự phân biệt của thật, của ghét, của lựa chọn, chỉ trích và chỉ trích.</p>
                                 <div class="ltn__social-media">
                                     <ul>
                                         <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -318,15 +311,15 @@
                         </div>
                         <!-- Search Widget -->
                         <div class="widget ltn__search-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Search Objects</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border"> Đối tượng tìm kiếm </h4>
                             <form action="#">
-                                <input type="text" name="search" placeholder="Search your keyword...">
+                                <input type="text" name="search" placeholder="Tìm kiếm từ khóa của bạn...">
                                 <button type="submit"><i class="fas fa-search"></i></button>
                             </form>
                         </div>
                         <!-- Popular Post Widget -->
                         <div class="widget ltn__popular-post-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Popular Feeds</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border"> Nguồn cấp dữ liệu phổ biến </h4>
                             <ul>
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
@@ -334,12 +327,11 @@
                                             <a href="blog-details.html"><img src="view/public/img/team/5.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Lorem ipsum dolor sit
-                                                cing elit, sed do.</a></h6>
+                                            <h6><a href="blog-details.html">Tôi rất xin lỗi vì sự bất tiện này, nhưng tôi làm.</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -352,12 +344,11 @@
                                             <a href="blog-details.html"><img src="view/public/img/team/6.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Lorem ipsum dolor sit
-                                                cing elit, sed do.</a></h6>
+                                            <h6><a href="blog-details.html">Tôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm.</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -370,12 +361,11 @@
                                             <a href="blog-details.html"><img src="view/public/img/team/7.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Lorem ipsum dolor sit
-                                                cing elit, sed do.</a></h6>
+                                            <h6><a href="blog-details.html">Tôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm..</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -388,12 +378,11 @@
                                             <a href="blog-details.html"><img src="view/public/img/team/8.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Lorem ipsum dolor sit
-                                                cing elit, sed do.</a></h6>
+                                            <h6><a href="blog-details.html">LTôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm.</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -404,18 +393,18 @@
                         </div>
                         <!-- Menu Widget (Category) -->
                         <div class="widget ltn__menu-widget ltn__menu-widget-2 ltn__menu-widget-2-color-2">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Categories</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border">Thể loại</h4>
                             <ul>
-                                <li><a href="#">Business <span>26</span></a></li>
-                                <li><a href="#">Consultant <span>30</span></a></li>
-                                <li><a href="#">Creative <span>71</span></a></li>
-                                <li><a href="#">UI/UX <span>56</span></a></li>
-                                <li><a href="#">Technology <span>60</span></a></li>
+                                <li><a href="#">Việc kinh doanh<span>26</span></a></li>
+                                <li><a href="#">Tư vấn <span>30</span></a></li>
+                                <li><a href="#">Sáng tạo <span>71</span></a></li>
+                                <li><a href="#"> Giao diện người dùng/UX <span>56</span></a></li>
+                                <li><a href="#">Công nghệ <span>60</span></a></li>
                             </ul>
                         </div>
                         <!-- Social Media Widget -->
                         <div class="widget ltn__social-media-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Never Miss News</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border">Không bao giờ bỏ lỡ tin tức</h4>
                             <div class="ltn__social-media-2">
                                 <ul>
                                     <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -428,7 +417,7 @@
                         </div>
                         <!-- Popular Post Widget (Twitter Post) -->
                         <div class="widget ltn__popular-post-widget ltn__twitter-post-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Twitter Feeds</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border">Nguồn cấp dữ liệu Twitter</h4>
                             <ul>
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
@@ -438,13 +427,13 @@
                                         <div class="popular-post-widget-brief">
                                             <p>Carsafe - #Gutenberg ready 
                                                 @wordpress
-                                                 Theme for Car Service, Auto Parts, Car Dealer available on 
+                                                Chủ đề cho Dịch vụ ô tô, Phụ tùng ô tô, Đại lý ô tô có sẵn trên
                                                 @website
                                                 <a href="https://website.net/">https://website.net</a></p>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -459,13 +448,13 @@
                                         <div class="popular-post-widget-brief">
                                             <p>Carsafe - #Gutenberg ready 
                                                 @wordpress
-                                                 Theme for Car Service, Auto Parts, Car Dealer available on 
+                                                Chủ đề cho Dịch vụ ô tô, Phụ tùng ô tô, Đại lý ô tô có sẵn trên
                                                 @website
                                                 <a href="https://website.net/">https://website.net</a></p>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -480,13 +469,13 @@
                                         <div class="popular-post-widget-brief">
                                             <p>Carsafe - #Gutenberg ready 
                                                 @wordpress
-                                                 Theme for Car Service, Auto Parts, Car Dealer available on 
+                                                Chủ đề cho Dịch vụ ô tô, Phụ tùng ô tô, Đại lý ô tô có sẵn trên
                                                 @website
                                                 <a href="https://website.net/">https://website.net</a></p>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
-                                                        <a href="#"><i class="far fa-calendar-alt"></i>June 22, 2020</a>
+                                                        <a href="#"><i class="far fa-calendar-alt"></i>22 Tháng Sáu, 2020</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -497,12 +486,12 @@
                         </div>
                         <!-- Instagram Widget -->
                         <div class="widget ltn__instagram-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Instagram Feeds</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border">Nguồn cấp dữ liệu Instagram</h4>
                             <div class="ltn__instafeed ltn__instafeed-grid insta-grid-gutter"></div>
                         </div>
                         <!-- Tagcloud Widget -->
                         <div class="widget ltn__tagcloud-widget">
-                            <h4 class="ltn__widget-title ltn__widget-title-border">Popular Tags</h4>
+                            <h4 class="ltn__widget-title ltn__widget-title-border">Thẻ phổ biến</h4>
                             <ul>
                                 <li><a href="#">Popular</a></li>
                                 <li><a href="#">desgin</a></li>

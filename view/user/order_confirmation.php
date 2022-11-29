@@ -13,11 +13,11 @@
     </div>
 <?php } else { ?>
     <div class="ltn__appointment-area pb-120">
-        <div class="container">
+        <div class="container  pt-[200px]">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ltn__appointment-inner">
-                        <form action="index.php?act=datlich" method="post">
+                        <form action="index.php?act=muahang" method="post">
                             <h6>Thông tin đặt xe của bạn</h6>
                             <div class="row">
                                 <div class="col-md-6">

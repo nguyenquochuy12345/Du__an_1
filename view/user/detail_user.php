@@ -1,10 +1,9 @@
-
         <?php
             if(!isset($_SESSION['user'])){
                 header("location: index.php");
             }
         ?>
-        <div class="content">
+        <div class="content  pt-[200px]">
             <h2 id="dangnhap">Thông tin tài khoản</h2>
             <form name"capnhat" action="index.php?act=capnhat_tk" method="post" enctype="multipart/form-data">
                 <table class="dangky" >

@@ -31,7 +31,7 @@
                       <td id="proid"><?= $product['product_id'] ?></td>
                       <td id="tensp"><?= $product['product_name'] ?></td>
                       <td id="gia"> <?= format_currency($product['price']). " VNĐ" ?></td>
-                      <td><img src="/duanmau/view/img/<?= $product['img'] ?> "height="100px" alt=""></td>
+                      <td><img src="../view/public/img/car/<?= $product['img'] ?> "height="100px" alt=""></td>
                       <td id="description" ><?= $product['description'] ?></td>
                       <td><?=$product['quantity']?></td>
                       <td><?= $product['cate_name'] ?></td>

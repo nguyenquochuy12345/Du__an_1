@@ -22,7 +22,8 @@
                     <td><?= $user['password']?></td>
                     <td><?= $user['tel']?></td>
                     <td><?= $user['vaitro'] ?></td>
-                    <td  id="chucnang"><button id="sua"><a href="index.php?act=edit_user&user_id=<?= $user['user_id'] ?>">Sửa</a></button><?php if($_SESSION['user']['user_id'] != $user['user_id']):?> <button id="xoa" ><a href="index.php?act=delete_user&user_id=<?= $user['user_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không ?')">Xóa</a></button>  <?php endif?></td>
+                    <td  id="chucnang"><button id="sua"><a href="index.php?act=edit_user&user_id=<?= $user['user_id'] ?>">Sửa</a></button>
+                    <?php if($_SESSION['user']['user_id'] != $user['user_id']):?> <button id="xoa" ><a href="index.php?act=delete_user&user_id=<?= $user['user_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa không ?')">Xóa</a></button>  <?php endif?></td>
 
                 </tr>
             <?php endforeach ?>

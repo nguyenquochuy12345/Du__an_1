@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content pt-[200px]">
     <div class="donhang">
         <table class="table_cart">
             <tr class="table_cart_tr">
