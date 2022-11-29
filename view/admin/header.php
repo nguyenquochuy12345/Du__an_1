@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../view/public/css/admin.css">
     <!-- <link rel="stylesheet" href="../view/public/icon/fontawesome-free-6.2.0/css/all.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <?php
     function format_currency($n = 0)
@@ -32,7 +32,7 @@
 <body>
     <div class="container">
         <div class="box">
-            <img src="../view/img/logo.png" alt="">
+            <img class="bg-white p-[20px] mb-5" src="../view/public/img/logo.png" alt="">
             <ul>
                 <li> <a href="index.php"><i class="fa-solid fa-house"></i> Trang chủ quản trị</a></li>
                 <li><a href="index.php?act=showdm"><i class="fa-solid fa-bars"></i> Danh mục</a></li>

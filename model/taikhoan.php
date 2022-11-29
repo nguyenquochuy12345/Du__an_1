@@ -137,7 +137,7 @@
     }
     function show_user(){
         include '../ketnoi/ketnoi.php';
-        $sql = "SELECT user_id,password,email,hovaten,tel, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id  ";
+        $sql = "SELECT user_id,img,password,email,hovaten,tel, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id  ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);

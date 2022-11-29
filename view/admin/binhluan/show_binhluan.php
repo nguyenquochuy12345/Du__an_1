@@ -18,7 +18,7 @@
                 <tbody>
                 <?php foreach ($binhluan as $binhluan) : ?>
                     <tr>
-                        <td><img src="../view/img/<?=$binhluan['img']?>"  alt="" height="100px"></td>
+                        <td><img class="my-auto mx-auto w-[100px]" src="../view/public/img/car/<?=$binhluan['img']?>"  alt="" height="100px"></td>
                         <td><?= $binhluan['product_name'] ?></td>
                         <td><?= $binhluan['soluong'] ?></td>
                         <td><?= $binhluan['moiNhat'] ?></td>

@@ -33,7 +33,7 @@
                                     <div class="col-sm-6 col-6">
                                         <div class="ltn__product-item ltn__product-item-3 text-center">
                                             <div class="product-img">
-                                                <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
+                                                <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img class="w-full h-[350px]" src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                                                 <div class="product-badge">
                                                     <ul>
                                                         <li class="soldout-badge">Mới</li>

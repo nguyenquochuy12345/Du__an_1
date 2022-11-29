@@ -18,7 +18,7 @@
                    <tr id="hang">
                     <td><?=$order_detail['order_id']?></td>
                     <td id="tenndh"><?=$order_detail['product_name']?></td>
-                    <td> <img  src="../view/img/<?= $order_detail['img'] ?>" height="100px"></td>
+                    <td> <img  src="../view/public/img/car/<?= $order_detail['img'] ?>" height="100px"></td>
                     <td><?=format_currency($order_detail['price']) . " VNĐ"?></td>
                     <td><?=$order_detail['quantity']?></td>
                     <?php $thanhtien = $order_detail['price'] * $order_detail['quantity'];
