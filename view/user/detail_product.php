@@ -145,7 +145,7 @@
                         <div class="nav">
                             <a class="active show" data-bs-toggle="tab" href="#liton_tab_details_1_1">Description</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_2" class="">Reviews</a> -->
-                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Comments</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Comments (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_4" class="">Shipping Policy</a> -->
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_5" class="">Size Chart</a> -->
                         </div>
@@ -173,7 +173,7 @@
                                                             <img src="view/public/img/testimonial/1.jpg" alt="Image">
                                                         </div>
                                                         <div class="ltn__commenter-comment">
-                                                            <h6><a href="#"><?= $binhluan['hovaten'] ?></a> <span><?php echo ($binhluan['vaitro_id'] > 1)?"--Admin--":"--Nhân viên--"; ?></span></h6>
+                                                            <h6><a href="#"><?= $binhluan['hovaten'] ?></a> <span><?php echo ($binhluan['vaitro_id'] > 1)?"--Admin--":"--Khách hàng--"; ?></span></h6>
                                                             
                                                             <span class="comment-date"><?= $binhluan['ngaybl'] ?></span>
                                                             <p><?= $binhluan['noidung'] ?>
@@ -189,7 +189,7 @@
                                                                 <?php if (isset($_SESSION['user'])) : ?>
                                                                     <?php if ($binhluan['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
                                                                         <div class="xoa">
-                                                                            <a href="index.php?act=delete_binhluan&id_binhluan=<?= $binhluan['binhluan_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
+                                                                            <a  style="color:red ;" href="index.php?act=delete_binhluan&id_binhluan=<?= $binhluan['binhluan_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
                                                                         </div>
                                                                     <?php endif ?>
                                                                 <?php endif ?>
@@ -212,7 +212,7 @@
                                                                             <img src="view/public/img/testimonial/4.jpg" alt="Image">
                                                                         </div>
                                                                         <div class="ltn__commenter-comment">
-                                                                            <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro">QTV</div> <?php endif ?></a></h6>
+                                                                            <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro"></div> <?php endif ?></a></h6>
                                                                             <span class="comment-date"> <?= $rep['ngay_traloi'] ?>
                                                                             </span>
                                                                             <p><?= $rep['noidung'] ?>
@@ -223,7 +223,7 @@
                                                                             </div>
                                                                         <?php endif ?>
                                                                     <?php endif ?></p>
-                                                                    <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a>
+                                                                    <!-- <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a> -->
                                                                         </div>
                                                                     </div>
                                                                 </li>
