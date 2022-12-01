@@ -23,7 +23,7 @@
             $sotrang = sotrang($id, $so_sanpham_tren1trang);
             $binhluan = show_binhluan($id, $so_sanpham_tren1trang, $trang);
             $products_lienquan = sanpham_lienquan($id, $iddm);
-            include_once './view/user/detail_product.php';
+            include_once './view/user/car/detail_product.php';
           }
         }
       }

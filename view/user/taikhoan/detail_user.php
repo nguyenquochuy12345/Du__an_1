@@ -11,6 +11,16 @@
                    
                     <input type="hidden" name="user_id" value="<?=$user['user_id']?>">
                     <tr>
+                        <td class="ten_input">Ảnh</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./view/img/<?=$user['img']?>"" alt="" height="200px"></td>
+                    </tr>
+                    <input type="hidden" name="old_img" value="<?=$user['img']?>">
+                    <tr>
+                        <td colspan="2" id="signupimg"><input  type="file" name="img"></td>
+                    </tr>
+                    <tr>
                         <td class="thongbao"><?php if(isset($_SESSION['errors']['img'])):?>
                                 <?=$_SESSION['errors']['img']?>
                             <?php endif?>
@@ -37,6 +47,18 @@
                     <tr>
                         <td class="thongbao"><?php if(isset($_SESSION['errors']['email'])):?>
                                 <?=$_SESSION['errors']['email']?>
+                            <?php endif?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ten_input">Địa chỉ</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ><input name="address" type="text" value="<?=$user['address']?>"></td>
+                    </tr>
+                    <tr>
+                        <td class="thongbao"><?php if(isset($_SESSION['errors']['address'])):?>
+                                <?=$_SESSION['errors']['address']?>
                             <?php endif?>
                         </td>
                     </tr>

@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Autixir - Car Services and Auto Mechanic HTML Template</title>
+    <title>Autixir - Gara</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="view/public/css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="view/public/css/responsive.css">
+
+    <link rel="stylesheet" href="../view/public/css/admin.css">
     <?php
     function format_currency($n = 0)
     {
@@ -107,7 +109,7 @@
                         <div class="col">
                             <div class="site-logo-wrap">
                                 <div class="site-logo">
-                                    <a href="index.html"><img src="view/public/img/logo.png" alt="Logo"></a>
+                                    <a href="index.php"><img src="view/public/img/logo.png" alt="Logo"></a>
                                 </div>
                                 <div class="get-support clearfix">
                                     <div class="get-support-icon">
@@ -139,6 +141,7 @@
                                                                     <li><a href="index.php?act=sanpham&iddm=1">Ô tô BMW</a></li>
                                                                     <li><a href="index.php?act=sanpham&iddm=2">Ô tô Toyota</a></li>
                                                                     <li><a href="index.php?act=sanpham&iddm=3">Ô tô Masdaz</a></li>
+                                                                    <li><a href="index.php?act=sanpham&iddm=3">Ô tô Mercedes</a></li>
                                                                 </ul>
                                                     </li>
                                                 </ul>

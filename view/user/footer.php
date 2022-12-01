@@ -4,70 +4,68 @@
                 <div class="row mt-[50px]">
                     <div class="col-xl-4 col-md-5">
                         <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1">
-                            <h6 class="ltn__secondary-color text-uppercase">// time shedule</h6>
-                            <h4 class="footer-title">Meet In Timeline.</h4>
+                            <h6 class="ltn__secondary-color text-uppercase">// Thời gian</h6>
+                            <h4 class="footer-title">Giờ hành chính.</h4>
                             <ul>
-                                <li>Monday <span>07:00AM - 20:00PM</span></li>
-                                <li>Tuesday <span>07:00AM - 20:00PM</span></li>
-                                <li>Wednesday <span>07:00AM - 20:00PM</span></li>
-                                <li>Thursday <span>07:00AM - 20:00PM</span></li>
-                                <li>Friday <span>07:00AM - 20:00PM</span></li>
-                                <li>Saturday <span>07:00AM - 20:00PM</span></li>
-                                <li>Sunday <span>Official Holiday</span></li>
+                                <li>Thứ hai <span>07:00AM - 20:00PM</span></li>
+                                <li>Thứ ba <span>07:00AM - 20:00PM</span></li>
+                                <li>Thứ tư <span>07:00AM - 20:00PM</span></li>
+                                <li>Thứ năm <span>07:00AM - 20:00PM</span></li>
+                                <li>Thứ sáu <span>07:00AM - 20:00PM</span></li>
+                                <li>Thứ bảy <span>07:00AM - 20:00PM</span></li>
+                                <li>Chủ nhật <span>Nghỉ</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-5 col-md-7">
                         <div class="footer-widget footer-menu-widget footer-menu-widget-2-column clearfix">
-                            <h4 class="footer-title">Services.</h4>
+                            <h4 class="footer-title">Dịch vụ.</h4>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="service.html">Engine Diagnostics</a></li>
-                                    <li><a href="service.html">Vehicles Damaged</a></li>
-                                    <li><a href="service.html">Air Conditioning Evac</a></li>
-                                    <li><a href="service.html">Anti Lock Brake Service</a></li>
-                                    <li><a href="service.html">Computer Diagnostics</a></li>
-                                    <li><a href="service.html">Performance Upgrades</a></li>
+                                    <li><a href="service.html">Chuẩn đoán động cơ</a></li>
+                                    <li><a href="service.html">Xe bị hư hỏng</a></li>
+                                    <li><a href="service.html">Điều hoà</a></li>
+                                    <li><a href="service.html">Dịch vụ chống bó cứng phanh</a></li>
+                                    <li><a href="service.html">Chuẩn đoán máy tình</a></li>
+                                    <li><a href="service.html">Nâng cấp hiệu xuất</a></li>
                                 </ul>
                             </div>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="service.html">Car Wash & Cleaning</a></li>
-                                    <li><a href="service.html">Choose your Repairs</a></li>
-                                    <li><a href="service.html">Free Consultancy</a></li>
-                                    <li><a href="service.html">Emergency Time</a></li>
+                                    <li><a href="service.html">Rửa và vệ sinh xe</a></li>
+                                    <li><a href="service.html">Chọn sửa chữa</a></li>
+                                    <li><a href="service.html">Tư vấn miễn phí</a></li>
+                                    <li><a href="service.html">Thời gian khẩn cấp</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="footer-widget footer-blog-widget">
-                            <h4 class="footer-title">News Feeds.</h4>
+                            <h4 class="footer-title">Tin tức.</h4>
                             <div class="ltn__footer-blog-item">
                                 <div class="ltn__blog-meta">
                                     <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> June 24, 2020</li>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> 24 Tháng sáu, 2020</li>
                                     </ul>
                                 </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">The branch of biology that
-                                    deals with the normal.</a></h4>
+                                <h4 class="ltn__blog-title"><a href="blog-details.html">Mở chi nhánh mới.</a></h4>
                             </div>
                             <div class="ltn__footer-blog-item">
                                 <div class="ltn__blog-meta">
                                     <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> June 28, 2020</li>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> 28 tháng sáu, 2020</li>
                                     </ul>
                                 </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">Electric Car Maintenance, Servicing & Repairs</a></h4>
+                                <h4 class="ltn__blog-title"><a href="blog-details.html">Bảo dưỡi, sửa chữa miến phí</a></h4>
                             </div>
                             <div class="ltn__footer-blog-item">
                                 <div class="ltn__blog-meta">
                                     <ul>
-                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> June 24, 2020</li>
+                                        <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> 24 tháng bảy, 2020</li>
                                     </ul>
                                 </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">The branch of biology that
-                                    deals with the normal.</a></h4>
+                                <h4 class="ltn__blog-title"><a href="blog-details.html">giảm giá 50%.</a></h4>
                             </div>
                         </div>
                     </div>
@@ -84,8 +82,8 @@
                             </div>
                             <div class="get-support ltn__copyright-design clearfix">
                                 <div class="get-support-info">
-                                    <h6>Copyright & Design By</h6>
-                                    <h4>Example - <span class="current-year"></span></h4>
+                                    <h6>Bản quyền và thiết kế bởi</h6>
+                                    <h4>Huy<span class="current-year"></span></h4>
                                 </div>
                             </div>
                         </div>
@@ -93,9 +91,9 @@
                     <div class="col-md-6 col-12 align-self-center">
                         <div class="ltn__copyright-menu text-end">
                             <ul>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Claim</a></li>
-                                <li><a href="#">Privacy & Policy</a></li>
+                                <li><a href="#">Điều khoản & điều kiện</a></li>
+                                <li><a href="#">Yêu cầu</a></li>
+                                <li><a href="#">Chính sách bảo mật</a></li>
                             </ul>
                         </div>
                     </div>

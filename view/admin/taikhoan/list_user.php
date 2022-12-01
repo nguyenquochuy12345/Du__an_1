@@ -6,6 +6,7 @@
           <thead>
           <tr>  <th>Mã khách hàng</th>
                 <th>Họ và tên</th>
+                <!-- <th>img</th> -->
                 <th>username</th>
                 <th>password</th>
                 <th>Số điện thoại</th>  
@@ -18,6 +19,7 @@
                 <tr>
                     <td><?=$user['user_id']?></td>
                     <td><?=  $user['hovaten'] ?></td>
+                    
                     <td><?=$user['username']?></td>
                     <td><?= $user['password']?></td>
                     <td><?= $user['tel']?></td>

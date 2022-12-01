@@ -1,5 +1,5 @@
 <?php
-function dathang($id_user, $hovaten, $tel, $email, $yeucau, $ngayxemxe, $caxemxe, $cosoxemxe)
+function dathang($id_user, $hovaten, $tel, $email, $yeucau,$id_product, $ngayxemxe, $caxemxe, $cosoxemxe)
 {
     include './ketnoi/ketnoi.php';
     $errors = [];
@@ -30,6 +30,7 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $ngayxemxe, $caxemxe
             email,
             tel,
             yeucau,
+            product_id,
             ngayxemxe,
             caxemxe,
             co_so,
@@ -42,6 +43,7 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $ngayxemxe, $caxemxe
             '$email',
             '$tel',
             '$yeucau',
+            '$id_product',
             '$ngayxemxe',
             '$caxemxe',
             '$cosoxemxe',
@@ -67,7 +69,7 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $ngayxemxe, $caxemxe
 function showdonhang_theo_user($user_id)
 {
     include './ketnoi/ketnoi.php';
-    $sql = "SELECT order_id,hovaten,email,tel,ngaydathang,ngayxemxe,caxemxe,co_so,tbl_order.status_id,order_status.status FROM tbl_order JOIN order_status ON order_status.status_id = tbl_order.status_id  WHERE user_id = '$user_id' order by ngaydathang DESC";
+    $sql = "SELECT order_id,hovaten,email,tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,tbl_order.status_id,order_status.status FROM tbl_order JOIN order_status ON order_status.status_id = tbl_order.status_id  WHERE user_id = '$user_id' order by ngaydathang DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $my_order = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -76,7 +78,7 @@ function showdonhang_theo_user($user_id)
 function show_chitiet_order($order_id)
 {
     include './ketnoi/ketnoi.php';
-    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM order_detail JOIN products ON products.product_id = order_detail.product_id WHERE order_id = '$order_id' order by products.price desc";
+    $sql = " SELECT order_id,products.product_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.color,products.view,products.quantity,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.product_id WHERE order_id = '$order_id' order by products.price desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -85,7 +87,7 @@ function show_chitiet_order($order_id)
 function show_chitiet_order_theokhachhang($order_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = " SELECT order_id, order_detail.quantity, products.product_name,products.price,products.img  FROM order_detail JOIN products ON products.product_id = order_detail.product_id WHERE order_id = '$order_id' order by products.price desc";
+    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.products_id WHERE order_id = '$order_id' order by products.price desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -94,7 +96,7 @@ function show_chitiet_order_theokhachhang($order_id)
 function admin_show_chitiet_order($order_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = " SELECT order_id, order_detail.quantity, products.product_name,products.price,products.img  FROM order_detail JOIN products ON products.product_id = order_detail.product_id WHERE order_id = '$order_id'";
+    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.products_id WHERE order_id = '$order_id' order by products.price desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
