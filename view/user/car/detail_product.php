@@ -1,3 +1,14 @@
+<script>
+    var i = 0;
+
+    function hien(i) {
+        for (var j = 0; j <= document.getElementsByClassName("formtraloi").length - 1; j++) {
+            document.getElementsByClassName("formtraloi")[j].style.display = "none"
+        }
+        document.getElementsByClassName("formtraloi")[i].style.display = "flex"
+    }
+</script>
+
 <div class="ltn__shop-details-area mb-120 pt-[200px]">
     <div class="container">
         <div class="row">
@@ -12,13 +23,28 @@
                                             <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
                                         </a>
                                     </div>
+                                    <div class="single-large-img">
+                                        <a href="view/public/img/car/<?php echo $product['img_2'] ?>" data-rel="lightcase:myCollection">
+                                            <img src="view/public/img/car/<?php echo $product['img_2'] ?>" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="single-large-img">
+                                        <a href="view/public/img/car/<?php echo $product['img_3'] ?>" data-rel="lightcase:myCollection">
+                                            <img src="view/public/img/car/<?php echo $product['img_3'] ?>" alt="Image">
+                                        </a>
+                                    </div>
+                                    <div class="single-large-img">
+                                        <a href="view/public/img/car/<?php echo $product['img_4'] ?>" data-rel="lightcase:myCollection">
+                                            <img src="view/public/img/car/<?php echo $product['img_4'] ?>" alt="Image">
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="ltn__shop-details-small-img slick-arrow-2">
                                     <div class="single-small-img">
                                         <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
                                     </div>
                                     <div class="single-small-img">
-                                        <img src="view/public/img/car/<?php echo $product['img'] ?>" alt="Image">
+                                        <img src="view/public/img/car/<?php echo $product['img_2'] ?>" alt="Image">
                                     </div>
                                     <div class="single-small-img">
                                         <img src="view/public/img/car/<?php echo $product['img_3'] ?>" alt="Image">
@@ -41,7 +67,7 @@
                                         <li class="review-total"> <a href="#"> <?php echo format_currency($product['view']) ?> View</a></li>
                                     </ul>
                                 </div>
-                                <h3>Mercedes A-Class</h3>
+                                <h3><?php echo $product['product_name'] ?></h3>
                                 <div class="product-price">
                                     <span><?php echo format_currency($product['price']) ?> VNĐ</span>
                                 </div>
@@ -76,7 +102,7 @@
                                         <li>
                                             <a href="#" class="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
                                                 <i class="far fa-heart"></i>
-                                                <span>Dang sách yêu thích</span>
+                                                <span>Danh sách yêu thích</span>
                                             </a>
                                         </li>
                                         <li>
@@ -106,7 +132,7 @@
                                 <hr>
                                 <div class="ltn__product-details-menu-2">
                                     <?php if (isset($_SESSION['user'])) { ?>
-                                        <form action="index.php?act=vao_trang_xacnhan_datlich" method="post">
+                                        <form action="index.php?act=vao_trang_xacnhan_datlich&id=<?php echo $product['product_id'] ?>" method="post">
 
                                         <?php } else { ?>
                                             <form action="index.php?act=vao_trang_dangnhap" method="post">
@@ -123,7 +149,7 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </form>
+                                            </form>
                                 </div>
                             </div>
                         </div>
@@ -145,7 +171,7 @@
                         <div class="nav">
                             <a class="active show" data-bs-toggle="tab" href="#liton_tab_details_1_1">Mô tả</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_2" class="">Reviews</a> -->
-                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Bình luận</a>
+                            <a data-bs-toggle="tab" href="#liton_tab_details_1_3" class="">Bình luận (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</a>
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_4" class="">Shipping Policy</a> -->
                             <!-- <a data-bs-toggle="tab" href="#liton_tab_details_1_5" class="">Size Chart</a> -->
                         </div>
@@ -164,32 +190,34 @@
                                 <div class="ltn__comment-area mb-30">
                                     <h4 class="title-2">Bình luận (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
                                     <div class="ltn__comment-inner">
+                                        <?php $u = -1 ?>
                                         <ul>
                                             <?php foreach ($binhluan as $binhluan) : ?>
 
                                                 <li>
                                                     <div class="ltn__comment-item clearfix">
                                                         <div class="ltn__commenter-img">
-                                                            <img src="view/public/img/testimonial/1.jpg" alt="Image">
+                                                            <img src="view/public/img/testimonial/avatar-trang-y-nghia.jpeg" alt="Image">
                                                         </div>
                                                         <div class="ltn__commenter-comment">
-                                                            <h6><a href="#"><?= $binhluan['hovaten'] ?></a> <span><?php echo ($binhluan['vaitro_id'] > 1)?"--Admin--":"--Nhân viên--"; ?></span></h6>
-                                                            
+                                                            <h6><a href="#"><?= $binhluan['hovaten'] ?></a> <span><?php echo ($binhluan['vaitro_id'] > 1) ? "--Admin--" : "--Khách hàng--"; ?></span></h6>
+
                                                             <span class="comment-date"><?= $binhluan['ngaybl'] ?></span>
                                                             <p><?= $binhluan['noidung'] ?>
                                                             <div class="chucnang_noidungbl">
-                                                                <?php if (isset($_SESSION['user'])) : ?>
-                                                                    <?php if ($binhluan['user_id'] != $_SESSION['user']['user_id']) : ?>
-                                                                        <div class=" sangdi">
 
-                                                                            <button class="ltn__comment-reply-btn" type="button">Trả lời</button>
+                                                                <?php if (isset($_SESSION['user'])) : ?>
+                                                                    <?php if ($binhluan['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
+                                                                        <div class="xoa">
+                                                                            <a style="color:red ;" href="index.php?act=delete_binhluan&id_binhluan=<?= $binhluan['binhluan_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
                                                                         </div>
                                                                     <?php endif ?>
                                                                 <?php endif ?>
                                                                 <?php if (isset($_SESSION['user'])) : ?>
-                                                                    <?php if ($binhluan['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
-                                                                        <div class="xoa">
-                                                                            <a href="index.php?act=delete_binhluan&id_binhluan=<?= $binhluan['binhluan_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
+                                                                    <?php if ($binhluan['user_id'] != $user_id) : ?>
+                                                                        <div class=" sangdi">
+                                                                            <?php $u++ ?>
+                                                                            <button class="ltn__comment-reply-btn" type="button" onclick="hien(<?= $u ?>)">Trả lời</button>
                                                                         </div>
                                                                     <?php endif ?>
                                                                 <?php endif ?>
@@ -212,7 +240,7 @@
                                                                             <img src="view/public/img/testimonial/4.jpg" alt="Image">
                                                                         </div>
                                                                         <div class="ltn__commenter-comment">
-                                                                            <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro">QTV</div> <?php endif ?></a></h6>
+                                                                            <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro"></div> <?php endif ?></a></h6>
                                                                             <span class="comment-date"> <?= $rep['ngay_traloi'] ?>
                                                                             </span>
                                                                             <p><?= $rep['noidung'] ?>
@@ -223,7 +251,7 @@
                                                                             </div>
                                                                         <?php endif ?>
                                                                     <?php endif ?></p>
-                                                                    <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a>
+                                                                    <!-- <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a> -->
                                                                         </div>
                                                                     </div>
                                                                 </li>
@@ -231,13 +259,8 @@
                                                         <?php endif ?>
 
                                                     <?php endforeach ?>
-
                                                 </li>
-
-
                                             <?php endforeach ?>
-
-
                                         </ul>
                                     </div>
                                 </div>
@@ -261,7 +284,7 @@
 
                                                 <?php endif ?>
                                             </div>
-                                        </form>
+                                            </form>
                                 </div>
                             </div>
                         </div>
@@ -280,7 +303,8 @@
             <div class="col-lg-12">
                 <div class="section-title-area ltn__section-title-2">
                     <h6 class="section-subtitle ltn__secondary-color">// cars</h6>
-                    <h1 class="section-title">Related Products<span>.</span></h1>
+                    <h1 class="section-title">Sản phẩm liên quan<span>.</span>
+                    </h1>
                 </div>
             </div>
         </div>
@@ -315,170 +339,85 @@
                         </div>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-title"><a href="product-details.html">Mercedes A-Class</a></h2>
+                        <h2 class="product-title"><a href="product-details.html"><?php echo $product['product_name'] ?></a></h2>
                         <div class="product-price">
-                            <span>$65,000</span>
-                            <del>$68,000</del>
+                            <span><?php echo format_currency($product['price']) ?>VND</span>
+                            <!-- <del>$68,000</del> -->
                         </div>
                         <div class="product-info-brief">
                             <ul>
                                 <li>
-                                    <i class="fas fa-car"></i>2020
+                                    <i class="fas fa-car"></i><?php echo $product['doi_xe'] ?>
                                 </li>
                                 <li>
                                     <i class="fas fa-cog"></i>Auto
                                 </li>
                                 <li>
-                                    <i class="fas fa-road"></i>90kph
+                                    <i class="fas fa-road"></i><?php echo
+                                                                $product['cong_xuat'] ?>kph
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ltn__product-item -->
-            <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="ltn__product-item ltn__product-item-3 text-center">
-                    <div class="product-img">
-                        <a href="product-details.html"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
-                        <div class="product-hover-action">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                        <i class="far fa-heart"></i></a>
-                                </li>
-                            </ul>
+
+            <?php foreach ($top3sp as $top3sp) { ?>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="ltn__product-item ltn__product-item-3 text-center">
+                        <div class="product-img">
+                            <a href="product-details.html"><img src="view/public/img/car/<?php echo $top3sp['img'] ?>" alt="#"></a>
+                            <div class="product-badge">
+                                <ul>
+                                    <li class="soldout-badge">New</li>
+                                </ul>
+                            </div>
+                            <div class="product-hover-action">
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                            <i class="far fa-eye"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                            <i class="far fa-heart"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-title"><a href="product-details.html">BMW 4 Series</a></h2>
-                        <div class="product-price">
-                            <span>$50,000</span>
-                            <del>$62,000</del>
-                        </div>
-                        <div class="product-info-brief">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-car"></i>2020
-                                </li>
-                                <li>
-                                    <i class="fas fa-cog"></i>Auto
-                                </li>
-                                <li>
-                                    <i class="fas fa-road"></i>95kph
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ltn__product-item -->
-            <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="ltn__product-item ltn__product-item-3 text-center">
-                    <div class="product-img">
-                        <a href="product-details.html"><img src="view/public/img/car/<?php echo $product['img_3'] ?>" alt="#"></a>
-                        <div class="product-badge">
-                            <ul>
-                                <li class="soldout-badge">Hot</li>
-                            </ul>
-                        </div>
-                        <div class="product-hover-action">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                        <i class="far fa-heart"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-title"><a href="product-details.html">Tesla Model S</a></h2>
-                        <div class="product-price">
-                            <span>$49,000</span>
-                            <del>$55,000</del>
-                        </div>
-                        <div class="product-info-brief">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-car"></i>2020
-                                </li>
-                                <li>
-                                    <i class="fas fa-cog"></i>Auto
-                                </li>
-                                <li>
-                                    <i class="fas fa-road"></i>80kph
-                                </li>
-                            </ul>
+                        <div class="product-info">
+                            <h2 class="product-title"><a href="product-details.html"><?php echo $top3sp['product_name'] ?></a></h2>
+                            <div class="product-price">
+                                <span><?php echo format_currency($top3sp['price']) ?> VNĐ</span>
+                                <!-- <del>$68,000</del> -->
+                            </div>
+                            <div class="product-info-brief">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-car"></i><?php echo $top3sp['doi_xe'] ?>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-cog"></i>Auto
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-road"></i><?php echo $top3sp['cong_xuat'] ?>kph
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- ltn__product-item -->
-            <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="ltn__product-item ltn__product-item-3 text-center">
-                    <div class="product-img">
-                        <a href="product-details.html"><img src="view/public/img/car/<?php echo $product['img_2'] ?>" alt="#"></a>
-                        <div class="product-hover-action">
-                            <ul>
-                                <li>
-                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                        <i class="far fa-heart"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-title"><a href="product-details.html">Toyota Corolla </a></h2>
-                        <div class="product-price">
-                            <span>$43,000</span>
-                            <del>$48,000</del>
-                        </div>
-                        <div class="product-info-brief">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-car"></i>2020
-                                </li>
-                                <li>
-                                    <i class="fas fa-cog"></i>Auto
-                                </li>
-                                <li>
-                                    <i class="fas fa-road"></i>70kph
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <?php } ?>
+
+
         </div>
     </div>
 </div>

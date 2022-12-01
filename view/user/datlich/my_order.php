@@ -1,4 +1,4 @@
-<div class="content pt-[200px]">
+<div class="content pt-[200px]" style="margin-top: 50px;">
     <?php if(empty($my_orders)) {?>
         <div class="cart_error">
             <h2 class="text-center text-[24px] font-[700]">Bạn chưa có lịch hẹn nào</h2>
@@ -20,6 +20,7 @@
                         <th>Ca</th>
                         <th>Cơ sở</th>
                         <th>Trạng thái</th>
+                        <th>Chi tiết</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +37,7 @@
 
                         <td><?=$my_order['status']?>        
                             </td>
-                        <!-- <td><button class="chitiet_order"><a href="index.php?act=chitiet_order&order_id=<?=$my_order['order_id']?>">Chi tiết</a></button></td> -->
+                        <td><button style="color: green ;" class="chitiet_order"><a href="index.php?act=chitiet_order&order_id=<?=$my_order['order_id']?>">Chi tiết</a></button></td>
                     </tr>
                 <?php endforeach ?>
                 </tbody>

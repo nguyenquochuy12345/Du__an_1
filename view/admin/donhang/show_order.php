@@ -24,7 +24,7 @@
                     <th> Người nhận hàng</th>
                     <th>Email</th>
                     <th>Số điện thoại</th>
-                    <th>Địa chỉ</th>
+                  
                     <th>Ngày đặt hàng</th>
                     <th>Trạng thái</th>
                     <th colspan="2">Chức năng</th>
@@ -40,7 +40,6 @@
                         <td><?= $order['hovaten'] ?></td>
                         <td><?= $order['email'] ?></td>
                         <td><?= $order['tel'] ?></td>
-                        <td id="order_diachi" ><?= $order['diachi'] ?></td>
                         <td id="ngaythang"><?= $order['ngaydathang'] ?></td>
                         <?php $count++; ?>
                         <form class="donhang" action="index.php?act=capnhat_donhang" method="post">

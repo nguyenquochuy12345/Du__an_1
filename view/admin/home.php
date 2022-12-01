@@ -22,12 +22,12 @@
                     <td><?= format_currency($cate['min']) . " VNĐ" ?></td>
                 </tr>
             <?php endforeach ?>
-            <!-- <tr>
+            <tr>
                 <td><button id="sua"><a href="index.php?act=bieudo_danhmuc">Biểu đồ</a></button></td>
                 <td></td>
                 <td></td>
                 <td></td>
-            </tr> -->
+            </tr>
             </tbody>
         </table>
     </div>

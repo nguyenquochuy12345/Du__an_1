@@ -37,7 +37,7 @@
           $sotrang = sotrang($id, $so_sanpham_tren1trang);
           $so_binhluan = dem_binh_luan_theo_sanpham($id);
           $products_lienquan = sanpham_lienquan($id, $iddm);
-          header("location: index.php?act=chitiet_datlich&id=$id&iddm=$iddm");
+          header("location: index.php?act=chitiet_sanpham&id=$id&iddm=$iddm");
         }
       }
 

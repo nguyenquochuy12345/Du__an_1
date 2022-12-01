@@ -17,7 +17,7 @@
             <div class="row pt-[200px]">
                 <div class="col-lg-12">
                     <div class="ltn__appointment-inner">
-                        <form action="index.php?act=muahang" method="post">
+                        <form action="index.php?act=datlich" method="post">
                             <h6>Thông tin đặt xe của bạn</h6>
                             <div class="row">
                                 <div class="col-md-6">
@@ -50,43 +50,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <h6>Thông tin của xe bạn muốn đặt</h6>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="input-item">
-                                        <select class="nice-select">
 
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="input-item">
-                                        <select class="nice-select">
-                                            <option>Model</option>
-                                            <option>Any</option>
-                                            <option>6 Series (1)</option>
-                                            <option>7 Series (1)</option>
-                                            <option>8 Series (1)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="input-item">
-                                        <select class="nice-select">
-                                            <option>Year</option>
-                                            <option>2015</option>
-                                            <option>2016</option>
-                                            <option>2017</option>
-                                            <option>2018</option>
-                                            <option>2019</option>
-                                            <option>2020</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <p><label class="input-info-save mb-0"><input type="checkbox" name="agree"> My vehicle is not listed in the form above..</label></p>
-                                </div>
-                            </div> -->
+                            <h6>
+                                        <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?>  " hidden>
+                            </h6>
+                            
                             <h6>Bạn cần yêu cầu hay ý kiến muốn đóng góp ?</h6>
                             <div class="input-item input-item-textarea ltn__custom-icon">
                                 <textarea type='text' name="ltn__message" placeholder="Enter message"></textarea>
@@ -99,7 +67,7 @@
                                         <div class="col-md-6">
                                             <div class="input-item ltn__datepicker">
                                                 <div class="input-group date" data-provide="datepicker">
-                                                    <input type="text" name="ngay_xem" class="form-control" placeholder="Select Date">
+                                                    <input type="text"  min name="ngay_xem" class="form-control" placeholder="Select Date">
                                                     <div class="input-group-addon">
                                                         <i class="far fa-calendar-alt"></i>
                                                     </div>

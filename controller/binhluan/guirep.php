@@ -31,7 +31,7 @@
                 $product = chitiet_sp($id);
                 $reps = show_rep($id);
                 $products_lienquan = sanpham_lienquan($id, $iddm);
-                include_once './view/user/detail_product.php';
+                include_once './view/user/car/detail_product.php';
               }
             }
           }
