@@ -97,7 +97,7 @@ function list_binhluan()
 function chitietBinhluan($product_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = "SELECT binhluan.binhluan_id,product_id,taikhoan.hovaten,binhluan.ngaybl,taikhoan.img,binhluan.noidung
+    $sql = "SELECT binhluan.binhluan_id,product_id,taikhoan.hovaten,binhluan.ngaybl,binhluan.noidung
          FROM binhluan JOIN taikhoan ON taikhoan.user_id=binhluan.user_id where product_id = '$product_id'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -128,7 +128,7 @@ function admin_xoabinhluan($binhluan_id)
 function show_rep_theo_binhluan($binhluan_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = "SELECT rep_id, binhluan_id, taikhoan.hovaten,taikhoan.img,noidung,ngay_traloi FROM rep JOIN taikhoan ON taikhoan.user_id=rep.user_id  WHERE binhluan_id= '$binhluan_id'";
+    $sql = "SELECT rep_id, binhluan_id, taikhoan.hovaten,noidung,ngay_traloi FROM rep JOIN taikhoan ON taikhoan.user_id=rep.user_id  WHERE binhluan_id= '$binhluan_id'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $rep = $stmt->fetchAll(PDO::FETCH_ASSOC);

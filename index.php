@@ -9,11 +9,11 @@ include "./model/taikhoan.php";
 include './model/binhluan.php';
 include './model/donhang.php';
 
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-// use PHPMailer\PHPMailer\Exception;
+
 
 // require_once 'vendor/autoload.php';
+
+
 
 if (!isset($_SESSION['cart'])) {
   $_SESSION['cart'] = [];
@@ -63,6 +63,8 @@ if (isset($_GET['act'])) {
       include './controller/binhluan/guibinhluan.php';
 
       break;
+
+
     case 'gioithieu':
 
       include './view/user/blog/gioithieu.php';
@@ -183,6 +185,17 @@ if (isset($_GET['act'])) {
       include './controller/datlich/vao_datlich.php';
 
       break;
+    case 'huy_lich':
+      
+      if (isset($_GET['order_id'])) {
+        $order_id = $_GET['order_id'];
+        $huy_lich = huy_lich_user($order_id);
+      }
+      echo '.';
+      include './controller/datlich/vao_datlich.php';
+      
+      break;
+
     case 'chitiet_order':
 
       include './controller/datlich/chitiet_order.php';

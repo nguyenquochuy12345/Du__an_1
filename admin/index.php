@@ -15,7 +15,7 @@
     require_once "../model/binhluan.php";
     require_once '../model/taikhoan.php';
     require_once '../model/donhang.php';
-    require_once "../model/doanhthu.php";
+    // require_once "../model/doanhthu.php";    
     if (isset($_GET['act'])) {
         $act = $_GET['act'];
         switch ($act) {
@@ -169,10 +169,10 @@
                 $users = show_user();
                 include '../view/admin/taikhoan/list_user.php';
                 break;
-            case 'delete_user':
+            case 'disable_user':
                 if (isset($_GET['user_id'])) {
                     $user_id = $_GET['user_id'];
-                    delete_user($user_id);
+                    disable_user($user_id);
                 }
 
                 $users = show_user();
@@ -251,6 +251,17 @@
                 $status = show_status();
                 include '../view/admin/donhang/show_order.php';
                 break;
+                
+            case 'huy_lich':
+                if (isset($_GET['order_id'])) {
+                    $order_id = $_GET['order_id'];
+                    $huy_lich = huy_lich($order_id);
+                }
+                $show_order = showdonhang();
+                $status = show_status();
+                include '../view/admin/donhang/show_order.php';
+                break;   
+                 
             case 'showdonhang_theo_khachhang':
                 if(isset($_GET['user_id'])){
                     $user_id = $_GET['user_id'];

@@ -1,5 +1,5 @@
 <?php
-function dathang($id_user, $hovaten, $tel, $email, $yeucau,$id_product, $ngayxemxe, $caxemxe, $cosoxemxe)
+function dathang($id_user, $hovaten, $tel, $email, $yeucau, $id_product, $ngayxemxe, $caxemxe, $cosoxemxe)
 {
     include './ketnoi/ketnoi.php';
     $errors = [];
@@ -11,12 +11,28 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau,$id_product, $ngayxem
     if ($hovaten == "") {
         $errors['hovaten'] = "Họ và tên không được để trống";
     }
-    // if ($address == "") {
-    //     $errors['address'] = "Địa chỉ không được để trống";
-    // }
+
     if ($tel == "") {
         $errors['tel'] = "Số điện thoại không được để trống";
     }
+    if ($ngayxemxe == "") {
+        $errors['chonngay'] = "Ngày  không được để trống!";
+    }
+
+    if ($caxemxe == "") {
+        $errors['chonthoigian'] = "Thời gian xem xe không được để trống!";
+    }
+    if ($cosoxemxe == "") {
+        $errors['chondiachi'] = "Cơ sở xem xe không được để trống!";
+    }
+
+    $time_start = strtotime($ngayxemxe);
+    $time_now = strtotime(date("Y-m-d"));
+
+    if ($ngayxemxe != "" && $time_start < $time_now) {
+        $errors['chonngay'] = "Ngày bạn chọn đã trôi qua !";
+    }
+
     $sdt = '/0\d{9,10}/';
     if (!preg_match($sdt, $tel)) {
         $errors['tel'] = "Số điện thoại không đúng định dạng";
@@ -87,7 +103,7 @@ function show_chitiet_order($order_id)
 function show_chitiet_order_theokhachhang($order_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.products_id WHERE order_id = '$order_id' order by products.price desc";
+    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.product_id WHERE order_id = '$order_id' order by products.price desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -96,7 +112,7 @@ function show_chitiet_order_theokhachhang($order_id)
 function admin_show_chitiet_order($order_id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.products_id WHERE order_id = '$order_id' order by products.price desc";
+    $sql = " SELECT order_id,products.product_name,products.price,products.img,products.img_2,products.img_3,products.img_4,products.description  FROM tbl_order JOIN products ON products.product_id = tbl_order.product_id WHERE order_id = '$order_id' order by products.price desc";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -148,6 +164,14 @@ function capnhat_donhang($status, $order_id, $ngaydathang)
         $stmt->execute();
     }
 }
+function huy_lich_user($order_id)
+{
+    include './ketnoi/ketnoi.php';
+    $sql = "UPDATE tbl_order
+        SET status_id = 5 WHERE order_id = '$order_id'";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+}
 function show_status()
 {
     include '../ketnoi/ketnoi.php';
@@ -156,4 +180,13 @@ function show_status()
     $stmt->execute();
     $status = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $status;
+}
+
+function huy_lich($order_id)
+{
+    include '../ketnoi/ketnoi.php';
+    $sql = "UPDATE tbl_order
+        SET status_id = 5 WHERE order_id = '$order_id'";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
 }
