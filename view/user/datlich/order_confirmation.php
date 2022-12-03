@@ -52,9 +52,9 @@
                             </div>
 
                             <h6>
-                                        <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?>  " hidden>
+                                <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?>  " hidden>
                             </h6>
-                            
+
                             <h6>Bạn cần yêu cầu hay ý kiến muốn đóng góp ?</h6>
                             <div class="input-item input-item-textarea ltn__custom-icon">
                                 <textarea type='text' name="ltn__message" placeholder="Enter message"></textarea>
@@ -67,17 +67,22 @@
                                         <div class="col-md-6">
                                             <div class="input-item ltn__datepicker">
                                                 <div class="input-group date" data-provide="datepicker">
-                                                    <input type="text"  min name="ngay_xem" class="form-control" placeholder="Select Date">
+                                                    <input type="text" min name="ngay_xem" class="form-control" placeholder="Select Date">
                                                     <div class="input-group-addon">
                                                         <i class="far fa-calendar-alt"></i>
                                                     </div>
+
                                                 </div>
                                             </div>
+                                            <br>
+                                            <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['chonngay'])) : ?>
+                                                    <?= $_SESSION['errors_muahhang']['chonngay'] ?>
+                                                <?php endif ?></small>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input-item input-item-time">
                                                 <select class="nice-select" name="ca_xemxe">
-                                                    <option value="HH:MM">HH:MM</option>
+                                                    <option value=" ">HH:MM</option>
                                                     <option value="9:00 Sáng - 11:00 Sáng">9:00 Sáng - 11:00 Sáng</option>
                                                     <option value="11:00 Sáng - 13:00 Chiều">11:00 Sáng - 13:00 Chiều</option>
                                                     <option value="13:00 Chiều - 15:00 Chiều">13:00 Chiều - 15:00 Chiều</option>
@@ -85,6 +90,9 @@
                                                     <option value="17:00 Chiều - 19:00 Chiều">17:00 Chiều - 19:00 Chiều</option>
                                                 </select>
                                             </div>
+                                            <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['chonthoigian'])) : ?>
+                                                    <?= $_SESSION['errors_muahhang']['chonthoigian'] ?>
+                                                <?php endif ?></small>
                                         </div>
                                     </div>
                                 </div>
@@ -94,19 +102,21 @@
                                             <h6>Cơ sở xem xe</h6>
                                             <div class="input-item">
                                                 <select class="nice-select" name="co_so">
-                                                    <option value="Trịnh Văn Bô">Địa chỉ</option>
+                                                    <option value="">Địa chỉ</option>
                                                     <option value="Trịnh Văn Bô">Trịnh Văn Bô</option>
                                                     <option value="74 Đường cầu Diễn">74 Đường cầu Diễn</option>
                                                     <option value="Hoàng Quốc Việt - Cầu Giấy">Hoàng Quốc Việt - Cầu Giấy</option>
-
                                                 </select>
                                             </div>
+                                            <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['chondiachi'])) : ?>
+                                                    <?= $_SESSION['errors_muahhang']['chondiachi'] ?>
+                                                <?php endif ?></small>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="alert alert-warning" role="alert">
-                                Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
-                            </div>
+                                    Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
+                                </div>
                                 <div class="btn-wrapper text-center mt-0">
                                     <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" name="btn_datlich" type="submit">Đặt lịch ngay bây giờ</button>
                                 </div>

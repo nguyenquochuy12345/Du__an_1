@@ -9,7 +9,7 @@
                 <tr>
                     <th>Mã bình luận</th>
                     <th>Người bình luận</th>
-                    <th>Ảnh người bình luận</th>
+                    <!-- <th>Ảnh người bình luận</th> -->
                     <th>Ngày bình luận</th>
                     <th>Nội dung</th>
                     <th colspan="3" >Chức năng</th>
@@ -18,7 +18,7 @@
                     <tr>
                         <td><?= $value['binhluan_id'] ?></td>
                         <td><?= $value['hovaten'] ?></td>
-                        <td><img class="mx-auto w-[100px] rounded-full" class="anhuser" src="../view/public/img/team/<?= $value['img'] ?>" alt=""></td>
+                        <!-- <td><img class="mx-auto w-[100px] rounded-full" class="anhuser" src="../view/public/img/team/<?= $value['img'] ?>" alt=""></td> -->
                         <td><?= $value['ngaybl'] ?></td>
                         <td><?= $value['noidung'] ?></td>
                         <td><button id="xoa" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')"  ><a href="index.php?act=xoa_binhluan&binhluan_id=<?=$value['binhluan_id']?>&product_id=<?=$value['product_id']?>">Xóa</a></button></td>

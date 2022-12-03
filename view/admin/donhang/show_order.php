@@ -13,22 +13,21 @@
 <div class="nen">
     <div class="listchung">
         <h1>Danh sách đơn hàng</h1>
-
-        
             <table class="list">
-
               <thead>
               <tr>  
                     <th>Mã đơn hàng</th>
                     <th>Mã khách hàng</th>
-                    <th> Người nhận hàng</th>
+                    <th>Người nhận hàng</th>
                     <th>Email</th>
                     <th>Số điện thoại</th>
-                  
-                    <th>Ngày đặt hàng</th>
-                    <th>Trạng thái</th>
-                    <th colspan="2">Chức năng</th>
-                </tr>
+                    <th>Ngày xem</th>
+                    <th>Thời gian</th>
+                    <th>Cơ sở</th>
+                    <th colspan="2">Trạng thái</th>
+                    <th>Trạng thái lịch</th>
+                    <th >Chức năng</th>
+                </tr>   
               </thead>
                 <tbody>
                     <?php $count = -1; ?>
@@ -40,7 +39,9 @@
                         <td><?= $order['hovaten'] ?></td>
                         <td><?= $order['email'] ?></td>
                         <td><?= $order['tel'] ?></td>
-                        <td id="ngaythang"><?= $order['ngaydathang'] ?></td>
+                        <td><?= $order['ngayxemxe'] ?></td>
+                        <td><?= $order['caxemxe'] ?></td>
+                        <td><?= $order['co_so'] ?></td>
                         <?php $count++; ?>
                         <form class="donhang" action="index.php?act=capnhat_donhang" method="post">
                         <input name="order_id" type="hidden" value="<?=$order['order_id']?>">
@@ -52,7 +53,8 @@
                             <?php endforeach ?>
                         </select></td>
                         <td><button class="btn_donhang" name="btn_capnhat_donhang" type="submit">Cập nhật</button></td>
-                        <td><button id="xoa"><a href="index.php?act=chitiet_donhang&order_id=<?=$order['order_id']?>">Chi tiết</a></button></td>
+                        <td><button><a href="index.php?act=huy_lich&order_id=<?= $order['order_id']?>" onclick="return confirm('Bạn có chắc chắn muốn hủy lịch hẹn này này không ?')" >Huỷ đơn</a></button></td>
+                        <td><button style="color: black;" id="xoa"><a href="index.php?act=chitiet_donhang&order_id=<?=$order['order_id']?>">Chi tiết</a></button></td>
                         </form>
                     </tr>
                 <?php endforeach ?>

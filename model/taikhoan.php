@@ -1,12 +1,22 @@
 <?php
     function checkuser($username,$password){
         include './ketnoi/ketnoi.php';
-        $sql = "SELECT * FROM taikhoan WHERE username = '$username' AND password = '$password'";
+        $sql = "SELECT * FROM taikhoan WHERE username = '$username' AND password = '$password' AND vaitro_id != 3 ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $account = $stmt->fetch(PDO::FETCH_ASSOC);
         return $account;
     }
+    function checkuser_vohieuhoa($username,$password){
+        include './ketnoi/ketnoi.php';
+        $sql = "SELECT * FROM taikhoan WHERE username = '$username' AND password = '$password' AND vaitro_id = 3 ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $account = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $account;
+    }
+
+
     function dangky($username,$password,$repassword,$hovaten,$email,$sdt){
         include './ketnoi/ketnoi.php';
         $errors = [];
@@ -137,13 +147,13 @@
     }
     function show_user(){
         include '../ketnoi/ketnoi.php';
-        $sql = "SELECT user_id,password,email,hovaten,tel, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id  ";
+        $sql = "SELECT user_id,password,email,hovaten,tel, username,vaitro.vaitro_id, vaitro.vaitro FROM taikhoan JOIN vaitro ON vaitro.vaitro_id=taikhoan.vaitro_id ORDER BY vaitro.vaitro_id ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $users;
     }
-    function delete_user($user_id){
+    function disable_user($user_id){
         include '../ketnoi/ketnoi.php';
         $sql = "SELECT taikhoan.user_id, binhluan.binhluan_id FROM taikhoan JOIN binhluan ON binhluan.user_id = taikhoan.user_id WHERE taikhoan.user_id = '1'";
         $stmt = $conn->prepare($sql);
@@ -159,16 +169,17 @@
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
-        $sql = "DELETE FROM feedback  WHERE user_id = '$user_id'";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
+        // $sql = "DELETE FROM feedback  WHERE user_id = '$user_id'";
+        // $stmt = $conn->prepare($sql);
+        // $stmt->execute();
 
-        $sql = "DELETE FROM cart  WHERE user_id = '$user_id'";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
+        // $sql = "DELETE FROM cart  WHERE user_id = '$user_id'";
+        // $stmt = $conn->prepare($sql);
+        // $stmt->execute();
        
 
-        $sql = "DELETE FROM taikhoan  WHERE user_id = '$user_id'";
+        $sql = "UPDATE taikhoan
+        SET vaitro_id = 3 WHERE user_id = '$user_id'";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
     }

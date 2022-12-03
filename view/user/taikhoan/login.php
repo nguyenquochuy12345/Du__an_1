@@ -6,9 +6,10 @@ if (isset($_SESSION['user'])) {
 <!-- LOGIN AREA START -->
 <div class="ltn__login-area pb-65 pt-[200px]">
     <?php if (!isset($_SESSION['user'])) : ?>
-        <script>
+        <!-- <script>
             alert('Bạn cần đăng nhập đã !');
-        </script>
+        </script> -->
+
     <?php endif ?>
     <div class="container">
         <div class="row">
@@ -37,7 +38,7 @@ if (isset($_SESSION['user'])) {
                                 <td colspan="2"><input name="password" type="password"></td>
                             </tr>
                             <tr>
-                                <td class="thongbao">
+                                <td class="thongbao" style="color: red ;">
                                     <?php if (isset($_SESSION['thongbao'])) : ?>
                                         <?= $_SESSION['thongbao'] ?>
                                     <?php endif ?>
@@ -45,6 +46,7 @@ if (isset($_SESSION['user'])) {
                                     <?php if (isset($_SESSION['dangkythanhcong'])) : ?>
                                         <?= $_SESSION['dangkythanhcong'] ?>
                                     <?php endif ?>
+
                                 </td>
                             </tr>
                             <tr>

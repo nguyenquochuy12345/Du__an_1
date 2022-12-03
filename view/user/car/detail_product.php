@@ -313,7 +313,7 @@
             <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
                 <div class="ltn__product-item ltn__product-item-3 text-center">
                     <div class="product-img">
-                        <a href="product-details.html"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
+                        <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                         <div class="product-badge">
                             <ul>
                                 <li class="soldout-badge">New</li>
@@ -322,24 +322,24 @@
                         <div class="product-hover-action">
                             <ul>
                                 <li>
-                                    <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                    <a href="" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
                                         <i class="far fa-eye"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                    <a href="" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
                                         <i class="far fa-heart"></i></a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="product-info">
-                        <h2 class="product-title"><a href="product-details.html"><?php echo $product['product_name'] ?></a></h2>
+                        <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
                         <div class="product-price">
                             <span><?php echo format_currency($product['price']) ?>VND</span>
                             <!-- <del>$68,000</del> -->
@@ -367,7 +367,7 @@
                 <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
                     <div class="ltn__product-item ltn__product-item-3 text-center">
                         <div class="product-img">
-                            <a href="product-details.html"><img src="view/public/img/car/<?php echo $top3sp['img'] ?>" alt="#"></a>
+                            <a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><img src="view/public/img/car/<?php echo $top3sp['img'] ?>" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
                                     <li class="soldout-badge">New</li>
@@ -376,24 +376,24 @@
                             <div class="product-hover-action">
                                 <ul>
                                     <li>
-                                        <a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
+                                        <a href="" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
                                             <i class="far fa-eye"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" title="Add to Cart" data-bs-toggle="modal" data-bs-target="#add_to_cart_modal">
+                                        <a href="" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
                                             <i class="fas fa-shopping-cart"></i>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
+                                    <!-- <li>
+                                        <a href="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
                                             <i class="far fa-heart"></i></a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h2 class="product-title"><a href="product-details.html"><?php echo $top3sp['product_name'] ?></a></h2>
+                            <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><?php echo $top3sp['product_name'] ?></a></h2>
                             <div class="product-price">
                                 <span><?php echo format_currency($top3sp['price']) ?> VNĐ</span>
                                 <!-- <del>$68,000</del> -->
