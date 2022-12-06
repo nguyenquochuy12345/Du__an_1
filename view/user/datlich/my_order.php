@@ -33,8 +33,8 @@
                             <td><?= $my_order['tel'] ?></td>
                             <td><?= $my_order['ngaydathang'] ?></td>
                             <td><?= $my_order['ngayxemxe'] ?></td>
-                            <td><?= $my_order['caxemxe'] ?></td>
-                            <td><?= $my_order['co_so'] ?></td>
+                            <td><?= $my_order['name_caxem'] ?></td>
+                            <td><?= $my_order['name_coso'] ?></td>
 
                             <td><?= $my_order['status'] ?>
                             </td>

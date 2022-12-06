@@ -280,7 +280,9 @@
                                             <div class="btn-wrapper">
                                                 <button name="gui" class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
                                                 <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
-                                                    <div class="thongbao"><?= $_SESSION['thongbaobinhluan'] ?></div>
+                                                    <div class="thongbao">
+                                                        <p style="color:red ;"><?= $_SESSION['thongbaobinhluan'] ?></p>
+                                                    </div>
 
                                                 <?php endif ?>
                                             </div>

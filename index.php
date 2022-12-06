@@ -176,6 +176,15 @@ if (isset($_GET['act'])) {
         $id = $_GET['id'];
         $detail_product = chitiet_sp($id);
         $id_product = $id;
+        $caxemxe = show_caxem();
+        // var_dump($caxemxe);
+        $cosoxem = show_cosoxem();
+        // var_dump($cosoxem);
+      } else {
+        include 'controller/car/trangchu.php';
+
+        include './view/user/car/home.php';
+        break;
       }
       include './view/user/datlich/order_confirmation.php';
 
@@ -186,14 +195,14 @@ if (isset($_GET['act'])) {
 
       break;
     case 'huy_lich':
-      
+
       if (isset($_GET['order_id'])) {
         $order_id = $_GET['order_id'];
         $huy_lich = huy_lich_user($order_id);
       }
       echo '.';
       include './controller/datlich/vao_datlich.php';
-      
+
       break;
 
     case 'chitiet_order':

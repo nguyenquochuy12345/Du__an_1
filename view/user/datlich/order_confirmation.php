@@ -22,7 +22,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="input-item input-item-name ltn__custom-icon">
-                                        <input type="text" value="<?= $_SESSION['user']['hovaten'] ?>" name="hovaten">
+                                        <input type="text" value="<?= $_SESSION['user']['hovaten'] ?>" name="hovaten" disabled>
                                         <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['hovaten'])) : ?>
                                                 <?= $_SESSION['errors_muahhang']['hovaten'] ?>
                                             <?php endif ?></small>
@@ -35,7 +35,7 @@
                                 </div> -->
                                 <div class="col-md-6">
                                     <div class="input-item input-item-email ltn__custom-icon">
-                                        <input type="email" value="<?= $_SESSION['user']['email'] ?>" name="email" placeholder="Email address">
+                                        <input type="email" value="<?= $_SESSION['user']['email'] ?>" name="email" placeholder="Email address" disabled>
                                         <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['email'])) : ?>
                                                 <?= $_SESSION['errors_muahhang']['email'] ?>
                                             <?php endif ?></small>
@@ -43,8 +43,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="input-item input-item-phone ltn__custom-icon">
-                                        <input type="text" value="<?= $_SESSION['user']['tel'] ?>" name="tel" placeholder="Phone number">
-                                        <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['tel'])) : ?>
+                                        <input type="text" value="<?= $_SESSION['user']['tel'] ?>" name="tel" placeholder="Phone number" disabled>
+                                        <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['tel'])) :  ?>
                                                 <?= $_SESSION['errors_muahhang']['tel'] ?>
                                             <?php endif ?></small>
                                     </div>
@@ -52,7 +52,8 @@
                             </div>
 
                             <h6>
-                                <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?>  " hidden>
+                                <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?> " hidden >
+                                
                             </h6>
 
                             <h6>Bạn cần yêu cầu hay ý kiến muốn đóng góp ?</h6>
@@ -66,11 +67,11 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="input-item ltn__datepicker">
-                                                <div class="input-group date" data-provide="datepicker">
-                                                    <input type="text" min name="ngay_xem" class="form-control" placeholder="Select Date">
-                                                    <div class="input-group-addon">
+                                                <div class=" ">
+                                                    <input type="date" name="ngay_xem" class="form-control" placeholder="Select Date">
+                                                    <!-- <div class="input-group-addon">
                                                         <i class="far fa-calendar-alt"></i>
-                                                    </div>
+                                                    </div> -->
 
                                                 </div>
                                             </div>
@@ -83,11 +84,9 @@
                                             <div class="input-item input-item-time">
                                                 <select class="nice-select" name="ca_xemxe">
                                                     <option value=" ">HH:MM</option>
-                                                    <option value="9:00 Sáng - 11:00 Sáng">9:00 Sáng - 11:00 Sáng</option>
-                                                    <option value="11:00 Sáng - 13:00 Chiều">11:00 Sáng - 13:00 Chiều</option>
-                                                    <option value="13:00 Chiều - 15:00 Chiều">13:00 Chiều - 15:00 Chiều</option>
-                                                    <option value="15:00 Chiều - 17:00 Chiều">15:00 Chiều - 17:00 Chiều</option>
-                                                    <option value="17:00 Chiều - 19:00 Chiều">17:00 Chiều - 19:00 Chiều</option>
+                                                <?php foreach($caxemxe as $item ) {?>
+                                                    <option value="<?php echo $item['caxem_id'] ?>"><?php echo $item['name_caxem'] ?></option>
+                                                    <?php }; ?>
                                                 </select>
                                             </div>
                                             <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['chonthoigian'])) : ?>
@@ -103,9 +102,9 @@
                                             <div class="input-item">
                                                 <select class="nice-select" name="co_so">
                                                     <option value="">Địa chỉ</option>
-                                                    <option value="Trịnh Văn Bô">Trịnh Văn Bô</option>
-                                                    <option value="74 Đường cầu Diễn">74 Đường cầu Diễn</option>
-                                                    <option value="Hoàng Quốc Việt - Cầu Giấy">Hoàng Quốc Việt - Cầu Giấy</option>
+                                                    <?php foreach($cosoxem as $item ) {?>
+                                                    <option value="<?php echo $item['coso_id'] ?>"><?php echo $item['name_coso'] ?></option>
+                                                    <?php }; ?>
                                                 </select>
                                             </div>
                                             <small style="color: red;"><?php if (isset($_SESSION['errors_muahhang']['chondiachi'])) : ?>

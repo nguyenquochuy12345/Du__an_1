@@ -1,20 +1,21 @@
 <?php
-function dathang($id_user, $hovaten, $tel, $email, $yeucau, $id_product, $ngayxemxe, $caxemxe, $cosoxemxe)
+function dathang($id_user, $yeucau, $id_product, $ngayxemxe, $caxemxe, $cosoxemxe)
 {
     include './ketnoi/ketnoi.php';
     $errors = [];
-    if ($email == "") {
-        $errors['email'] = "Email không được để trống";
-    } else if (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) {
-        $errors['email'] = "Email không đúng định dạng";
-    }
-    if ($hovaten == "") {
-        $errors['hovaten'] = "Họ và tên không được để trống";
-    }
+    // if ($email == "") {
+    //     $errors['email'] = "Email không được để trống";
+    // } else if (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) {
+    //     $errors['email'] = "Email không đúng định dạng";
+    // }
+    // if ($hovaten == "") {
+    //     $errors['hovaten'] = "Họ và tên không được để trống";
+    // }
 
-    if ($tel == "") {
-        $errors['tel'] = "Số điện thoại không được để trống";
-    }
+    // if ($tel == "") {
+    //     $errors['tel'] = "Số điện thoại không được để trống";
+    // }
+
     if ($ngayxemxe == "") {
         $errors['chonngay'] = "Ngày  không được để trống!";
     }
@@ -33,18 +34,16 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $id_product, $ngayxe
         $errors['chonngay'] = "Ngày bạn chọn đã trôi qua !";
     }
 
-    $sdt = '/0\d{9,10}/';
-    if (!preg_match($sdt, $tel)) {
-        $errors['tel'] = "Số điện thoại không đúng định dạng";
-    }
+    // $sdt = '/0\d{9,10}/';
+    // if (!preg_match($sdt, $tel)) {
+    //     $errors['tel'] = "Số điện thoại không đúng định dạng";
+    // }
+    
     $_SESSION['errors_muahhang'] =  $errors;
     if (!$errors) {
         $sql = "INSERT INTO tbl_order
         (
             user_id,
-            hovaten,
-            email,
-            tel,
             yeucau,
             product_id,
             ngayxemxe,
@@ -55,9 +54,6 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $id_product, $ngayxe
         VALUES
         (
             '$id_user',
-            '$hovaten' ,
-            '$email',
-            '$tel',
             '$yeucau',
             '$id_product',
             '$ngayxemxe',
@@ -85,7 +81,16 @@ function dathang($id_user, $hovaten, $tel, $email, $yeucau, $id_product, $ngayxe
 function showdonhang_theo_user($user_id)
 {
     include './ketnoi/ketnoi.php';
-    $sql = "SELECT order_id,hovaten,email,tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,tbl_order.status_id,order_status.status FROM tbl_order JOIN order_status ON order_status.status_id = tbl_order.status_id  WHERE user_id = '$user_id' order by ngaydathang DESC";
+    $sql = "SELECT order_id,taikhoan.hovaten,taikhoan.email,taikhoan.tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,
+    tbl_order.status_id,order_status.status,
+    ca_xem_xe.name_caxem,
+    co_so.name_coso
+    FROM tbl_order 
+    JOIN taikhoan ON taikhoan.user_id = tbl_order.user_id 
+    JOIN order_status ON order_status.status_id = tbl_order.status_id 
+    JOIN ca_xem_xe ON ca_xem_xe.caxem_id = tbl_order.caxemxe
+    JOIN co_so ON co_so.coso_id = tbl_order.co_so
+    WHERE tbl_order.user_id = '$user_id' order by ngaydathang DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $my_order = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -120,8 +125,18 @@ function admin_show_chitiet_order($order_id)
 }
 function showdonhang()
 {
-    include '../ketnoi/ketnoi.php';
-    $sql = "SELECT * FROM tbl_order order by ngaydathang desc";
+    include './ketnoi/ketnoi.php';
+    // $sql = "SELECT * FROM tbl_order order by ngaydathang desc";
+    $sql = "SELECT order_id,tbl_order.user_id,taikhoan.hovaten,taikhoan.email,taikhoan.tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,
+    tbl_order.status_id,order_status.status,
+    ca_xem_xe.name_caxem,
+    co_so.name_coso
+    FROM tbl_order 
+    JOIN taikhoan ON taikhoan.user_id = tbl_order.user_id 
+    JOIN order_status ON order_status.status_id = tbl_order.status_id 
+    JOIN ca_xem_xe ON ca_xem_xe.caxem_id = tbl_order.caxemxe
+    JOIN co_so ON co_so.coso_id = tbl_order.co_so
+    order by ngaydathang DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $show_order = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -189,4 +204,29 @@ function huy_lich($order_id)
         SET status_id = 5 WHERE order_id = '$order_id'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
+}
+
+
+
+// xu ly ca xem xe
+function show_cosoxem()
+{
+    include './ketnoi/ketnoi.php';
+    $sql = " SELECT *  FROM co_so ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $order_coso = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $order_coso;
+}
+
+
+// xu ly co so xem xe
+function show_caxem()
+{
+    include './ketnoi/ketnoi.php';
+    $sql = " SELECT *  FROM ca_xem_xe ";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $order_caxemxe = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $order_caxemxe;
 }
