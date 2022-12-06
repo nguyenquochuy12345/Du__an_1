@@ -7,21 +7,24 @@ use PHPMailer\PHPMailer\Exception;
 require_once 'vendor/autoload.php';
 
 if (isset($_POST['btn_datlich'])) {
-  $hovaten = trim($_POST['hovaten']);
-  $tel = $_POST['tel'];
-  $email = trim($_POST['email']);
+
+  // $hovaten = trim($_POST['hovaten']);
+  // $tel = $_POST['tel'];
+  // $email = trim($_POST['email']);
   // $address = trim($_POST['address']);
   $yeucau = trim($_POST['ltn__message']);
   $id_product = $_POST['product_id'];
-  $ngayxemxe = trim($_POST['ngay_xem']);
+  $ngayxemxe = $_POST['ngay_xem'];
   $caxemxe = trim($_POST['ca_xemxe']);
   $cosoxemxe = trim($_POST['co_so']);
+
+  $show_order = showdonhang();
  
 
   $id_user = $_SESSION['user']['user_id'];
 
-  dathang($id_user, $hovaten, $tel, $email, $yeucau, $id_product, $ngayxemxe, $caxemxe, $cosoxemxe);
-  if (!isset($_SESSION['errors_muahhang']['hovaten']) && !isset($_SESSION['errors_muahhang']['email'])  && !isset($_SESSION['errors_muahhang']['tel']) && !isset($_SESSION['errors_muahhang']['chonngay']) && !isset($_SESSION['errors_muahhang']['chonthoigian']) && !isset($_SESSION['errors_muahhang']['chondiachi'])) {
+  dathang($id_user, $yeucau, $id_product, $ngayxemxe, $caxemxe, $cosoxemxe);
+  if (!isset($_SESSION['errors_muahhang']['chonngay']) && !isset($_SESSION['errors_muahhang']['chonthoigian']) && !isset($_SESSION['errors_muahhang']['chondiachi'])) {
     $_SESSION['dangkythanhcong'] = "Đăng ký thành công";
 
     // Xử lý gmail
@@ -46,9 +49,9 @@ if (isset($_POST['btn_datlich'])) {
     <br>
     <h3>Ngày xem xe : '.$ngayxemxe.' </h3>
     <br>
-    <h3>Thời gian xem xe : '.$caxemxe.'  </h3>
+    <h3>Thời gian xem xe : '.$show_order['name_caxem'].'  </h3>
     <br>
-    <h3>Cơ sở xem xe : '.$cosoxemxe.'  </h3>
+    <h3>Cơ sở xem xe : '.$show_order['name_coso'].'  </h3>
     <br>
     <h2>Cảm ơn quý khách đã tin tưởng và đặt xe bên Ga-ra. Xin trân thành cảm ơn !</h2>
     '; // nội dung gửi mail
@@ -56,7 +59,9 @@ if (isset($_POST['btn_datlich'])) {
     $mailer->Body = $body;
     $mailer->send();
 
-    header("location: index.php?act=vao_trang_xacnhan_datlich");
+    // header("location: index.php?act=datlich");
+    header('location: ./index.php?act=vao_trang_xacnhan_datlich&id=' . $id_product . '');
+
     
   } else {
     header('location: ./index.php?act=vao_trang_xacnhan_datlich&id=' . $id_product . '');

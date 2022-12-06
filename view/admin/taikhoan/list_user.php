@@ -24,11 +24,14 @@
                         <td><?= $user['tel'] ?></td>
                         <?php if ($user['vaitro'] == 'Vô hiệu hóa') { ?>
                             <td style="color: red ; font-weight:600 ;"><?= $user['vaitro'] ?></td>
-                        <?php }else{?>
+                        <?php } else { ?>
                             <td><?= $user['vaitro'] ?></td>
                         <?php } ?>
                         <td id="chucnang"><button id="sua"><a href="index.php?act=edit_user&user_id=<?= $user['user_id'] ?>">Sửa</a></button>
-                            <?php if ($_SESSION['user']['user_id'] != $user['user_id']) : ?> <button id="xoa"><a href="index.php?act=disable_user&user_id=<?= $user['user_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn vô hiệu hóa tài khoản này không ?')">Vô hiệu</a></button> <?php endif ?></td>
+
+                            <?php if ($_SESSION['user']['user_id'] != $user['user_id'] && $user['vaitro'] !=  'Vô hiệu hóa' ) : ?>
+                                <button id="xoa"><a href="index.php?act=disable_user&user_id=<?= $user['user_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn vô hiệu hóa tài khoản này không ?')">Vô hiệu</a></button> <?php endif ?>
+                        </td>
 
                     </tr>
                 <?php endforeach ?>

@@ -40,14 +40,14 @@
                         <td><?= $order['email'] ?></td>
                         <td><?= $order['tel'] ?></td>
                         <td><?= $order['ngayxemxe'] ?></td>
-                        <td><?= $order['caxemxe'] ?></td>
-                        <td><?= $order['co_so'] ?></td>
+                        <td><?= $order['name_caxem'] ?></td>
+                        <td><?= $order['name_coso'] ?></td>
                         <?php $count++; ?>
                         <form class="donhang" action="index.php?act=capnhat_donhang" method="post">
                         <input name="order_id" type="hidden" value="<?=$order['order_id']?>">
                         <input type="hidden" name="ngaydathang" value="<?=$order['ngaydathang']?>">
                         <!-- <input type="hidden" name="tong" value="<?=$order['tong']?>"> -->
-                        <td><select  <?=($order['status_id']==3)?'disabled': ""?> name="trangtdh" class="trangthaidonhang" onchange="trangthai(<?=$count?>,<?=$order['status_id']?>)">
+                        <td><select  <?=($order['status_id'] ==3 || $order['status_id'] ==5 )? 'disabled' : ""?> name="trangtdh" class="trangthaidonhang" onchange="trangthai(<?=$count?>,<?=$order['status_id']?>)">
                             <?php foreach($status as $value) : ?>
                                 <option value="<?=$value['status_id']?>"<?=($value['status_id']==$order['status_id'])?'selected':""?>><?=$value['status']?></option>
                             <?php endforeach ?>
