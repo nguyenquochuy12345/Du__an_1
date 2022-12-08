@@ -24,9 +24,9 @@ if (isset($_SESSION['user'])) {
                                 <td colspan="2"><input name="username" type="text" placeholder="Nhập tên đăng nhập của bạn"></td>
                             </tr>
                             <tr>
-                                <td><?php if(isset($_SESSION['errors']['username'])) :?>
+                                <td><p style="color: red ;"><?php if(isset($_SESSION['errors']['username'])) :?>
                                         <?=$_SESSION['errors']['username']?>
-                                <?php endif?></td>
+                                <?php endif?></p></td>
                             </tr>
                             <tr>
                                 <td class="ten_input text-left pl-2" name="email">Email</td>
@@ -35,17 +35,17 @@ if (isset($_SESSION['user'])) {
                                 <td colspan="2"><input name="email" type="text" placeholder="Nhập email của bạn"></td>
                             </tr>
                             <tr>
-                                <td><?php if(isset($_SESSION['errors']['email'])) :?>
+                                <td><p style="color: red ;"><?php if(isset($_SESSION['errors']['email'])) :?>
                                         <?=$_SESSION['errors']['email']?>
-                                <?php endif?></td>
+                                <?php endif?></p></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td class="thongbao">
                                     <?php if (isset($_SESSION['thongbao'])) : ?>
                                         <?= $_SESSION['thongbao'] ?>
                                     <?php endif ?>
                                 </td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td> <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="submit" name="gui" class="dn">Gửi</button></td>
 

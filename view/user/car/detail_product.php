@@ -241,7 +241,7 @@
                                                                         </div>
                                                                         <div class="ltn__commenter-comment">
                                                                             <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro"></div> <?php endif ?></a></h6>
-                                                                            <span class="comment-date"> <?= $rep['ngay_traloi'] ?>
+                                                                            <span class="comment-date"> <?= $rep['ngay_traloi'] = date("d-m-Y") ?>
                                                                             </span>
                                                                             <p><?= $rep['noidung'] ?>
                                                                                 <?php if (isset($_SESSION['user'])) : ?>

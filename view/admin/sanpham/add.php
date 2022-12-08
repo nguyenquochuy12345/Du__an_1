@@ -1,18 +1,18 @@
 <div class="nen">
     <div class="add">
         <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
-           
+
 
             <table class="form">
-            <h1>Thêm sản phẩm</h1>
+                <h1>Thêm sản phẩm</h1>
                 <tr>
-                    <td>Product_id</td>
+                    <td>ID sản phẩm</td>
                 </tr>
                 <tr>
                     <td><input type="text" disabled></td>
                 </tr>
                 <tr>
-                    <td>Product_name</td>
+                    <td>Tên sản phẩm</td>
                 </tr>
                 <tr>
                     <td><input type="text" name="product_name"></td>
@@ -20,14 +20,14 @@
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['product_name'])) : ?>
+                            <?php if (isset($_SESSION['error_product']['product_name'])) : ?>
                                 <?= $_SESSION['error_product']['product_name'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Price</td>
+                    <td>Giá</td>
                 </tr>
                 <tr>
                     <td><input type="number" name="price"></td>
@@ -35,96 +35,98 @@
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['price'])) : ?>
+                            <?php if (isset($_SESSION['error_product']['price'])) : ?>
                                 <?= $_SESSION['error_product']['price'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>img</td>
+                    <td>Ảnh</td>
                 </tr>
                 <tr>
-                    <td><input type="file" name="img"></td>
+                    <td>
+                        <!-- <input type="file" name="img"> -->
+                        <input name="img[]" type="file" multiple="multiple" />
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['img'])) : ?>
+                            <?php if (isset($_SESSION['error_product']['img'])) : ?>
                                 <?= $_SESSION['error_product']['img'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>img2</td>
+                    <td>Mô tả</td>
+                </tr>
+                <tr>
+                    <td><textarea class="spmt border-2 border-[#CCCCCC]" name="description" id="" cols="52" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Đời xe</td>
+                </tr>
+                <tr>
+                    <td><input type="number" min="1" name="doi_xe"></td>
                 </tr>
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['img2'])) : ?>
-                                <?= $_SESSION['error_product']['img2'] ?>
+                        <?php if (isset($_SESSION['error_product']['doi_xe'])) : ?>
+                                <?= $_SESSION['error_product']['doi_xe'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="file" name="img2"></td>
+                    <td>Công xuất</td>
                 </tr>
                 <tr>
-                    <td>img3</td>
-                </tr>
-               
-                <tr>
-                    <td><input type="file" name="img3"></td>
+                    <td><input type="number" min="1" name="cong_xuat"></td>
                 </tr>
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['img3'])) : ?>
-                                <?= $_SESSION['error_product']['img3'] ?>
+                        <?php if (isset($_SESSION['error_product']['cong_xuat'])) : ?>
+                                <?= $_SESSION['error_product']['cong_xuat'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>img4</td>
+                    <td>Màu</td>
                 </tr>
                 <tr>
-                    <td><input type="file" name="img4"></td>
+                    <td><input type="text" name="color"></td>
                 </tr>
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['img4'])) : ?>
-                                <?= $_SESSION['error_product']['img'] ?>
+                        <?php if (isset($_SESSION['error_product']['color'])) : ?>
+                                <?= $_SESSION['error_product']['color'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Description</td>
+                    <td>Số lượng</td>
                 </tr>
                 <tr>
-                    <td><textarea class="spmt" name="description" id="" cols="52" rows="10"></textarea></td>
-                </tr>
-                <tr>
-                    <td>Quantity</td>
-                </tr>
-                <tr>
-                    <td><input type="number" min="1" name="quantity" ></td>
+                    <td><input type="number" min="1" name="quantity"></td>
                 </tr>
                 <tr>
                     <td>
                         <div class="loi">
-                            <?php if (isset( $_SESSION['error_product']['quantity'])) : ?>
+                            <?php if (isset($_SESSION['error_product']['quantity'])) : ?>
                                 <?= $_SESSION['error_product']['quantity'] ?>
                             <?php endif ?>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Cate_id</td>
+                    <td>Danh mục</td>
                 </tr>
                 <tr>
                     <td><select class="trong" name="cate_id" id="">
@@ -138,6 +140,6 @@
                 </tr>
             </table>
         </form>
-    </div>  
+    </div>
     <?php unset($_SESSION['error_product']) ?>
 </div>

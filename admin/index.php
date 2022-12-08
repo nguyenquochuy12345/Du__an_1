@@ -1,4 +1,4 @@
- <?php
+<?php
     session_start();
     if (!isset($_SESSION['user'])) {
         header("location: ../index.php");
@@ -27,10 +27,10 @@
                 $cate_bieude = thongke_dm();
                 include '../view/admin/danhmuc/bieudo.php';
                 break;
-            // case 'bieudo_doanhthu':
-            //     $bieude_doanhthu = bieude_doanhthu();
-            //     include "../view/admin/doanhthu/bieudo_doanhthu.php";
-            //     break;
+                // case 'bieudo_doanhthu':
+                //     $bieude_doanhthu = bieude_doanhthu();
+                //     include "../view/admin/doanhthu/bieudo_doanhthu.php";
+                //     break;
             case 'adddm':
                 if (isset($_POST['them'])) {
                     $cate_name = $_POST['cate_name'];
@@ -95,15 +95,35 @@
                 if (isset($_POST['them'])) {
                     $product_name = $_POST['product_name'];
                     $price = $_POST['price'];
+                    $total = count($_FILES['img']['name']);
                     $description = $_POST['description'];
-                    $cate_id = $_POST['cate_id'];
+                    $doi_xe = $_POST['doi_xe'];
+                    $cong_xuat = $_POST['cong_xuat'];
+                    $color = $_POST['color'];
                     $quantity = $_POST['quantity'];
-                    $file = $_FILES['img'];
-                    $file2 = $_FILES['img2'];
-                    $file3 = $_FILES['img3'];
-                    $file4 = $_FILES['img4'];
-                    addsp($product_name, $price, $description, $quantity, $file, $file2, $file3, $file4, $cate_id);
-                    if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['img2']) && !isset($_SESSION['error_product']['img3']) && !isset($_SESSION['error_product']['img4']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
+                    $cate_id = $_POST['cate_id'];
+                    // $file4 = $_FILES[''];
+
+
+                    // Loop through each file
+                    for ($i = 0; $i < $total; $i++) {
+
+                        //Get the temp file path
+                        $tmpFilePath = $_FILES['img']['tmp_name'][$i];
+
+                        //Make sure we have a file path
+                        if ($tmpFilePath != "") {
+                            //Setup our new file path
+                            $image[$i] = $_FILES['img']['name'][$i];
+                        }
+                    }
+                    // $file = $image[0];
+                    // $file2 = $image[1];
+                    // $file3 = $image[2];
+                    // $file4 = $image[3];
+
+                    addsp($product_name, $price, $description, $quantity, $doi_xe, $cong_xuat, $color, $cate_id, $total);
+                    if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
                         header("location: index.php?act=showsp");
                     }
                 }
@@ -153,7 +173,10 @@
                     $file3 = $_FILES['img3'];
                     $img4 = $_POST['oldImg4'];
                     $file4 = $_FILES['img4'];
-                    updatesp($product_id, $product_name, $price, $file, $file2, $file3, $file4, $img, $img2, $img3, $img4, $description, $quantity, $cate_id,$ngaynhap);
+                    $doi_xe = $_POST['doi_xe'];
+                    $cong_xuat = $_POST['cong_xuat'];
+                    $color = $_POST['color'];
+                    updatesp($product_id, $product_name, $price, $file, $file2, $file3, $file4, $img, $img2, $img3, $img4, $description, $doi_xe, $cong_xuat, $color, $quantity, $cate_id, $ngaynhap);
                     if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['img2']) && !isset($_SESSION['error_product']['img3']) && !isset($_SESSION['error_product']['img4']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
                         header("location: index.php?act=showsp");
                     } else {
@@ -197,12 +220,12 @@
                     $password = $_POST['password'];
                     $hovaten = $_POST['hovaten'];
                     $email = $_POST['email'];
-                    $address = $_POST['address'];
+                    // $address = $_POST['address'];
                     $tel = $_POST['tel'];
                     $vaitro_id = $_POST['vaitro_id'];
-                    $img = $_POST['oldImg'];
-                    $file = $_FILES['img'];
-                    update_user($user_id, $username, $password, $hovaten, $email, $address, $tel, $vaitro_id, $file, $img);
+                    // $img = $_POST['oldImg'];
+                    // $file = $_FILES['img'];
+                    update_user($user_id, $username, $password, $hovaten, $email, $tel, $vaitro_id);
                 }
                 if (!isset($_SESSION['errors']['password']) && !isset($_SESSION['errors']['hovaten']) && !isset($_SESSION['errors']['email']) && !isset($_SESSION['errors']['address']) && !isset($_SESSION['errors']['tel'])) {
                     $users = show_user();
@@ -246,26 +269,26 @@
                     include '../view/admin/binhluan/show_rep.php';
                 }
                 break;
-            case 'showdonhang':
-                $show_order = showdonhang();
+            case 'showdonhangadmin':
+                $show_order = showdonhangadmin();
                 $status = show_status();
                 include '../view/admin/donhang/show_order.php';
                 break;
-                
+
             case 'huy_lich':
                 if (isset($_GET['order_id'])) {
                     $order_id = $_GET['order_id'];
                     $huy_lich = huy_lich($order_id);
                 }
-                $show_order = showdonhang();
+                $show_order = showdonhangadmin();
                 $status = show_status();
                 include '../view/admin/donhang/show_order.php';
-                break;   
-                 
+                break;
+
             case 'showdonhang_theo_khachhang':
-                if(isset($_GET['user_id'])){
+                if (isset($_GET['user_id'])) {
                     $user_id = $_GET['user_id'];
-                    $showdonhang_theo_khachhang=showdonhang_theo_khachhang($user_id);
+                    $showdonhang_theo_khachhang = showdonhang_theo_khachhang($user_id);
                 }
                 include '../view/admin/donhang/show_order_theokhachhang.php';
                 break;
@@ -277,7 +300,7 @@
                 }
                 break;
             case 'chitiet_donhang_theo_khachhang':
-                if(isset($_GET['order_id'])){
+                if (isset($_GET['order_id'])) {
                     $order_id = $_GET['order_id'];
                     $show_chitiet_order_theokhachhang = show_chitiet_order_theokhachhang($order_id);
                 }
@@ -305,14 +328,14 @@
                     $status = $_POST['trangtdh'];
                     $ngaydathang = $_POST['ngaydathang'];
                     // $tong = $_POST['tong'];
-                    capnhat_donhang($status, $order_id,$ngaydathang);
-                    $show_order = showdonhang();
-                    header("location: index.php?act=showdonhang");
+                    capnhat_donhang($status, $order_id, $ngaydathang);
+                    $show_order = showdonhangadmin();
+                    header("location: index.php?act=showdonhangadmin");
                 }
                 break;
             default:
                 $khachvip = top3khachhang_muanhieu();
-                $sanpham_top1_view=sanpham_xemnhieunhat();
+                $sanpham_top1_view = sanpham_xemnhieunhat();
                 $cate = thongke_dm();
                 // $doanhthu = show_doanhthu();
                 $sp_binhluannhieu = sanphamdcbinhluannhieu();
@@ -322,7 +345,7 @@
     } else {
         $sp_binhluannhieu = sanphamdcbinhluannhieu();
         $khachvip = top3khachhang_muanhieu();
-        $sanpham_top1_view=sanpham_xemnhieunhat();
+        $sanpham_top1_view = sanpham_xemnhieunhat();
         $cate = thongke_dm();
         // $doanhthu = show_doanhthu();
         require_once "../view/admin/home.php";

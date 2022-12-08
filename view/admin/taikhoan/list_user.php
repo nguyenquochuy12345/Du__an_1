@@ -7,8 +7,8 @@
                 <tr>
                     <th>Mã khách hàng</th>
                     <th>Họ và tên</th>
-                    <th>username</th>
-                    <th>password</th>
+                    <th>Tên đăng nhập</th>
+                    <th>Mật khẩu</th>
                     <th>Số điện thoại</th>
                     <th>Vai trò</th>
                     <th>Chức năng</th>
