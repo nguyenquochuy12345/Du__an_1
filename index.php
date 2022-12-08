@@ -56,6 +56,7 @@ if (isset($_GET['act'])) {
     case 'chitiet_sanpham':
 
       include './controller/datlich/chitiet_datlich.php';
+      include './controller/car/sanpham.php';
       include './view/user/car/detail_product.php';
       unset($_SESSION['thongbaobinhluan']);
       break;

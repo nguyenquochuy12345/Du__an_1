@@ -90,7 +90,7 @@
                                             <div class="ltn__color-widget clearfix">
                                                 <strong class="alignleft">Màu</strong>
                                                 <ul>
-                                                    <li class="<?php echo $product['color'] ?>"><a href="#"></a></li>
+                                                    <li class="<?php echo $product['color'] ?> border-2 border-black"><a href="#"></a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -125,10 +125,6 @@
                                     </ul>
                                 </div>
                                 <hr>
-                                <div class="ltn__safe-checkout">
-                                    <h5>Thanh toán</h5>
-                                    <img src="view/public/img/icons/payment-2.png" alt="Payment Image">
-                                </div>
                                 <hr>
                                 <div class="ltn__product-details-menu-2">
                                     <?php if (isset($_SESSION['user'])) { ?>
@@ -150,6 +146,7 @@
                                                 </li>
                                             </ul>
                                             </form>
+                                        </form>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +196,7 @@
                                                 <li>
                                                     <div class="ltn__comment-item clearfix">
                                                         <div class="ltn__commenter-img">
-                                                            <img src="view/public/img/testimonial/avatar-trang-y-nghia.jpeg" alt="Image">
+                                                            <img src="view/public/img/testimonial/avatar.jpeg" alt="Image">
                                                         </div>
                                                         <div class="ltn__commenter-comment">
                                                             <h6><a href="#"><?= $binhluan['hovaten'] ?></a> <span><?php echo ($binhluan['vaitro_id'] > 1) ? "--Admin--" : "--Khách hàng--"; ?></span></h6>
@@ -336,112 +333,67 @@
         </div>
         <div class="row ltn__product-slider-one-active slick-arrow-1">
             <!-- ltn__product-item -->
-            <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                <div class="ltn__product-item ltn__product-item-3 text-center">
-                    <div class="product-img">
-                        <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
-                        <div class="product-badge">
-                            <ul>
-                                <li class="soldout-badge">New</li>
-                            </ul>
-                        </div>
-                        <div class="product-hover-action">
-                            <ul>
-                                <li>
-                                    <a href="" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
-                                        <i class="far fa-eye"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
-                                        <i class="fas fa-shopping-cart"></i>
-                                    </a>
-                                </li>
-                                <!-- <li>
-                                    <a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                        <i class="far fa-heart"></i></a>
-                                </li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
-                        <div class="product-price">
-                            <span><?php echo format_currency($product['price']) ?>VND</span>
-                            <!-- <del>$68,000</del> -->
-                        </div>
-                        <div class="product-info-brief">
-                            <ul>
-                                <li>
-                                    <i class="fas fa-car"></i><?php echo $product['doi_xe'] ?>
-                                </li>
-                                <li>
-                                    <i class="fas fa-cog"></i>Auto
-                                </li>
-                                <li>
-                                    <i class="fas fa-road"></i><?php echo
-                                                                $product['cong_xuat'] ?>kph
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <?php foreach ($top3sp as $top3sp) { ?>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+            <?php foreach ($products as $product) : ?>
+                <div class="col-sm-6 col-6">
                     <div class="ltn__product-item ltn__product-item-3 text-center">
                         <div class="product-img">
-                            <a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><img src="view/public/img/car/<?php echo $top3sp['img'] ?>" alt="#"></a>
+                            <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><img class="w-full h-[350px]" src="view/public/img/car/<?php echo $product['img'] ?>" alt="#"></a>
                             <div class="product-badge">
                                 <ul>
-                                    <li class="soldout-badge">New</li>
+                                    <li class="soldout-badge">Mới</li>
                                 </ul>
                             </div>
                             <div class="product-hover-action">
                                 <ul>
                                     <li>
-                                        <a href="" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
+                                        <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Quick View" data-bs-toggle="" data-bs-target="#quick_view_modal">
                                             <i class="far fa-eye"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
-                                            <i class="fas fa-shopping-cart"></i>
-                                        </a>
+                                        <?php if (isset($_SESSION['user'])) { ?>
+                                            <form action="index.php?act=vao_trang_xacnhan_datlich&id=<?php echo $product['product_id'] ?>" method="post">
+
+                                            <?php } else { ?>
+                                                <form class="w-full" action="index.php?act=vao_trang_dangnhap" method="post">
+                                                <?php } ?>
+                                                <button class="w-full"><a class="w-full" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                    </a></button>
+                                                </form>
+                                            </form>
+                                            <!-- <a href="index.php?act=vao_trang_xacnhan_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                                    <i class="fas fa-shopping-cart"></i>
+                                                                </a> -->
                                     </li>
-                                    <!-- <li>
-                                        <a href="" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-                                            <i class="far fa-heart"></i></a>
-                                    </li> -->
+
                                 </ul>
                             </div>
                         </div>
                         <div class="product-info">
-                            <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $top3sp['product_id'] ?>&iddm=<?= $top3sp['cate_id'] ?>"><?php echo $top3sp['product_name'] ?></a></h2>
+                            <h2 class="product-title"><a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>"><?php echo $product['product_name'] ?></a></h2>
                             <div class="product-price">
-                                <span><?php echo format_currency($top3sp['price']) ?> VNĐ</span>
-                                <!-- <del>$68,000</del> -->
+                                <span><?php echo format_currency($product['price'])  ?> VNĐ</span>
                             </div>
                             <div class="product-info-brief">
                                 <ul>
                                     <li>
-                                        <i class="fas fa-car"></i><?php echo $top3sp['doi_xe'] ?>
+                                        <i class="fas fa-car"></i><?php echo $product['doi_xe'] ?>
                                     </li>
                                     <li>
                                         <i class="fas fa-cog"></i>Auto
                                     </li>
                                     <li>
-                                        <i class="fas fa-road"></i><?php echo $top3sp['cong_xuat'] ?>kph
+                                        <i class="fas fa-road"></i><?php echo $product['cong_xuat'] ?>kph
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+            <?php endforeach ?>
 
-            <?php } ?>
+
 
 
         </div>

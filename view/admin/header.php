@@ -52,7 +52,7 @@
 
                     <ul class="user">
                         <li class="an"><a class="tenuser" href="#">
-                                <div class="chao">Chào :</div> <img  src="../view/public/img/testimonial/avater.jpeg" alt="">
+                                <div class="chao">Chào :</div> <img  src="../view/public/img/testimonial/avatar.jpeg" alt="">
                                 <div class="chao"> <?= $hovaten ?> </div> <i id="muiten" class="fa-solid fa-chevron-down"></i>
                             </a>
 
