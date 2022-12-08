@@ -47,7 +47,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="index.php?act=chitiet_sanpham&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                            <a href="index.php?act=vao_trang_xacnhan_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
                                                                 <i class="fas fa-shopping-cart"></i>
                                                             </a>
                                                         </li>
@@ -127,7 +127,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="product-brief">
-                                                    <p><?php echo $product['description'] ?></p>
+                                                    <p class="w-full text-ellipsis overflow-hidden whitespace-nowrap"><?php echo $product['description'] ?></p>
                                                 </div>
                                                 <div class="product-hover-action">
                                                     <ul>

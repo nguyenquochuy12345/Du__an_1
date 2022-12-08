@@ -3,8 +3,8 @@
         <form action="index.php?act=update_user" method="post" enctype="multipart/form-data">
             <table class="form">
                 <h1>Sửa tài khoản</h1>
-                <tr>
-                    <td>User_id</td>
+                <tr class="">
+                    <td>ID tài khoản</td>
 
                     <input type="hidden" name="user_id" value="<?= $user['user_id'] ?>">
                 </tr>
@@ -33,7 +33,7 @@
                         <?php endif ?>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Img</td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                 <input type="hidden" name="oldImg" value="<?= $user['img'] ?>">
                 <tr>
                     <td><input type="file" name="img"></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Họ và tên</td>
 
@@ -73,7 +73,7 @@
                         <?php endif ?>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Địa chỉ</td>
 
                 </tr>
@@ -87,7 +87,7 @@
                             </div>
                         <?php endif ?>
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Số điện thoại</td>
 

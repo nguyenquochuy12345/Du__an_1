@@ -39,7 +39,7 @@
                 <li><a href="index.php?act=showsp"><i class="fa-solid fa-box"></i> Sản phẩm</a></li>
                 <li><a href="index.php?act=showuser"><i class="fa-solid fa-user"></i> Tài khoản</a></li>
                 <li><a href="index.php?act=showcommemt"><i class="fa-solid fa-comment"></i> Bình luận</a></li>
-                <li><a href="index.php?act=showdonhang"><i class="fa-solid fa-file-invoice-dollar"></i>Đặt lịch</a></li>
+                <li><a href="index.php?act=showdonhangadmin"><i class="fa-solid fa-file-invoice-dollar"></i>Đặt lịch</a></li>
             </ul>
         </div>
         <header>
@@ -52,14 +52,14 @@
 
                     <ul class="user">
                         <li class="an"><a class="tenuser" href="#">
-                                <div class="chao">Chào :</div> <img  src="../view/public/img/team/1.jpg" alt="">
+                                <div class="chao">Chào :</div> <img  src="../view/public/img/testimonial/avater.jpeg" alt="">
                                 <div class="chao"> <?= $hovaten ?> </div> <i id="muiten" class="fa-solid fa-chevron-down"></i>
                             </a>
 
                             <ul>
                                 <li><a href="../index.php?act=vao_trang_taikhoan">Thông tin tài khoản</a></li>
                                 <li><a href="../index.php?act=vao_trang_doimatkhau">Đổi mật khẩu</a></li>
-                                <li><a href="../index.php?act=vao_donhang">Đơn hàng của tôi</a></li>
+                                <!-- <li><a href="../index.php?act=vao_donhang">Đơn hàng của tôi</a></li> -->
                                 <li><a href="../index.php">Trang chủ website</a></li>
                                 <li><a href="../index.php?act=dangxuat">Đăng xuất</a></li>
                             </ul>

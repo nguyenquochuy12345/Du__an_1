@@ -52,20 +52,21 @@
                             </div>
 
                             <h6>
-                                <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?> " hidden >
-                                
+                                <input type="text" name="product_id" value="<?php echo $detail_product['product_id'] ?> " hidden>
+
                             </h6>
 
                             <h6>Bạn cần yêu cầu hay ý kiến muốn đóng góp ?</h6>
                             <div class="input-item input-item-textarea ltn__custom-icon">
-                                <textarea type='text' name="ltn__message" placeholder="Enter message"></textarea>
+                                <textarea class="pt-2 pl-1" type='text' name="ltn__message" placeholder="Lời nhắn"></textarea>
                             </div>
                             <div class="row">
 
                                 <div class="col-lg-6">
-                                    <h6>First Choice</h6>
+
                                     <div class="row">
                                         <div class="col-md-6">
+                                            <h6>Ngày xem xe</h6>
                                             <div class="input-item ltn__datepicker">
                                                 <div class=" ">
                                                     <input type="date" name="ngay_xem" class="form-control" placeholder="Select Date">
@@ -80,12 +81,13 @@
                                                     <?= $_SESSION['errors_muahhang']['chonngay'] ?>
                                                 <?php endif ?></small>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-lg-6">
+                                            <h6>Ca xem xe</h6>
                                             <div class="input-item input-item-time">
                                                 <select class="nice-select" name="ca_xemxe">
                                                     <option value=" ">HH:MM</option>
-                                                <?php foreach($caxemxe as $item ) {?>
-                                                    <option value="<?php echo $item['caxem_id'] ?>"><?php echo $item['name_caxem'] ?></option>
+                                                    <?php foreach ($caxemxe as $item) { ?>
+                                                        <option value="<?php echo $item['caxem_id'] ?>"><?php echo $item['name_caxem'] ?></option>
                                                     <?php }; ?>
                                                 </select>
                                             </div>
@@ -102,8 +104,8 @@
                                             <div class="input-item">
                                                 <select class="nice-select" name="co_so">
                                                     <option value="">Địa chỉ</option>
-                                                    <?php foreach($cosoxem as $item ) {?>
-                                                    <option value="<?php echo $item['coso_id'] ?>"><?php echo $item['name_coso'] ?></option>
+                                                    <?php foreach ($cosoxem as $item) { ?>
+                                                        <option value="<?php echo $item['coso_id'] ?>"><?php echo $item['name_coso'] ?></option>
                                                     <?php }; ?>
                                                 </select>
                                             </div>
@@ -117,7 +119,7 @@
                                     Xin lưu ý rằng ngày và giờ bạn yêu cầu có thể không có sẵn. Chúng tôi sẽ liên hệ với bạn để xác nhận chi tiết cuộc hẹn thực tế của bạn.
                                 </div>
                                 <div class="btn-wrapper text-center mt-0">
-                                    <button class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" name="btn_datlich" type="submit">Đặt lịch ngay bây giờ</button>
+                                    <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" name="btn_datlich" type="submit">Đặt lịch ngay bây giờ</button>
                                 </div>
 
 

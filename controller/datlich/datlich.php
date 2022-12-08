@@ -18,7 +18,7 @@ if (isset($_POST['btn_datlich'])) {
   $caxemxe = trim($_POST['ca_xemxe']);
   $cosoxemxe = trim($_POST['co_so']);
 
-  $show_order = showdonhang();
+  $show_order = showdonhanguser();
  
 
   $id_user = $_SESSION['user']['user_id'];

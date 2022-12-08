@@ -21,8 +21,8 @@
                         <td><img class="my-auto mx-auto w-[100px]" src="../view/public/img/car/<?=$binhluan['img']?>"  alt="" height="100px"></td>
                         <td><?= $binhluan['product_name'] ?></td>
                         <td><?= $binhluan['soluong'] ?></td>
-                        <td><?= $binhluan['moiNhat'] ?></td>
-                        <td><?= $binhluan['cuNhat'] ?></td>
+                        <td><?= $binhluan['moiNhat'] = date("d-m-Y") ?></td>
+                        <td><?= $binhluan['cuNhat'] = date("d-m-Y") ?></td>
                         <td><button id="sua"><a href="index.php?act=chitietBinhluan&product_id=<?= $binhluan['product_id'] ?>">Chi tiết</a></button></td>
                     </tr>
                 <?php endforeach ?>

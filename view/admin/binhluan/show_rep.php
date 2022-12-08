@@ -23,7 +23,7 @@
                             <td><img class="anhuser" src="../view/img/<?= $rep['img'] ?>" alt=""></td>
                             <td><?= $rep['hovaten'] ?></td>
                             <td><?= $rep['noidung'] ?></td>
-                            <td><?= $rep['ngay_traloi'] ?></td>
+                            <td><?= $rep['ngay_traloi'] = date("d-m-Y") ?></td>
                             <td><button id="xoa" onclick="return confirm('Bạn có chắc chắn muốn xóa câu trả lời không ?')" ><a href="index.php?act=admin_xoa_rep&rep_id=<?= $rep['rep_id'] ?>&binhluan_id=<?=$binhluan_id?>">Xóa</a></button></td>
                         </tr>
                     <?php endforeach ?>
