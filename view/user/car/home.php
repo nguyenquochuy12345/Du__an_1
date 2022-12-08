@@ -1,4 +1,4 @@
-<?php include 'view/user/banner.php';?>
+<?php include 'view/user/banner.php'; ?>
 <div class="ltn__product-area ltn__product-gutter mb-120" style="margin-top:150px ;">
     <div class="container">
         <div class="row">
@@ -47,9 +47,20 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="index.php?act=vao_trang_xacnhan_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
-                                                                <i class="fas fa-shopping-cart"></i>
-                                                            </a>
+                                                            <?php if (isset($_SESSION['user'])) { ?>
+                                                                <form action="index.php?act=vao_trang_xacnhan_datlich&id=<?php echo $product['product_id'] ?>" method="post">
+
+                                                                <?php } else { ?>
+                                                                    <form class="w-full" action="index.php?act=vao_trang_dangnhap" method="post">
+                                                                    <?php } ?>
+                                                                    <button class="w-full"><a class="w-full" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                                            <i class="fas fa-shopping-cart"></i>
+                                                                        </a></button>
+                                                                    </form>
+                                                                </form>
+                                                                <!-- <a href="index.php?act=vao_trang_xacnhan_datlich&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" title="Add to Cart" data-bs-toggle="" data-bs-target="#add_to_cart_modal">
+                                                                    <i class="fas fa-shopping-cart"></i>
+                                                                </a> -->
                                                         </li>
 
                                                     </ul>
