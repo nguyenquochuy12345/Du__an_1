@@ -1,10 +1,7 @@
 <div class="nen">
     <div class="listchung">
-        <h1>Danh sách đơn hàng</h1>
-
-        
+        <h1>Danh sách đơn hàng</h1>       
             <table class="list">
-
               <thead>
               <tr>  
                     <th>Mã đơn hàng</th>

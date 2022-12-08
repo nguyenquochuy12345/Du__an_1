@@ -190,7 +190,9 @@
                                 <div class="ltn__comment-area mb-30">
                                     <h4 class="title-2">Bình luận (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
                                     <div class="ltn__comment-inner">
+
                                         <?php $u = -1 ?>
+
                                         <ul>
                                             <?php foreach ($binhluan as $binhluan) : ?>
 
@@ -228,38 +230,60 @@
                                                     </div>
                                                 </li>
 
-
-                                                <li>
-                                                    <?php foreach ($reps as $rep) : ?>
-                                                        <?php if ($rep['binhluan_id'] == $binhluan['binhluan_id']) : ?>
-
-                                                            <ul>
-                                                                <li>
-                                                                    <div class="ltn__comment-item clearfix">
-                                                                        <div class="ltn__commenter-img">
-                                                                            <img src="view/public/img/testimonial/4.jpg" alt="Image">
-                                                                        </div>
-                                                                        <div class="ltn__commenter-comment">
-                                                                            <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro"></div> <?php endif ?></a></h6>
-                                                                            <span class="comment-date"> <?= $rep['ngay_traloi'] ?>
-                                                                            </span>
-                                                                            <p><?= $rep['noidung'] ?>
-                                                                                <?php if (isset($_SESSION['user'])) : ?>
-                                                                                    <?php if ($rep['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
-                                                                            <div class="xoa">
-                                                                                <a href="index.php?act=delete_rep&rep_id=<?= $rep['rep_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
-                                                                            </div>
-                                                                        <?php endif ?>
-                                                                    <?php endif ?></p>
-                                                                    <!-- <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a> -->
-                                                                        </div>
+                                                <?php if (isset($_SESSION['user'])) : ?>
+                                                    <?php if ($binhluan['user_id'] != $user_id) : ?>
+                                                        <form class="formtraloi" action="index.php?act=guirep&id=<?= $product['product_id'] ?>&id_binhluan=<?= $binhluan['binhluan_id'] ?>&iddm=<?= $product['cate_id'] ?>" method="post">
+                                                            <!-- <textarea id="formtraloi" name="rep" cols="30" rows="10" placeholder="Trả lời"></textarea>
+                                                            <button type="submit" name="guirep" id="nhan">Gửi</button> -->
+                                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                                <textarea id="formtraloi" class="pl-[10px] pt-[5px]" type="text" name="rep" placeholder="Trả lời"></textarea>
+                                                            </div>
+                                                            <div class="btn-wrapper">
+                                                                <button id="nhan" name="guirep" class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi trả lời</button>
+                                                                <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
+                                                                    <div class="thongbao">
+                                                                        <p style="color:red ;"><?= $_SESSION['thongbaobinhluan'] ?></p>
                                                                     </div>
-                                                                </li>
-                                                            </ul>
-                                                        <?php endif ?>
 
-                                                    <?php endforeach ?>
-                                                </li>
+                                                                <?php endif ?>
+                                                            </div>
+                                                        </form>
+                                                    <?php endif ?>
+                                                <?php endif ?>
+
+                                                <ul>
+                                                    <li>
+                                                        <?php foreach ($reps as $rep) : ?>
+                                                            <?php if ($rep['binhluan_id'] == $binhluan['binhluan_id']) : ?>
+
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="ltn__comment-item clearfix">
+                                                                            <div class="ltn__commenter-img">
+                                                                                <img src="view/public/img/testimonial/4.jpg" alt="Image">
+                                                                            </div>
+                                                                            <div class="ltn__commenter-comment">
+                                                                                <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro"></div> <?php endif ?></a></h6>
+                                                                                <span class="comment-date"> <?= $rep['ngay_traloi'] ?>
+                                                                                </span>
+                                                                                <p><?= $rep['noidung'] ?>
+                                                                                    <?php if (isset($_SESSION['user'])) : ?>
+                                                                                        <?php if ($rep['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
+                                                                                <div class="xoa">
+                                                                                    <a href="index.php?act=delete_rep&rep_id=<?= $rep['rep_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
+                                                                                </div>
+                                                                            <?php endif ?>
+                                                                        <?php endif ?></p>
+                                                                        <!-- <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a> -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            <?php endif ?>
+
+                                                        <?php endforeach ?>
+                                                    </li>
+                                                </ul>
                                             <?php endforeach ?>
                                         </ul>
                                     </div>

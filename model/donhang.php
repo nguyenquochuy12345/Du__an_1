@@ -125,7 +125,7 @@ function admin_show_chitiet_order($order_id)
 }
 function showdonhang()
 {
-    include './ketnoi/ketnoi.php';
+    include '../ketnoi/ketnoi.php';
     // $sql = "SELECT * FROM tbl_order order by ngaydathang desc";
     $sql = "SELECT order_id,tbl_order.user_id,taikhoan.hovaten,taikhoan.email,taikhoan.tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,
     tbl_order.status_id,order_status.status,
