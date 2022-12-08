@@ -52,14 +52,14 @@
 
                     <ul class="user">
                         <li class="an"><a class="tenuser" href="#">
-                                <div class="chao">Chào :</div> <img  src="../view/public/img/team/1.jpg" alt="">
+                                <div class="chao">Chào :</div> <img  src="../view/public/img/testimonial/avatar.jpeg" alt="">
                                 <div class="chao"> <?= $hovaten ?> </div> <i id="muiten" class="fa-solid fa-chevron-down"></i>
                             </a>
 
                             <ul>
                                 <li><a href="../index.php?act=vao_trang_taikhoan">Thông tin tài khoản</a></li>
                                 <li><a href="../index.php?act=vao_trang_doimatkhau">Đổi mật khẩu</a></li>
-                                <li><a href="../index.php?act=vao_donhang">Đơn hàng của tôi</a></li>
+                                <!-- <li><a href="../index.php?act=vao_donhang">Đơn hàng của tôi</a></li> -->
                                 <li><a href="../index.php">Trang chủ website</a></li>
                                 <li><a href="../index.php?act=dangxuat">Đăng xuất</a></li>
                             </ul>
