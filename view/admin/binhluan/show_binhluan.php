@@ -1,6 +1,6 @@
 <div class="nen">
     <div class="listchung">
-        <h1>Danh sách bình luận</h1>
+        <h1 class="text-[20px] font-[600] py-3">Danh sách bình luận</h1>
 
         <form action="" method="post">
             <table class="list">

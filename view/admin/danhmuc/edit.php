@@ -2,7 +2,7 @@
 <div class="edit">
     <form action="index.php?act=updatedm" method="post">
         <table class="form">
-            <h1>Sửa danh mục</h1>
+            <h1 class="text-[20px] font-[600] py-3">Sửa danh mục</h1>
             <tr>
                 <td>Mã danh mục</td>
                 

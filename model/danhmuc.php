@@ -5,23 +5,22 @@ function add($cate_name)
     $error = [];
     if ($cate_name == "") {
         $error['cate_name'] = "Bạn chưa nhập tên danh mục";
-    } 
-    else if($cate_name != " ") {
+    } else if ($cate_name != " ") {
         $sql = "SELECT cate_name FROM categories WHERE cate_name ='$cate_name'";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $check_cate_name = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($check_cate_name) {
             $error['cate_name'] = "Tên danh mục đã tồn tại";
-        }    
+        }
     }
     $_SESSION['cate_error'] = $error;
-       
-    if(!$error){   
+
+    if (!$error) {
         $sql = "INSERT INTO  categories(cate_name) values('$cate_name')";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-    }    
+    }
 }
 function delete($id)
 {
@@ -50,24 +49,22 @@ function updatedm($cate_id, $cate_name)
     $error = [];
     if ($cate_name == "") {
         $error['cate_name'] = "Bạn chưa nhập tên danh mục";
-    } 
-    else if($cate_name != " ") {
+    } else if ($cate_name != " ") {
         $sql = "SELECT cate_name FROM categories WHERE cate_id !='$cate_id' AND  cate_name ='$cate_name' ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $check_cate_name = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($check_cate_name) {
             $error['cate_name'] = "Tên danh mục đã tồn tại";
-        }    
+        }
     }
     $_SESSION['cate_error'] = $error;
-       
-    if(!$error){   
+
+    if (!$error) {
         $sql = "UPDATE   categories set  cate_name = ('$cate_name') WHERE cate_id = '$cate_id '";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-    }    
-  
+    }
 }
 function showdm()
 {

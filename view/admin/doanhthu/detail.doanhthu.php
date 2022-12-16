@@ -1,7 +1,7 @@
 <div class="nen">
     
     <div class="listchung">
-        <h1>Thống kê danh mục</h1>
+        <h1 class="text-[20px] font-[600] py-3">Thống kê danh mục</h1>
         <table class="list" >
            <thead>
            <tr>

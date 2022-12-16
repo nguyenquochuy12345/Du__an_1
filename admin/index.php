@@ -13,6 +13,7 @@
     require_once "../model/danhmuc.php";
     require_once "../model/sanpham.php";
     require_once "../model/binhluan.php";
+    require_once "../model/coso.php";
     require_once '../model/taikhoan.php';
     require_once '../model/donhang.php';
     // require_once "../model/doanhthu.php";    
@@ -133,8 +134,9 @@
             case "delete_sp":
                 if (isset($_GET['id'])) {
                     $id = $_GET['id'];
+                    deletesp($id);
                 }
-                deletesp($id);
+                
                 if (isset($_POST['tim'])) {
                     $kyw = $_POST['kyw'];
                     $cate_id = $_POST['cate_id'];
@@ -165,18 +167,22 @@
                     $description = $_POST['description'];
                     $quantity = $_POST['quantity'];
                     $cate_id = $_POST['cate_id'];
-                    $img = $_POST['oldImg'];
-                    $file = $_FILES['img'];
-                    $img2 = $_POST['oldImg2'];
-                    $file2 = $_FILES['img2'];
-                    $img3 = $_POST['oldImg3'];
-                    $file3 = $_FILES['img3'];
-                    $img4 = $_POST['oldImg4'];
-                    $file4 = $_FILES['img4'];
+                    $total = count($_FILES['img']['name']);
                     $doi_xe = $_POST['doi_xe'];
                     $cong_xuat = $_POST['cong_xuat'];
                     $color = $_POST['color'];
-                    updatesp($product_id, $product_name, $price, $file, $file2, $file3, $file4, $img, $img2, $img3, $img4, $description, $doi_xe, $cong_xuat, $color, $quantity, $cate_id, $ngaynhap);
+                    for ($i = 0; $i < $total; $i++) {
+
+                        //Get the temp file path
+                        $tmpFilePath = $_FILES['img']['tmp_name'][$i];
+
+                        //Make sure we have a file path
+                        if ($tmpFilePath != "") {
+                            //Setup our new file path
+                            $image[$i] = $_FILES['img']['name'][$i];
+                        }
+                    }
+                    updatesp($product_id, $product_name, $price,$total, $description, $doi_xe, $cong_xuat, $color, $quantity, $cate_id, $ngaynhap);
                     if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['img2']) && !isset($_SESSION['error_product']['img3']) && !isset($_SESSION['error_product']['img4']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
                         header("location: index.php?act=showsp");
                     } else {
@@ -268,6 +274,52 @@
                     $rep = show_rep_theo_binhluan($binhluan_id);
                     include '../view/admin/binhluan/show_rep.php';
                 }
+                break;
+            case 'showcoso':
+                $cates = showcs();
+                include '../view/admin/coso/show.php';
+                break;
+            case 'addcs':
+                if (isset($_POST['them'])) {
+                    $name_coso = $_POST['name_coso'];
+                    addcs($name_coso);
+                    if (!isset($_SESSION['cate_error']['name_coso'])) {
+                        $cates = showcs();
+                        $_SESSION['cate'] = "Thêm cơ sở thành công";
+                        header("location: index.php?act=showcoso");
+                    }
+                }
+                include "../view/admin/coso/add_cs.php";
+                break;
+            case 'edit_cs':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    $cate = editcs($id);
+                }
+                include '../view/admin/coso/edit_cs.php';
+                break;
+            case 'updatecs':
+                if (isset($_POST['update'])) {
+                    $coso_id = $_POST['coso_id'];
+                    $name_coso = $_POST['name_coso'];
+                    updatecs($coso_id, $name_coso);
+                    if (!isset($_SESSION['cate_error']['name_coso'])) {
+                        header("location: index.php?act=showcoso");
+                    } else {
+                        $id = $coso_id;
+                        $cate = editcs($id);
+                        include "../view/admin/coso/edit_cs.php";
+                    }
+                }
+                break;
+            case 'deletecs':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    deletecs($id);
+                }
+
+                $cates = showcs();
+                include "../view/admin/coso/show.php";
                 break;
             case 'showdonhangadmin':
                 $show_order = showdonhangadmin();

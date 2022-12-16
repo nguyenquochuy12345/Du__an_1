@@ -1,7 +1,7 @@
 <div class="nen">
 <div class="add">
     <form action="index.php?act=adddm" method="post">
-        <h1>Thêm danh mục</h1>    
+        <h1 class="text-[20px] font-[600] py-3">Thêm danh mục</h1>    
     <table class="form" >
             <tr>
                 <td>Mã danh mục</td>

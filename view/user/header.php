@@ -203,6 +203,7 @@
                                                     <a href="#"><i class="icon-user"></i></a>
                                                     <ul>
                                                         <li><a href="index.php?act=vao_trang_dangnhap">Đăng nhập</a></li>
+                                                        <li><a href="index.php?act=vao_trang_dangky">Đăng ký</a></li>
                                                     </ul>
 
 

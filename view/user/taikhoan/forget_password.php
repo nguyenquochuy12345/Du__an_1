@@ -7,7 +7,7 @@ if (isset($_SESSION['user'])) {
     <div class="row">
         <div class="col-lg-12">
             <div class="section-title-area text-center">
-                <h1 class="section-title">Đăng nhập</h1>
+                <h1 class="section-title ">Quyên mật khẩu</h1>
             </div>
         </div>
     </div>

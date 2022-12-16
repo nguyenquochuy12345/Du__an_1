@@ -4,7 +4,7 @@
         }
         ?> 
         <div class="content  pt-[200px] mx-auto ">
-            <h2 id="dangnhap" class="text-center">Thông tin tài khoản</h2>
+            <h2 id="dangnhap" class="text-center text-[20px] font-[600] py-3">Thông tin tài khoản</h2>
             <form class="w-full mx-auto" name="capnhat" action="index.php?act=capnhat_tk" method="post" enctype="multipart/form-data">
                 <table class="dangky mx-auto">
 

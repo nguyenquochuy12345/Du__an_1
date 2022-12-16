@@ -2,11 +2,12 @@
     <div class="edit">
         <form class="mx-auto w-[60%]" action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
             <table class="form">
-                <h1>Sửa sản phẩm</h1>
+                <h1 class="text-[20px] font-[600] py-3">Sửa sản phẩm</h1>
                 <tr>
                     <td>ID sản phẩm</td>
                 </tr>
                 <tr>
+                    <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
                     <td class="cursor-no-drop"><p class="border-[1px] w border-[#cccccc] w-[400px] h-[30px] rounded-[5px] bg-white pl-[10px]"><?= $product['product_id'] ?></p></td>
                 </tr>
                 <tr>
@@ -44,11 +45,13 @@
                     <td>Ảnh</td>
                 </tr>
                 <tr>
-                    <td><img class="w-[50%]" src="../view/public/img/car/<?= $product['img'] ?>" alt=""></td>
+                    <td><img class="w-[50%]" name="img" src="../view/public/img/car/<?= $product['img'] ?>" alt=""></td>
                 </tr>
-                <!-- <input type="hidden" name="oldImg" value="<?= $product['img'] ?>">
                 <tr>
-                    <td><input type="file" name="img"></td>
+                    <td>
+                        <!-- <input type="file" name="img"> -->
+                        <input name="img[]" type="file" multiple="multiple" />
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -58,65 +61,7 @@
                             <?php endif ?>
                         </div>
                     </td>
-                </tr>                
-                <tr>
-                    <td>Img_2</td>
                 </tr>
-                <tr>
-                    <td><img src="/duanmau/view/img/<?= $product['img_2'] ?>" height="100px" alt=""></td>
-                </tr>
-                
-                <input type="hidden" name="oldImg2" value="<?= $product['img_2'] ?>">
-                <tr>
-                    <td><input type="file" name="img2"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="loi">
-                            <?php if (isset($_SESSION['error_product']['img2'])) : ?>
-                                <?= $_SESSION['error_product']['img2'] ?>
-                            <?php endif ?>
-                        </div>
-                    </td>
-                </tr>                 
-                <tr>
-                    <td>Img_3</td>
-                </tr>
-                <tr>
-                    <td><img src="/duanmau/view/img/<?= $product['img_3'] ?>" height="100px" alt=""></td>
-                </tr>
-                <input type="hidden" name="oldImg3" value="<?= $product['img_3'] ?>">
-                <tr>
-                    <td><input type="file" name="img3"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="loi">
-                            <?php if (isset($_SESSION['error_product']['img3'])) : ?>
-                                <?= $_SESSION['error_product']['img3'] ?>
-                            <?php endif ?>
-                        </div>
-                    </td>
-                </tr>                 
-                <tr>
-                    <td>Img_4</td>
-                </tr>
-                <tr>
-                    <td><img src="/duanmau/view/img/<?= $product['img_4'] ?>" height="100px" alt=""></td>
-                </tr>
-                <input type="hidden" name="oldImg4" value="<?= $product['img_4'] ?>">
-                <tr>
-                    <td><input type="file" name="img4"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="loi">
-                            <?php if (isset($_SESSION['error_product']['img4'])) : ?>
-                                <?= $_SESSION['error_product']['img4'] ?>
-                            <?php endif ?>
-                        </div>
-                    </td>
-                </tr>   -->
                 <tr>
                     <td>Mô tả</td>
                 </tr>

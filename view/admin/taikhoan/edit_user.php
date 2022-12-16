@@ -2,7 +2,7 @@
     <div class="edit">
         <form action="index.php?act=update_user" method="post" enctype="multipart/form-data">
             <table class="form">
-                <h1>Sửa tài khoản</h1>
+                <h1 class="text-[20px] font-[600] py-3">Sửa tài khoản</h1>
                 <tr class="">
                     <td>ID tài khoản</td>
 
