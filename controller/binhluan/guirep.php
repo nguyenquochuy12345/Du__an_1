@@ -30,7 +30,9 @@ if (isset($_POST['guirep'])) {
           $so_binhluan = dem_binh_luan_theo_sanpham($id);
           $product = chitiet_sp($id);
           $reps = show_rep($id);
-          $top3sp = show_top3_sp();
+          // $top3sp = show_top3_sp();
+          $products = showsp_theodm($iddm);
+
           $products_lienquan = sanpham_lienquan($id, $iddm);
           include_once './view/user/car/detail_product.php';
         }

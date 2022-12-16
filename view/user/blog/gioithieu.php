@@ -24,7 +24,7 @@
 
                         <p>Đó là một nỗi đau ở mông, đó là một sự đóng băng trên chiếc bánh, nhưng đã đến lúc biến nó thành hiện thực với rất nhiều công việc và nỗi đau. Vì tôi nghĩ rằng, không ai nên tham gia vào bất kỳ bài tập nào trừ khi anh ta thu được một số lợi ích từ nó. </p>
                         <div class="btn-wrapper">
-                            <a href="service.html" class="theme-btn-3 btn btn-effect-4">DỊCH VỤ CỦA CHÚNG TÔI</a>
+                            <a href="" class="theme-btn-3 btn btn-effect-4">DỊCH VỤ CỦA CHÚNG TÔI</a>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                             <div class="ltn__feature-icon">
                                 <span><i class="icon-car-parts-3"></i></span>
                             </div>
-                            <h3><a href="service-details.html"> Tất cả các loại thương hiệu </a></h3>
+                            <h3><a href="#"> Tất cả các loại thương hiệu </a></h3>
                         </div>
                         <div class="ltn__feature-info">
                             <p>Bản thân cơn đau có thể là bình thường, nó sẽ dẫn đến tình trạng béo phì, nhưng hãy làm cùng một nhiệt độ hoặc sự cố giống như công việc.</p>
@@ -64,7 +64,7 @@
                             <div class="ltn__feature-icon">
                                 <span><i class="icon-mechanic"></i></span>
                             </div>
-                            <h3><a href="service-details.html"> Thay dầu phanh </a></h3>
+                            <h3><a href="#"> Thay dầu phanh </a></h3>
                         </div>
                         <div class="ltn__feature-info">
                             <p>Bản thân cơn đau có thể là bình thường, nó sẽ dẫn đến tình trạng béo phì, nhưng hãy làm cùng một nhiệt độ hoặc sự cố giống như công việc.</p>
@@ -77,7 +77,7 @@
                             <div class="ltn__feature-icon">
                                 <span><i class="icon-repair"></i></span>
                             </div>
-                            <h3><a href="service-details.html">Gói bảo trì</a></h3>
+                            <h3><a href="#">Gói bảo trì</a></h3>
                         </div>
                         <div class="ltn__feature-info">
                             <p>Bản thân cơn đau có thể là bình thường, nó sẽ dẫn đến tình trạng béo phì, nhưng hãy làm cùng một nhiệt độ hoặc sự cố giống như công việc.</p>
@@ -95,7 +95,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="call-to-action-inner call-to-action-inner-5 text-center">
-                        <h2 class="white-color text-decoration">Sẵn sàng 24/7, Thực hiện <a href="appointment.html"> Cuộc hẹn </a></h2>
+                        <h2 class="white-color text-decoration">Sẵn sàng 24/7, Thực hiện <a href="#"> Cuộc hẹn </a></h2>
                     </div>
                 </div>
             </div>
@@ -273,7 +273,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Bảo dưỡng, bảo dưỡng & sửa chữa ô tô điện </a></h3>
+                            <h3 class="ltn__blog-title"><a href="#">Bảo dưỡng, bảo dưỡng & sửa chữa ô tô điện </a></h3>
                             <p>Tôi cảm ơn anh ấy vì đã làm việc chăm chỉ và đau đớn. Trên thực tế, đến từng chi tiết nhỏ nhất, không ai nên thực hiện bất kỳ điều gì trong số họ.</p>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
@@ -282,7 +282,7 @@
                                     </ul>
                                 </div>
                                 <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Đọc thêm</a>
+                                    <a href="#">Đọc thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -301,7 +301,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Các vấn đề và giải pháp về dầu động cơ phổ biến</a></h3>
+                            <h3 class="ltn__blog-title"><a href="#">Các vấn đề và giải pháp về dầu động cơ phổ biến</a></h3>
                             <p>Tôi cảm ơn anh ấy vì đã làm việc chăm chỉ và đau đớn. Trên thực tế, đến từng chi tiết nhỏ nhất, không ai nên thực hiện bất kỳ điều gì trong số họ.</p>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
@@ -310,7 +310,7 @@
                                     </ul>
                                 </div>
                                 <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Đọc thêm</a>
+                                    <a href="#">Đọc thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -329,7 +329,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">Cách chuẩn bị cho Ngày theo dõi đầu tiên của bạn!</a></h3>
+                            <h3 class="ltn__blog-title"><a href="#">Cách chuẩn bị cho Ngày theo dõi đầu tiên của bạn!</a></h3>
                             <p>Tôi cảm ơn anh ấy vì đã làm việc chăm chỉ và đau đớn. Trên thực tế, đến từng chi tiết nhỏ nhất, không ai nên thực hiện bất kỳ điều gì trong số họ.</p>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
@@ -338,7 +338,7 @@
                                     </ul>
                                 </div>
                                 <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Đọc thêm</a>
+                                    <a href="#">Đọc thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -357,7 +357,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">The branch of biology that deals with the normal.</a></h3>
+                            <h3 class="ltn__blog-title"><a href="#">The branch of biology that deals with the normal.</a></h3>
                             <p>Lorem ipsum labore et dolore mag na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
@@ -366,7 +366,7 @@
                                     </ul>
                                 </div>
                                 <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Đọc thêm</a>
+                                    <a href="#">Đọc thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -385,7 +385,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <h3 class="ltn__blog-title"><a href="blog-details.html">How to: Make Your Tires Last Longer</a></h3>
+                            <h3 class="ltn__blog-title"><a href="#">How to: Make Your Tires Last Longer</a></h3>
                             <p>Lorem ipsum labore et dolore mag na aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
                             <div class="ltn__blog-meta-btn">
                                 <div class="ltn__blog-meta">
@@ -394,7 +394,7 @@
                                     </ul>
                                 </div>
                                 <div class="ltn__blog-btn">
-                                    <a href="blog-details.html">Đọc thêm</a>
+                                    <a href="#">Đọc thêm</a>
                                 </div>
                             </div>
                         </div>

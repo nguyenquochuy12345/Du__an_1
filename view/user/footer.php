@@ -22,20 +22,20 @@
                             <h4 class="footer-title">Dịch vụ.</h4>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="service.html">Chuẩn đoán động cơ</a></li>
-                                    <li><a href="service.html">Xe bị hư hỏng</a></li>
-                                    <li><a href="service.html">Điều hoà</a></li>
-                                    <li><a href="service.html">Dịch vụ chống bó cứng phanh</a></li>
-                                    <li><a href="service.html">Chuẩn đoán máy tình</a></li>
-                                    <li><a href="service.html">Nâng cấp hiệu xuất</a></li>
+                                    <li><a href="#">Chuẩn đoán động cơ</a></li>
+                                    <li><a href="#">Xe bị hư hỏng</a></li>
+                                    <li><a href="#">Điều hoà</a></li>
+                                    <li><a href="#">Dịch vụ chống bó cứng phanh</a></li>
+                                    <li><a href="#">Chuẩn đoán máy tình</a></li>
+                                    <li><a href="#">Nâng cấp hiệu xuất</a></li>
                                 </ul>
                             </div>
                             <div class="footer-menu">
                                 <ul>
-                                    <li><a href="service.html">Rửa và vệ sinh xe</a></li>
-                                    <li><a href="service.html">Chọn sửa chữa</a></li>
-                                    <li><a href="service.html">Tư vấn miễn phí</a></li>
-                                    <li><a href="service.html">Thời gian khẩn cấp</a></li>
+                                    <li><a href="#">Rửa và vệ sinh xe</a></li>
+                                    <li><a href="#">Chọn sửa chữa</a></li>
+                                    <li><a href="#">Tư vấn miễn phí</a></li>
+                                    <li><a href="#">Thời gian khẩn cấp</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                         <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> 24 Tháng sáu, 2020</li>
                                     </ul>
                                 </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">Mở chi nhánh mới.</a></h4>
+                                <h4 class="ltn__blog-title"><a href="#">Mở chi nhánh mới.</a></h4>
                             </div>
                             <div class="ltn__footer-blog-item">
                                 <div class="ltn__blog-meta">
@@ -57,7 +57,7 @@
                                         <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> 28 tháng sáu, 2020</li>
                                     </ul>
                                 </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">Bảo dưỡi, sửa chữa miến phí</a></h4>
+                                <h4 class="ltn__blog-title"><a href="#">Bảo dưỡi, sửa chữa miến phí</a></h4>
                             </div>
                             <div class="ltn__footer-blog-item">
                                 <div class="ltn__blog-meta">
@@ -65,7 +65,7 @@
                                         <li class="ltn__blog-date"><i class="far fa-calendar-alt"></i> 24 tháng bảy, 2020</li>
                                     </ul>
                                 </div>
-                                <h4 class="ltn__blog-title"><a href="blog-details.html">giảm giá 50%.</a></h4>
+                                <h4 class="ltn__blog-title"><a href="#">giảm giá 50%.</a></h4>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                     <div class="col-md-6 col-12">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="index.html"><img src="view/public/img/logo.png" alt="Logo"></a>
+                                <a href="index.php"><img src="view/public/img/logo.png" alt="Logo"></a>
                             </div>
                             <div class="get-support ltn__copyright-design clearfix">
                                 <div class="get-support-info">
@@ -125,11 +125,11 @@
                                             <img src="img/product/1.png" alt="#">
                                         </div>
                                          <div class="modal-product-info">
-                                            <h5><a href="product-details.html">Brake Conversion Kit</a></h5>
+                                            <h5><a href="#">Brake Conversion Kit</a></h5>
                                             <p class="added-cart"><i class="fa fa-check-circle"></i>  Successfully added to your Cart</p>
                                             <div class="btn-wrapper">
-                                                <a href="cart.html" class="theme-btn-1 btn btn-effect-1">View Cart</a>
-                                                <a href="checkout.html" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+                                                <a href="#" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                                                <a href="#" class="theme-btn-2 btn btn-effect-2">Checkout</a>
                                             </div>
                                          </div>
                                          <!-- additional-info -->
@@ -169,10 +169,10 @@
                                             <img src="img/product/7.png" alt="#">
                                         </div>
                                          <div class="modal-product-info">
-                                            <h5><a href="product-details.html">Brake Conversion Kit</a></h5>
+                                            <h5><a href="#">Brake Conversion Kit</a></h5>
                                             <p class="added-cart"><i class="fa fa-check-circle"></i>  Successfully added to your Wishlist</p>
                                             <div class="btn-wrapper">
-                                                <a href="wishlist.html" class="theme-btn-1 btn btn-effect-1">View Wishlist</a>
+                                                <a href="#" class="theme-btn-1 btn btn-effect-1">View Wishlist</a>
                                             </div>
                                          </div>
                                          <!-- additional-info -->

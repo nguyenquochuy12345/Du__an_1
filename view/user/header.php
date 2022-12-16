@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="view/public/css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="view/public/css/responsive.css">
+    <!-- Jquery ajax  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="../view/public/css/admin.css">
     <?php
@@ -41,9 +43,34 @@
     }
     ?>
 
+    <script>
+        $(document).ready(function() {
+            $('.btn-commnet').click(function(e) {
+                e.preventDefault();
+                var $comment = $().val();
+
+                $.ajax({
+                    url: '',
+                    type: 'post',
+                    dataType: 'html',
+                    data: {
+                        comment: $comment
+                    }
+                }).done(function(ketqua) {
+                    
+                    $('test').html(ketqua);
+
+                });
+
+            });
+
+        });
+    </script>
+
 </head>
 
 <body>
+    <div class="test"></div>
     <div class="body-wrapper">
 
         <!-- HEADER AREA START (header-5) -->
@@ -56,7 +83,7 @@
                             <div class="ltn__top-bar-menu">
                                 <ul>
                                     <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i>Huynqph277841@fpt.edu.vn</a></li>
-                                    <li><a href="locations.html"><i class="icon-placeholder"></i>74 Cầu Diễn</a></li>
+                                    <li><a href="#"><i class="icon-placeholder"></i>74 Cầu Diễn</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -229,4 +256,3 @@
         <!-- HEADER AREA END -->
 
         <!-- Utilize Cart Menu Start -->
-        

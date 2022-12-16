@@ -1,14 +1,3 @@
-<script>
-    var i = 0;
-
-    function hien(i) {
-        for (var j = 0; j <= document.getElementsByClassName("formtraloi").length - 1; j++) {
-            document.getElementsByClassName("formtraloi")[j].style.display = "none"
-        }
-        document.getElementsByClassName("formtraloi")[i].style.display = "flex"
-    }
-</script>
-
 <div class="ltn__shop-details-area mb-120 pt-[200px]">
     <div class="container">
         <div class="row">
@@ -187,9 +176,6 @@
                                 <div class="ltn__comment-area mb-30">
                                     <h4 class="title-2">Bình luận (<?php if (isset($so_binhluan['soluong_binhluan'])) { ?> <?= $so_binhluan['soluong_binhluan'] ?> <?php } else { ?> <?= "0" ?> <?php } ?>)</h4>
                                     <div class="ltn__comment-inner">
-
-                                        <?php $u = -1 ?>
-
                                         <ul>
                                             <?php foreach ($binhluan as $binhluan) : ?>
 
@@ -212,14 +198,40 @@
                                                                         </div>
                                                                     <?php endif ?>
                                                                 <?php endif ?>
+
                                                                 <?php if (isset($_SESSION['user'])) : ?>
                                                                     <?php if ($binhluan['user_id'] != $user_id) : ?>
-                                                                        <div class=" sangdi">
-                                                                            <?php $u++ ?>
-                                                                            <button class="ltn__comment-reply-btn" type="button" onclick="hien(<?= $u ?>)">Trả lời</button>
-                                                                        </div>
+                                                                        <!--  -->
+                                                                        <label for="input__traloi12">
+                                                                            <p class="ltn__comment-reply-btn" type="button">Trả lời</p>
+                                                                        </label>
                                                                     <?php endif ?>
                                                                 <?php endif ?>
+
+                                                                <input type="checkbox" hidden id="input__traloi12" class="input__traloi">
+
+
+                                                                <?php if (isset($_SESSION['user'])) : ?>
+                                                                    <?php if ($binhluan['user_id'] != $user_id) : ?>
+                                                                        <form class="formtraloi" action="index.php?act=guirep&id=<?= $product['product_id'] ?>&id_binhluan=<?= $binhluan['binhluan_id'] ?>&iddm=<?= $product['cate_id'] ?>" method="post">
+                                                                            <!-- <textarea id="formtraloi" name="rep" cols="30" rows="10" placeholder="Trả lời"></textarea>
+                                                            <button type="submit" name="guirep" id="nhan">Gửi</button> -->
+                                                                            <div class="input-item input-item-textarea ltn__custom-icon">
+                                                                                <textarea id="formtraloi" class="pl-[10px] pt-[5px]" type="text" name="rep" placeholder="Trả lời"></textarea>
+                                                                            </div>
+                                                                            <div class="btn-wrapper">
+                                                                                <button id="nhan" name="guirep" class="btn btn-comment theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi trả lời</button>
+                                                                                <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
+                                                                                    <div class="thongbao">
+                                                                                        <p style="color:red ;"><?= $_SESSION['thongbaobinhluan'] ?></p>
+                                                                                    </div>
+
+                                                                                <?php endif ?>
+                                                                            </div>
+                                                                        </form>
+                                                                    <?php endif ?>
+                                                                <?php endif ?>
+
                                                             </div>
                                                             </p>
                                                             <!-- <a href="#" class="ltn__comment-reply-btn"><i class="fas fa-reply"></i>Reply</a> -->
@@ -227,26 +239,7 @@
                                                     </div>
                                                 </li>
 
-                                                <?php if (isset($_SESSION['user'])) : ?>
-                                                    <?php if ($binhluan['user_id'] != $user_id) : ?>
-                                                        <form class="formtraloi" action="index.php?act=guirep&id=<?= $product['product_id'] ?>&id_binhluan=<?= $binhluan['binhluan_id'] ?>&iddm=<?= $product['cate_id'] ?>" method="post">
-                                                            <!-- <textarea id="formtraloi" name="rep" cols="30" rows="10" placeholder="Trả lời"></textarea>
-                                                            <button type="submit" name="guirep" id="nhan">Gửi</button> -->
-                                                            <div class="input-item input-item-textarea ltn__custom-icon">
-                                                                <textarea id="formtraloi" class="pl-[10px] pt-[5px]" type="text" name="rep" placeholder="Trả lời"></textarea>
-                                                            </div>
-                                                            <div class="btn-wrapper">
-                                                                <button id="nhan" name="guirep" class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi trả lời</button>
-                                                                <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
-                                                                    <div class="thongbao">
-                                                                        <p style="color:red ;"><?= $_SESSION['thongbaobinhluan'] ?></p>
-                                                                    </div>
 
-                                                                <?php endif ?>
-                                                            </div>
-                                                        </form>
-                                                    <?php endif ?>
-                                                <?php endif ?>
 
                                                 <ul>
                                                     <li>
@@ -257,7 +250,7 @@
                                                                     <li>
                                                                         <div class="ltn__comment-item clearfix">
                                                                             <div class="ltn__commenter-img">
-                                                                                <img src="view/public/img/testimonial/4.jpg" alt="Image">
+                                                                                <img src="view/public/img/testimonial/avatar.jpeg" alt="Image">
                                                                             </div>
                                                                             <div class="ltn__commenter-comment">
                                                                                 <h6><a href="#"><?= $rep['hovaten'] ?> <?php if ($rep['vaitro_id'] != 1) : ?> <div class="tenvaitro"></div> <?php endif ?></a></h6>
@@ -267,7 +260,7 @@
                                                                                     <?php if (isset($_SESSION['user'])) : ?>
                                                                                         <?php if ($rep['user_id'] == $_SESSION['user']['user_id'] || $_SESSION['user']['vaitro_id'] == 2) : ?>
                                                                                 <div class="xoa">
-                                                                                    <a href="index.php?act=delete_rep&rep_id=<?= $rep['rep_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
+                                                                                    <a style="color: red;" href="index.php?act=delete_rep&rep_id=<?= $rep['rep_id'] ?>&id=<?= $product['product_id'] ?>&iddm=<?= $product['cate_id'] ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không ?')">Xóa</a>
                                                                                 </div>
                                                                             <?php endif ?>
                                                                         <?php endif ?></p>
@@ -299,7 +292,7 @@
 
 
                                             <div class="btn-wrapper">
-                                                <button name="gui" class="btn theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
+                                                <button name="gui" class="btn btn-comment theme-btn-1 btn-effect-1 text-uppercase border-[#212529] bg-[#212529]" type="submit"><i class="far fa-comments"></i>Gửi bình luận</button>
                                                 <?php if (isset($_SESSION['thongbaobinhluan'])) : ?>
                                                     <div class="thongbao">
                                                         <p style="color:red ;"><?= $_SESSION['thongbaobinhluan'] ?></p>
@@ -326,7 +319,7 @@
             <div class="col-lg-12">
                 <div class="section-title-area ltn__section-title-2">
                     <h6 class="section-subtitle ltn__secondary-color">// cars</h6>
-                    <h1 class="section-title">Sản phẩm liên quan<span>.</span>
+                    <h1 class="section-title">Ô tô liên quan<span>.</span>
                     </h1>
                 </div>
             </div>
