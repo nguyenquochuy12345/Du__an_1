@@ -6,7 +6,7 @@
                         <!-- Blog Item -->
                         <div class="ltn__blog-item ltn__blog-item-5">
                             <div class="ltn__blog-img">
-                                <a href="blog-details.html"><img src="view/public/img/blog/31.jpg" alt="Image"></a>
+                                <a href="#"><img src="view/public/img/blog/31.jpg" alt="Image"></a>
                             </div>
                             <div class="ltn__blog-brief">
                                 <div class="ltn__blog-meta">
@@ -16,7 +16,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Đó thực sự là một nỗi đau trong ass, nhưng tôi đang cho nó thời gian.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="#">Đó thực sự là một nỗi đau trong ass, nhưng tôi đang cho nó thời gian.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
@@ -40,7 +40,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm</a>
+                                        <a href="#"><i class="fas fa-arrow-right"></i>Đọc thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Tăng mỡ và béo, nhưng làm điều tương tự xảy ra cùng lúc với chuyển dạ và đau đớn.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="#">Tăng mỡ và béo, nhưng làm điều tương tự xảy ra cùng lúc với chuyển dạ và đau đớn.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
@@ -85,7 +85,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
+                                        <a href="#"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
                                     </div>
                                 </div>
                             </div>
@@ -94,13 +94,13 @@
                         <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-gallery">
                             <div class="ltn__blog-gallery-active slick-arrow-1 slick-arrow-1-inner">
                                 <div class="ltn__blog-gallery-item">
-                                    <a href="blog-details.html"><img src="view/public/img/blog/33.jpg" alt="Image"></a>
+                                    <a href="#"><img src="view/public/img/blog/33.jpg" alt="Image"></a>
                                 </div>
                                 <div class="ltn__blog-gallery-item">
-                                    <a href="blog-details.html"><img src="view/public/img/blog/34.jpg" alt="Image"></a>
+                                    <a href="#"><img src="view/public/img/blog/34.jpg" alt="Image"></a>
                                 </div>
                                 <div class="ltn__blog-gallery-item">
-                                    <a href="blog-details.html"><img src="view/public/img/blog/31.jpg" alt="Image"></a>
+                                    <a href="#"><img src="view/public/img/blog/31.jpg" alt="Image"></a>
                                 </div>
                             </div>
                             <div class="ltn__blog-brief">
@@ -111,7 +111,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Một số cái tuyệt vời. Thực ra, đến từng chi tiết nhỏ nhất, không ai nên thao thao bất tuyệt cả.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="#">Một số cái tuyệt vời. Thực ra, đến từng chi tiết nhỏ nhất, không ai nên thao thao bất tuyệt cả.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
@@ -135,7 +135,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm</a>
+                                        <a href="#"><i class="fas fa-arrow-right"></i>Đọc thêm</a>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Bạn làm việc chỉ để nhận được một số lợi ích từ nó. Đừng để nỗi đau qua đi.</a></h3>
+                                <h3 class="ltn__blog-title"><a href="#">Bạn làm việc chỉ để nhận được một số lợi ích từ nó. Đừng để nỗi đau qua đi.</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
@@ -178,7 +178,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
+                                        <a href="#"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Anh muốn có lỗi trong cuộc vui đừng để sợi tóc nào chạy trốn khỏi nỗi đau</a></h3>
+                                <h3 class="ltn__blog-title"><a href="#">Anh muốn có lỗi trong cuộc vui đừng để sợi tóc nào chạy trốn khỏi nỗi đau</a></h3>
                                 <div class="ltn__blog-meta">
                                     <ul>
                                         <li>
@@ -217,7 +217,7 @@
                                         </ul>
                                     </div>
                                     <div class="ltn__blog-btn">
-                                        <a href="blog-details.html"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
+                                        <a href="#"><i class="fas fa-arrow-right"></i>Đọc thêm </a>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
                         <div class="ltn__blog-item ltn__blog-item-5 ltn__blog-item-quote bg-image bg-overlay-theme-90" data-bs-bg="img/blog/3.jpg">
                             <div class="ltn__blog-brief">
                                 <blockquote>
-                                    <a href="blog-details.html">Trừ phi bị sắc dục che mắt, không ra mà vào.</a>
+                                    <a href="#">Trừ phi bị sắc dục che mắt, không ra mà vào.</a>
                                 </blockquote>
                                 <div class="ltn__blog-meta mb-0">
                                     <ul>
@@ -253,7 +253,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <h3 class="ltn__blog-title"><a href="blog-details.html">Cảm giác tội lỗi của những người từ bỏ nhiệm vụ của họ làm dịu đi tâm hồn, đó là sự cực nhọc. Nhưng như bạn quan sát</a></h3>
+                                <h3 class="ltn__blog-title"><a href="#">Cảm giác tội lỗi của những người từ bỏ nhiệm vụ của họ làm dịu đi tâm hồn, đó là sự cực nhọc. Nhưng như bạn quan sát</a></h3>
                                 <div class="ltn__blog-meta mb-0">
                                     <ul>
                                         <li>
@@ -324,10 +324,10 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><img src="view/public/img/team/5.jpg" alt="#"></a>
+                                            <a href="#"><img src="view/public/img/team/5.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Tôi rất xin lỗi vì sự bất tiện này, nhưng tôi làm.</a></h6>
+                                            <h6><a href="#">Tôi rất xin lỗi vì sự bất tiện này, nhưng tôi làm.</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
@@ -341,10 +341,10 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><img src="view/public/img/team/6.jpg" alt="#"></a>
+                                            <a href="#"><img src="view/public/img/team/6.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Tôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm.</a></h6>
+                                            <h6><a href="#">Tôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm.</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
@@ -358,10 +358,10 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><img src="view/public/img/team/7.jpg" alt="#"></a>
+                                            <a href="#"><img src="view/public/img/team/7.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">Tôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm..</a></h6>
+                                            <h6><a href="#">Tôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm..</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
@@ -375,10 +375,10 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><img src="view/public/img/team/8.jpg" alt="#"></a>
+                                            <a href="#"><img src="view/public/img/team/8.jpg" alt="#"></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
-                                            <h6><a href="blog-details.html">LTôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm.</a></h6>
+                                            <h6><a href="#">LTôi rất xin lỗi vì quá trình ngồi, nhưng tôi làm.</a></h6>
                                             <div class="ltn__blog-meta">
                                                 <ul>
                                                     <li class="ltn__blog-date">
@@ -422,7 +422,7 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
                                             <p>Carsafe - #Gutenberg ready 
@@ -443,7 +443,7 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
                                             <p>Carsafe - #Gutenberg ready 
@@ -464,7 +464,7 @@
                                 <li>
                                     <div class="popular-post-widget-item clearfix">
                                         <div class="popular-post-widget-img">
-                                            <a href="blog-details.html"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
                                         </div>
                                         <div class="popular-post-widget-brief">
                                             <p>Carsafe - #Gutenberg ready 
@@ -511,7 +511,7 @@
                         </div>
                         <!-- Banner Widget -->
                         <div class="widget ltn__banner-widget">
-                            <a href="shop.html"><img src="view/public/img/banner/banner-4.jpg" alt="Banner Image"></a>
+                            <a href="#"><img src="view/public/img/banner/banner-4.jpg" alt="Banner Image"></a>
                         </div>
                         
                     </aside>

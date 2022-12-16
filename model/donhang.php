@@ -123,10 +123,31 @@ function admin_show_chitiet_order($order_id)
     $order_details = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $order_details;
 }
-function showdonhangadmin()
+
+// function showdonhangadmin()
+// {
+//     include '../ketnoi/ketnoi.php';
+//     // $sql = "SELECT * FROM tbl_order order by ngaydathang desc";
+//     $sql = "SELECT order_id,tbl_order.user_id,taikhoan.hovaten,taikhoan.email,taikhoan.tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,
+//     tbl_order.status_id,order_status.status,
+//     ca_xem_xe.name_caxem,
+//     co_so.name_coso
+//     FROM tbl_order 
+//     JOIN taikhoan ON taikhoan.user_id = tbl_order.user_id 
+//     JOIN order_status ON order_status.status_id = tbl_order.status_id 
+//     JOIN ca_xem_xe ON ca_xem_xe.caxem_id = tbl_order.caxemxe
+//     JOIN co_so ON co_so.coso_id = tbl_order.co_so
+//     order by ngaydathang DESC";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->execute();
+//     $show_order = $stmt->fetchAll(PDO::FETCH_ASSOC);
+//     return $show_order;
+// }
+
+function showdonhangadmin($kyw, $status_id)
 {
     include '../ketnoi/ketnoi.php';
-    // $sql = "SELECT * FROM tbl_order order by ngaydathang desc";
+
     $sql = "SELECT order_id,tbl_order.user_id,taikhoan.hovaten,taikhoan.email,taikhoan.tel,ngaydathang,product_id,ngayxemxe,caxemxe,co_so,
     tbl_order.status_id,order_status.status,
     ca_xem_xe.name_caxem,
@@ -135,13 +156,24 @@ function showdonhangadmin()
     JOIN taikhoan ON taikhoan.user_id = tbl_order.user_id 
     JOIN order_status ON order_status.status_id = tbl_order.status_id 
     JOIN ca_xem_xe ON ca_xem_xe.caxem_id = tbl_order.caxemxe
-    JOIN co_so ON co_so.coso_id = tbl_order.co_so
-    order by ngaydathang DESC";
+    JOIN co_so ON co_so.coso_id = tbl_order.co_so  ";
+    if ($kyw != "") {
+        $sql .= " and taikhoan.email like '%" . $kyw . "%'";
+    }
+    if ($status_id > 0) {
+        $sql .= " and tbl_order.status_id = '$status_id'";
+    }
+    $sql .= " order by ngaydathang DESC ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $show_order = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $show_order;
 }
+
+
+
+
+
 function showdonhanguser()
 {
     include './ketnoi/ketnoi.php';
