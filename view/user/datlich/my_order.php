@@ -31,8 +31,8 @@
                             <td id="tenndh"><?= $my_order['hovaten'] ?></td>
                             <td><?= $my_order['email'] ?></td>
                             <td><?= $my_order['tel'] ?></td>
-                            <td><?= $my_order['ngaydathang'] = date("d-m-Y") ?></td>
-                            <td><?= $my_order['ngayxemxe'] = date("d-m-Y") ?></td>
+                            <td><?= $my_order['ngaydathang']?></td>
+                            <td><?= $my_order['ngayxemxe']?></td>
                             <td><?= $my_order['name_caxem'] ?></td>
                             <td><?= $my_order['name_coso'] ?></td>
 

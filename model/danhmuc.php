@@ -26,7 +26,7 @@ function add($cate_name)
 function delete($id)
 {
     include '../ketnoi/ketnoi.php';
-    $sql = " UPDATE products SET cate_id = '48' WHERE cate_id = '$id'";
+    $sql = " UPDATE products SET cate_id = '72' WHERE cate_id = '$id'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     if ($sql) {

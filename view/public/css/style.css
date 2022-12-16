@@ -8981,6 +8981,18 @@ blockquote {
     width: 60px;
     height: 60px; } }
 
+
+  .formtraloi{
+    display: none;
+    transition-delay: 0.2s;
+    transition: all linear 0.2s;
+  }
+  .input__traloi:checked ~ .formtraloi{
+    display: block;
+    transition-delay: 0.2s;
+
+    /* color: red; */
+  }
 /* ----------------------------------------------------
     Service Details
 ---------------------------------------------------- */

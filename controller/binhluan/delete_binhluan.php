@@ -19,6 +19,7 @@ if (isset($_GET['id'])) {
       delete_binhluan($id_binhluan);
       $reps = show_rep($id);
       $product = chitiet_sp($id);
+      $products = showsp_theodm($iddm);
       $so_binhluan = dem_binh_luan_theo_sanpham($id);
       $sotrang = sotrang($id, $so_sanpham_tren1trang);
       $binhluan = show_binhluan($id, $so_sanpham_tren1trang, $trang);

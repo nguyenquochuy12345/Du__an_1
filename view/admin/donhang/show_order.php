@@ -12,12 +12,12 @@
 <div class="nen">
     <div class="listchung">
         <h1>Danh sách đơn hàng</h1>
-        <form action="index.php?act=showsp" method="post" class="search">
+        <form action="index.php?act=showdonhangadmin" method="post" class="search">
             <input type="text" name="kyw">
-            <select name="cate_id">
+            <select name="status_id">
                 <option value="0" selected>Tất cả</option>
-                <?php foreach ($cates as $cate) : ?>
-                    <option value="<?= $cate['cate_id'] ?>"><?= $cate['cate_name'] ?></option>
+                <?php foreach ($status as $item) : ?>
+                    <option value="<?= $item['status_id'] ?>"><?= $item['status'] ?></option>
                 <?php endforeach ?>
             </select>
             <button type="submit" name="tim">Tìm kiếm</button>
@@ -48,7 +48,7 @@
                         <td><?= $order['hovaten'] ?></td>
                         <td><?= $order['email'] ?></td>
                         <td><?= $order['tel'] ?></td>
-                        <td><?= $order['ngayxemxe'] = date("d-m-Y") ?></td>
+                        <td><?= $order['ngayxemxe'] ?></td>
                         <td><p class="w-[50px] text-ellipsis overflow-hidden"><?= $order['name_caxem'] ?></p></td>
                         <td><p class="w-[150px] text-ellipsis overflow-hidden whitespace-nowrap"><?= $order['name_coso'] ?></p></td>
                         <?php $count++; ?>
