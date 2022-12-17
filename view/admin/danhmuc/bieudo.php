@@ -19,7 +19,7 @@
                     extract($value);
                     if ($i == $tongdm) $dauphay = "";
                     else $dauphay = ",";
-                    echo "['" . $value['cate_name'] . "', " . $value['soluong'] . "]" . $dauphay;         
+                    echo "['" . $value['cate_name'] . "', " . $value['soluong'] . "]" . $dauphay;
                     $i++;
                 }
 
@@ -34,5 +34,5 @@
             var chart = new google.visualization.PieChart(document.getElementById('Chart'));
             chart.draw(data, options);
         }
-        </script>
+    </script>
 </div>

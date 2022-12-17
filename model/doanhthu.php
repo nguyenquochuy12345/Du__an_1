@@ -24,4 +24,3 @@
     //     $doanhthu = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //     return $doanhthu; 
     // }
-?>

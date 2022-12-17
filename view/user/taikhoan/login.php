@@ -56,7 +56,7 @@ if (isset($_SESSION['user'])) {
                                 
                             </tr>
                             <tr>
-                                <td class="dangky2 flex item-center justify-center gap-x-1 mt-3" >Bạn chưa có tài khoản? <a href="index.php?act=vao_trang_dangky">Đăng ký ngay</a><span>Hoặc</span><a href="index.php?act=vao_trang_quenmk">Quên mật khẩu ?</a></td>
+                                <td class="dangky2 flex item-center justify-center gap-x-1 mt-3" >Bạn  có tài khoản? <a href="index.php?act=vao_trang_dangky">Đăng ký ngay</a><span>Hoặc</span><a href="index.php?act=vao_trang_quenmk">Quên mật khẩu ?</a></td>
                             </tr>
                         </table>
                     </form>

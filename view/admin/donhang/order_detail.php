@@ -1,6 +1,6 @@
 <div class="nen">
     <div class="listchung">
-        <h1>Chi tiết đơn hàng</h1>
+        <h1 class="text-[20px] font-[600] py-3">Chi tiết đơn hàng</h1>
         <table class="list">
             <thead>
                 <tr class="table_cart_tr">

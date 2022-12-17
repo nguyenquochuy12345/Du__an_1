@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
     <div class="row">
         <div class="col-lg-12">
             <div class="section-title-area text-center">
-                <h1 class="section-title">Đăng nhập</h1>
+                <h1 class="section-title">Đổi mật khẩu</h1>
             </div>
         </div>
     </div>
@@ -23,11 +23,13 @@ if (!isset($_SESSION['user'])) {
                                 <td colspan="2"><input name="username" type="text" placeholder="Nhập tài khoản của bạn"></td>
                             </tr>
                             <tr>
-                                <td class="thongbao">
+                                <td class="hidden">
+                                    <p style="color: red; text-align: left; margin-bottom: 5px;">
                                     <?php if (isset($_SESSION['error_doimk']['username'])) : ?>
 
                                         <?= $_SESSION['error_doimk']['username'] ?>
                                     <?php endif ?>
+                                    </p>
                                 </td>
                             </tr>
                             <tr>
@@ -38,10 +40,12 @@ if (!isset($_SESSION['user'])) {
                             </tr>
                             <tr>
                                 <td class="thongbao">
+                                    <p  style="color: red; text-align: left; margin-bottom: 5px;">
                                     <?php if (isset($_SESSION['error_doimk']['old_password'])) : ?>
 
                                         <?= $_SESSION['error_doimk']['old_password'] ?>
                                     <?php endif ?>
+                                    </p>
                                 </td>
                             </tr>            
                             <tr>
@@ -52,10 +56,12 @@ if (!isset($_SESSION['user'])) {
                             </tr>
                             <tr>
                                 <td class="thongbao">
+                                    <p style="color: red; text-align: left; margin-bottom: 5px;">
                                     <?php if (isset($_SESSION['error_doimk']['new_password'])) : ?>
 
                                         <?= $_SESSION['error_doimk']['new_password'] ?>
                                     <?php endif ?>
+                                    </p>
                                 </td>
                             </tr>
                             
@@ -68,10 +74,12 @@ if (!isset($_SESSION['user'])) {
                             </tr>
                             <tr>
                                 <td class="thongbao">
+                                    <p  style="color: red; text-align: left; margin-bottom: 5px;">
                                     <?php if (isset($_SESSION['error_doimk']['re_new_password'])) : ?>
 
                                         <?= $_SESSION['error_doimk']['re_new_password'] ?>
                                     <?php endif ?>
+                                    </p>
                                 </td>
                             </tr>
                             <tr>
@@ -83,7 +91,7 @@ if (!isset($_SESSION['user'])) {
                                 </td>
                             </tr>
                             <tr>
-                                <td class="doimk"> <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="submit" name="xacnhandoimk" class="dn">Xác nhận</button></td>
+                                <td class="doimk"> <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29] mb-30" type="submit" name="xacnhandoimk" class="dn">Xác nhận</button></td>
 
                             </tr>
 

@@ -3,7 +3,7 @@
 </div>
 <div class="nen3">
     <div class="listchung">
-        <h1>Thống kê danh mục</h1>
+        <h1 class="text-[20px] font-[600] py-3">Thống kê danh mục</h1>
         <table class="list" >
             <thead>
             <tr>
@@ -35,7 +35,7 @@
 
 <div class="nen3">
 <div class="listchung">
-        <h1>Top 3 sản phẩm có nhiều lượt xem nhất</h1>
+        <h1 class="text-[20px] font-[600] py-3">Top 3 sản phẩm có nhiều lượt xem nhất</h1>
         <table class="list" >
             <thead>
             <tr> 
@@ -62,7 +62,7 @@
 </div>
 <div class="nen3">
 <div class="listchung">
-        <h1>Top 5 Sản phẩm được bình luận nhiều nhất</h1>
+        <h1 class="text-[20px] font-[600] py-3">Top 5 Sản phẩm được bình luận nhiều nhất</h1>
         <table class="list" >
             <thead>
             <tr> 

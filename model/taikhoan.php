@@ -305,20 +305,10 @@ function doimatkhau($username, $old_password, $new_password, $re_new_password)
         $stmt->execute();
     }
 }
-function capnhat_tk($user_id, $hovaten, $email, $tel, $address, $file, $old_img)
+function capnhat_tk($user_id, $hovaten, $email, $tel)
 {
     include './ketnoi/ketnoi.php';
     $errors = [];
-    $img = $old_img;
-    if ($file['size'] > 0) {
-        $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
-        $ext = strtolower($ext);
-        if ($ext != "png" && $ext != "jpeg" && $ext != "jpg" && $ext != "gif") {
-            $errors['img'] = "Không đúng định dạnh ảnh";
-        } else {
-            $img = $file['name'];
-        }
-    }
     if ($email == "") {
         $errors['email'] = "Email không được để trống";
     } else if (!filter_var(trim($email), FILTER_VALIDATE_EMAIL)) {
@@ -335,9 +325,6 @@ function capnhat_tk($user_id, $hovaten, $email, $tel, $address, $file, $old_img)
     if ($hovaten == "") {
         $errors['hovaten'] = "Họ và tên không được để trống";
     }
-    if ($address == "") {
-        $errors['address'] = "Địa chỉ không được để trống";
-    }
     if ($tel == "") {
         $errors['sdt'] = "Số điện thoại không được để trống";
     } else if ($tel != "") {
@@ -349,16 +336,15 @@ function capnhat_tk($user_id, $hovaten, $email, $tel, $address, $file, $old_img)
             $errors['sdt'] = "Số điện thoại đã tồn tại";
         }
     }
-    $sdt = '/0\d{9,10}/';
-    if (!preg_match($sdt, $tel)) {
-        $errors['sdt'] = "Số điện thoại không đúng định dạng";
-    }
+    // $sdt = '/0\d{9,10}/';
+    // if (!preg_match($sdt, $tel)) {
+    //     $errors['sdt'] = "Số điện thoại không đúng định dạng";
+    // }
     $_SESSION['errors'] =  $errors;
     if (!$errors) {
-        $sql = " UPDATE taikhoan set hovaten = '$hovaten', email='$email',address='$address',tel='$tel', img='$img' WHERE user_id = '$user_id'  ";
+        $sql = " UPDATE taikhoan set hovaten = '$hovaten', email='$email',tel='$tel' WHERE user_id = '$user_id'  ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
-        move_uploaded_file($file['tmp_name'], './view/img/' . $img);
     }
 }
 function show_tt_theo_user($user_id)

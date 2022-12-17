@@ -8,40 +8,49 @@ if (!isset($_SESSION['user'])) {
         header("location: ../index.php");
     }
 }
-require_once '../ketnoi/ketnoi.php';
-require_once '../view/admin/header.php';
-require_once "../model/danhmuc.php";
-require_once "../model/sanpham.php";
-require_once "../model/binhluan.php";
-require_once '../model/taikhoan.php';
-require_once '../model/donhang.php';
-// require_once "../model/doanhthu.php";    
-if (isset($_GET['act'])) {
-    $act = $_GET['act'];
-    switch ($act) {
-        case 'showdm':
-            $cates = showdm();
-            include_once "../view/admin/danhmuc/list_danhmuc.php";
-            break;
-        case 'bieudo_danhmuc':
-            $cate_bieude = thongke_dm();
-            include '../view/admin/danhmuc/bieudo.php';
-            break;
-            // case 'bieudo_doanhthu':
-            //     $bieude_doanhthu = bieude_doanhthu();
-            //     include "../view/admin/doanhthu/bieudo_doanhthu.php";
-            //     break;
-        case 'adddm':
-            if (isset($_POST['them'])) {
-                $cate_name = $_POST['cate_name'];
-                add($cate_name);
-                if (!isset($_SESSION['cate_error']['cate_name'])) {
-                    $cates = showdm();
-                    $_SESSION['cate'] = "Thêm danh mục thành công";
-                    header("location: index.php?act=showdm");
+    require_once '../ketnoi/ketnoi.php';
+    require_once '../view/admin/header.php';
+    require_once "../model/danhmuc.php";
+    require_once "../model/sanpham.php";
+    require_once "../model/binhluan.php";
+    require_once "../model/coso.php";
+    require_once '../model/taikhoan.php';
+    require_once '../model/donhang.php';
+    // require_once "../model/doanhthu.php";    
+    if (isset($_GET['act'])) {
+        $act = $_GET['act'];
+        switch ($act) {
+            case 'showdm':
+                $cates = showdm();
+                include_once "../view/admin/danhmuc/list_danhmuc.php";
+                break;
+            case 'bieudo_danhmuc':
+                $cate_bieude = thongke_dm();
+                include '../view/admin/danhmuc/bieudo.php';
+                break;
+                // case 'bieudo_doanhthu':
+                //     $bieude_doanhthu = bieude_doanhthu();
+                //     include "../view/admin/doanhthu/bieudo_doanhthu.php";
+                //     break;
+            case 'adddm':
+                if (isset($_POST['them'])) {
+                    $cate_name = $_POST['cate_name'];
+                    add($cate_name);
+                    if (!isset($_SESSION['cate_error']['cate_name'])) {
+                        $cates = showdm();
+                        $_SESSION['cate'] = "Thêm danh mục thành công";
+                        header("location: index.php?act=showdm");
+                    }
                 }
-            }
-            include "../view/admin/danhmuc/add.php";
+                include "../view/admin/danhmuc/add.php";
+                break;
+            // case 'delete':
+            //     if (isset($_GET['id'])) {
+            //         $id = $_GET['id'];
+            //         delete($id);
+            //     }
+            // }
+            // include "../view/admin/danhmuc/add.php";
             break;
         case 'delete':
             if (isset($_GET['id'])) {
@@ -165,18 +174,22 @@ if (isset($_GET['act'])) {
                 $description = $_POST['description'];
                 $quantity = $_POST['quantity'];
                 $cate_id = $_POST['cate_id'];
-                $img = $_POST['oldImg'];
-                $file = $_FILES['img'];
-                $img2 = $_POST['oldImg2'];
-                $file2 = $_FILES['img2'];
-                $img3 = $_POST['oldImg3'];
-                $file3 = $_FILES['img3'];
-                $img4 = $_POST['oldImg4'];
-                $file4 = $_FILES['img4'];
+                $total = count($_FILES['img']['name']);
                 $doi_xe = $_POST['doi_xe'];
                 $cong_xuat = $_POST['cong_xuat'];
                 $color = $_POST['color'];
-                updatesp($product_id, $product_name, $price, $file, $file2, $file3, $file4, $img, $img2, $img3, $img4, $description, $doi_xe, $cong_xuat, $color, $quantity, $cate_id, $ngaynhap);
+                for ($i = 0; $i < $total; $i++) {
+
+                    //Get the temp file path
+                    $tmpFilePath = $_FILES['img']['tmp_name'][$i];
+
+                    //Make sure we have a file path
+                    if ($tmpFilePath != "") {
+                        //Setup our new file path
+                        $image[$i] = $_FILES['img']['name'][$i];
+                    }
+                }
+                updatesp($product_id, $product_name, $price,$total, $description, $doi_xe, $cong_xuat, $color, $quantity, $cate_id, $ngaynhap);
                 if (!isset($_SESSION['error_product']['img']) && !isset($_SESSION['error_product']['img2']) && !isset($_SESSION['error_product']['img3']) && !isset($_SESSION['error_product']['img4']) && !isset($_SESSION['error_product']['product_name']) && !isset($_SESSION['error_product']['price']) && !isset($_SESSION['error_product']['quantity'])) {
                     header("location: index.php?act=showsp");
                 } else {
@@ -186,6 +199,7 @@ if (isset($_GET['act'])) {
                     include "../view/admin/sanpham/edit.php";
                 }
             }
+
 
             break;
         case 'showuser';
@@ -269,36 +283,68 @@ if (isset($_GET['act'])) {
                 include '../view/admin/binhluan/show_rep.php';
             }
             break;
-        case "showsp":
-            if (isset($_POST['tim'])) {
-                $kyw = $_POST['kyw'];
-                $cate_id = $_POST['cate_id'];
-            } else {
-                $kyw = "";
-                $cate_id = 0;
-            }
-            $cates = showdm();
-            $products = showsp($kyw, $cate_id);
-            include "../view/admin/sanpham/list_sp.php";
+            case 'showcoso':
+                $cates = showcs();
+                include '../view/admin/coso/show.php';
+                break;
+            case 'addcs':
+                if (isset($_POST['them'])) {
+                    $name_coso = $_POST['name_coso'];
+                    addcs($name_coso);
+                    if (!isset($_SESSION['cate_error']['name_coso'])) {
+                        $cates = showcs();
+                        $_SESSION['cate'] = "Thêm cơ sở thành công";
+                        header("location: index.php?act=showcoso");
+                    }
+                }
+                include "../view/admin/coso/add_cs.php";
+                break;
+            case 'edit_cs':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    $cate = editcs($id);
+                }
+                include '../view/admin/coso/edit_cs.php';
+                break;
+            case 'updatecs':
+                if (isset($_POST['update'])) {
+                    $coso_id = $_POST['coso_id'];
+                    $name_coso = $_POST['name_coso'];
+                    updatecs($coso_id, $name_coso);
+                    if (!isset($_SESSION['cate_error']['name_coso'])) {
+                        header("location: index.php?act=showcoso");
+                    } else {
+                        $id = $coso_id;
+                        $cate = editcs($id);
+                        include "../view/admin/coso/edit_cs.php";
+                    }
+                }
+                break;
+            case 'deletecs':
+                if (isset($_GET['id'])) {
+                    $id = $_GET['id'];
+                    deletecs($id);
+                }
 
-            break;
-        case 'showdonhangadmin':
+                $cates = showcs();
+                include "../view/admin/coso/show.php";
+                break;
+                case 'showdonhangadmin':
 
-            if (isset($_POST['tim'])) {
-                $kyw = $_POST['kyw'];
-                $status_id = $_POST['status_id'];
-            } else {
-                $kyw = "";
-                $status_id = 0;
-            }
-
-            $show_order = showdonhangadmin($kyw, $status_id);
-
-            // $show_order = showdonhangadmin();
-            $status = show_status();
-            include '../view/admin/donhang/show_order.php';
-            break;
-
+                    if (isset($_POST['tim'])) {
+                        $kyw = $_POST['kyw'];
+                        $status_id = $_POST['status_id'];
+                    } else {
+                        $kyw = "";
+                        $status_id = 0;
+                    }
+        
+                    $show_order = showdonhangadmin($kyw, $status_id);
+        
+                    // $show_order = showdonhangadmin();
+                    $status = show_status();
+                    include '../view/admin/donhang/show_order.php';
+                    break;
         case 'huy_lich':
             if (isset($_GET['order_id'])) {
                 $order_id = $_GET['order_id'];

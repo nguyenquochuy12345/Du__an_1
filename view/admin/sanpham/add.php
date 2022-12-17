@@ -4,7 +4,7 @@
 
 
             <table class="form">
-                <h1>Thêm sản phẩm</h1>
+                <h1 class="text-[20px] font-[600] py-3">Thêm sản phẩm</h1>
                 <tr>
                     <td>ID sản phẩm</td>
                 </tr>

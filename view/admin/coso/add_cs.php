@@ -1,19 +1,19 @@
 <div class="nen">
     <div class="add">
-        <form action="index.php?act=adddm" method="post">
-            <h1 class="text-[20px] font-[600] py-3">Thêm danh mục</h1>
+        <form action="index.php?act=addcs" method="post">
+            <h1 class="text-[20px] font-[600] py-3">Thêm cơ sở</h1>
             <table class="form">
                 <tr>
-                    <td>Mã danh mục</td>
+                    <td>Mã cơ sở</td>
                 </tr>
                 <tr>
                     <td><input type="text" disabled placeholder="auto numble"></td>
                 </tr>
                 <tr>
-                    <td>Tên danh mục</td>
+                    <td>Tên cơ sở</td>
                 </tr>
                 <tr>
-                    <td><input type="text" name="cate_name"></td>
+                    <td><input type="text" name="name_coso"></td>
                 </tr>
 
                 <tr>

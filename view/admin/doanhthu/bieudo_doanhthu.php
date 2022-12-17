@@ -8,7 +8,7 @@
 ?>
 
 <div style="width: 1200px;">
-<h1>Thống kê doanh thu</h1>
+<h1 class="text-[20px] font-[600] py-3">Thống kê doanh thu</h1>
     <canvas id="myChart">
         
     </canvas>

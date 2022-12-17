@@ -7,8 +7,7 @@
                             <img class="mx-auto" src="https://tunatheme.com/tf/html/autixir-preview/autixir/img/icons/10.png" alt="Icon Image">
                         </div>
                         <h3>Địa chỉ email</h3>
-                        <p>info@webmail.com <br>
-                            jobs@webexample.com</p>
+                        <p>Huynqph277841@fpt.edu.vn</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -17,7 +16,7 @@
                             <img class="mx-auto" src="https://tunatheme.com/tf/html/autixir-preview/autixir/img/icons/11.png" alt="Icon Image">
                         </div>
                         <h3>Số điện thoại</h3>
-                        <p>+0123-456789 <br> +987-6543210</p>
+                        <p>+84 867435803</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -26,8 +25,7 @@
                             <img class="mx-auto" src="https://tunatheme.com/tf/html/autixir-preview/autixir/img/icons/12.png" alt="Icon Image">
                         </div>
                         <h3>Địa chỉ văn phòng</h3>
-                        <p>18/A, New Born Town Hall <br>
-                            New York, US</p>
+                        <p>Ngo 74 đường cầu Diễn , quận Bắc Từ Niêm </p>
                     </div>
                 </div>
             </div>
@@ -36,7 +34,7 @@
     <!-- CONTACT ADDRESS AREA END -->
     
     <!-- CONTACT MESSAGE AREA START -->
-    <div class="ltn__contact-message-area mb-120 mb--100">
+    <!-- <div class="ltn__contact-message-area mb-120 mb--100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -75,16 +73,15 @@
                                 <textarea name="message" placeholder="Nhập tin nhắn"></textarea>
                             </div>
                             <p><label class="input-info-save mb-0"><input type="checkbox" name="agree"> Lưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo.</label></p>
-                            <div class="btn-wrapper mt-0">
-                                <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">nhận được một dịch vụ miễn phí</button>
+                            <div class="btn-wrapper mt-20">
+                                <button class="theme-btn-2 btn btn-effect-2 border-[#e53e29] bg-[#e53e29]" type="submit">Gửi thông tin</button>
                             </div>
-                            <p class="form-messege mb-0 mt-20"></p>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- CONTACT MESSAGE AREA END -->
 
     <!-- GOOGLE MAP AREA START -->

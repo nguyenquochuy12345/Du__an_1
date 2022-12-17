@@ -1,6 +1,6 @@
 <div class="nen">
     <div class="listchung">
-        <h1>Danh sách tài khoản </h1>
+        <h1 class="text-[20px] font-[600] py-3">Danh sách tài khoản </h1>
         <table class="list">
 
             <thead>
