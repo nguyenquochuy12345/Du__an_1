@@ -11,13 +11,8 @@
 </script>
 <div class="nen">
     <div class="listchung">
-<<<<<<< HEAD
-        <h1 class="text-[20px] font-[600] pt-3">Danh sách đơn hàng</h1>
-        <form action="index.php?act=showsp" method="post" class="search">
-=======
         <h1>Danh sách đơn hàng</h1>
         <form action="index.php?act=showdonhangadmin" method="post" class="search">
->>>>>>> afcb91b010fb7349480ae64d01cbe194669a46f0
             <input type="text" name="kyw">
             <select name="status_id">
                 <option value="0" selected>Tất cả</option>
@@ -27,7 +22,7 @@
             </select>
             <button type="submit" name="tim">Tìm kiếm</button>
         </form>
-        <table class=" list ">
+        <table class="list">
             <thead>
                 <tr>
                     <th>Mã đơn hàng</th>

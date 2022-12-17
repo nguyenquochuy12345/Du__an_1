@@ -38,7 +38,7 @@ function dathang($id_user, $yeucau, $id_product, $ngayxemxe, $caxemxe, $cosoxemx
     // if (!preg_match($sdt, $tel)) {
     //     $errors['tel'] = "Số điện thoại không đúng định dạng";
     // }
-    
+
     $_SESSION['errors_muahhang'] =  $errors;
     if (!$errors) {
         $sql = "INSERT INTO tbl_order

@@ -19,7 +19,7 @@ if (isset($_POST['btn_datlich'])) {
   $cosoxemxe = trim($_POST['co_so']);
 
   $show_order = showdonhanguser();
- 
+
 
   $id_user = $_SESSION['user']['user_id'];
 
@@ -33,7 +33,7 @@ if (isset($_POST['btn_datlich'])) {
     $mailer->isSMTP();
     $mailer->Host       = 'smtp.gmail.com';
     $mailer->SMTPAuth   = true;
-  
+
     $mailer->Username   = 'quochuynguyen11112003@gmail.com'; // nhập gmail của bạn vào đây
     $mailer->Password   = 'dpffhyyfyofvxxwv'; // nhập mật khẩu vừa tạo 
     $mailer->SMTPSecure = 'tls';
@@ -47,11 +47,8 @@ if (isset($_POST['btn_datlich'])) {
     <br>
     <h2>Quý khách đã có lịch đặt xem xe bên Ga-ra Autixir. Thời gian xem xe của quý khách như sau :</h2>
     <br>
-    <h3>Ngày xem xe : '.$ngayxemxe.' </h3>
+    <h3>Ngày xem xe : ' . $ngayxemxe . ' </h3>
     <br>
-    <h3>Thời gian xem xe : '.$show_order['name_caxem'].'  </h3>
-    <br>
-    <h3>Cơ sở xem xe : '.$show_order['name_coso'].'  </h3>
     <br>
     <h2>Cảm ơn quý khách đã tin tưởng và đặt xe bên Ga-ra. Xin trân thành cảm ơn !</h2>
     '; // nội dung gửi mail
@@ -61,8 +58,6 @@ if (isset($_POST['btn_datlich'])) {
 
     // header("location: index.php?act=datlich");
     header('location: ./index.php?act=vao_trang_xacnhan_datlich&id=' . $id_product . '');
-
-    
   } else {
     header('location: ./index.php?act=vao_trang_xacnhan_datlich&id=' . $id_product . '');
   }

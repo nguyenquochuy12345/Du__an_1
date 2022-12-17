@@ -256,8 +256,7 @@ function updatesp($product_id, $product_name, $price, $total, $description, $doi
             if ($tmpFilePath != "") {
                 $image = $_FILES['img']['name'][$i];
                 move_uploaded_file($file['tmp_name'], '../view/public/img/car/' . $image);
-            }
-            else{
+            } else {
                 move_uploaded_file($tmpFilePath, '../view/public/img/car/' . $image);
             }
             // move_uploaded_file($file2['tmp_name'], '../view/img/' . $img2);

@@ -1,12 +1,8 @@
 <div class="nen">
     <div class="listchung">
-<<<<<<< HEAD
         <h1 class="text-[20px] font-[600] py-3">Danh sách đơn hàng</h1>
 
         
-=======
-        <h1>Danh sách đơn hàng</h1>       
->>>>>>> afcb91b010fb7349480ae64d01cbe194669a46f0
             <table class="list">
               <thead>
               <tr>  

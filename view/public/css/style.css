@@ -12702,7 +12702,17 @@ input.cart-plus-minus-box {
     font-size: 14px; }
   [type="submit"].btn {
     padding: 12px 30px; } }
+.formtraloi{
+  display: none;
+  transition-delay: 0.2s;
+  transition: all linear 0.2s;
+}
+.input__traloi:checked ~ .formtraloi{
+  display: block;
+  transition-delay: 0.2s;
 
+  /* color: red; */
+}
 /* ----------------------------------------------------
     END
 ---------------------------------------------------- */

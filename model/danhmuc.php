@@ -26,7 +26,7 @@ function delete($id)
 {
     include '../ketnoi/ketnoi.php';
     $sql = " UPDATE products SET cate_id = '72' WHERE cate_id = '$id'";
-    $stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare($sql);   
     $stmt->execute();
     if ($sql) {
         $sql = "DELETE FROM categories WHERE cate_id = '$id'";

@@ -11,7 +11,7 @@
             <table class="list w-full text-center mb-4">
                 <thead class="bg-[#e5e7eb]">
                     <tr>
-                        <th>MĐH</th>
+                        <!-- <th>MĐH</th> -->
                         <th>Tên</th>
                         <th>Email</th>
                         <th>SĐT</th>
@@ -27,7 +27,7 @@
                 <tbody class="">
                     <?php foreach ($my_orders  as $my_order) : ?>
                         <tr>
-                            <td><?= $my_order['order_id'] ?></td>
+                            <!-- <td><?= $my_order['order_id'] ?></td> -->
                             <td id="tenndh"><?= $my_order['hovaten'] ?></td>
                             <td><?= $my_order['email'] ?></td>
                             <td><?= $my_order['tel'] ?></td>

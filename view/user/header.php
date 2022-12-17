@@ -83,7 +83,7 @@
                             <div class="ltn__top-bar-menu">
                                 <ul>
                                     <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i class="icon-mail"></i>Huynqph277841@fpt.edu.vn</a></li>
-                                    <li><a href="#"><i class="icon-placeholder"></i>74 Cầu Diễn</a></li>
+                                    <li><a href="#"><i class="icon-placeholder"></i>Ngo 74 đường cầu Diễn , quận Bắc Từ Niêm</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -216,6 +216,7 @@
                                                 <?php if ($vaitro_id == 2) : ?>
                                                     <li><a href="admin/index.php">Trang quản trị</a></li>
                                                 <?php endif ?>
+                                                <li><a href="index.php?act=vao_trang_taikhoan">Tài khoản</a></li>
                                                 <li><a href="index.php?act=vao_trang_doimatkhau">Đổi mật khẩu</a></li>
                                                 <li><a href="index.php?act=dangxuat">Đăng xuất</a></li>
                                                 <!-- <li><a href="account.html">My Account</a></li>
